@@ -1,0 +1,34 @@
+21:22:42.628 [CRITICAL] [ParseError] /Users/coocoder/desktop/carwow/specs/image.spec : line no: 8, Parse error: Multiple spec headings found in same file
+21:23:13.440 [CRITICAL] [ParseError] /Users/coocoder/desktop/carwow/specs/image.spec : line no: 29, Parse error: Multiple spec headings found in same file
+21:23:28.789 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:23:28.988 [ERROR] Validation failed. The following steps have errors
+21:23:28.988 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:20: Step implementation not found. I M N - Create a new M x N image with all pixels coloured white (O).
+21:23:28.988 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:21: Step implementation not found. C - Clears the table, setting all pixels to white (O).
+21:23:28.988 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:22: Step implementation not found. L X Y C - Colours the pixel (X,Y) with colour C.
+21:23:28.988 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:23: Step implementation not found. V X Y1 Y2 C - Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive).
+21:23:28.988 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:24: Step implementation not found. H X1 X2 Y C - Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).
+21:23:28.988 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:25: Step implementation not found. F X Y C - Fill the region R with the colour C. R is defined as: Pixel (X,Y) belongs to R. Any other pixel which is the same colour as (X,Y) and shares a common side with any pixel in R also belongs to this region.
+21:23:28.988 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:26: Step implementation not found. S - Show the contents of the current image
+21:23:28.988 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:27: Step implementation not found. X - Terminate the session
+21:23:29.051 [INFO] Executing specification: Specification Heading
+21:23:29.052 [INFO] Executing scenario: First scenario
+21:23:29.052 [DEBUG] Executing Step: * A context step which gets executed before every scenario
+21:23:29.054 [DEBUG] Executing Step: * Say "hello" to "gauge"
+21:23:29.054 [INFO] hello gauge
+21:23:29.056 [INFO] Executing scenario: Second scenario for the specification
+21:23:29.056 [DEBUG] Executing Step: * A context step which gets executed before every scenario
+21:23:29.057 [DEBUG] Executing Step: * Say "hello again" to "gauge"
+21:23:29.058 [INFO] hello again gauge
+21:23:29.059 [DEBUG] Executing Step: * Step that takes a table 
+     |Product|Description                  |
+     |-------|-----------------------------|
+     |Gauge  |Test automation with ease    |
+     |Mingle |Agile project management     |
+     |Snap   |Hosted continuous integration|
+     |Gocd   |Continuous delivery platform |
+21:23:29.168 [DEBUG] Plugin [Html Report] with pid [77206] has exited
+21:23:29.168 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 1 skipped
+21:23:29.168 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
+21:23:29.168 [INFO] Total time taken: 13ms
