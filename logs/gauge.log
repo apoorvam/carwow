@@ -1162,3 +1162,869 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 16:17:48.019 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 16:17:48.019 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
 16:17:48.019 [INFO] Total time taken: 15ms
+16:20:49.877 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+16:20:49.877 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+16:20:50.520 [INFO] Executing specification: Pixel co-ordinates Specification
+16:20:50.521 [INFO] Executing scenario: Create a an image with maximum size
+16:20:50.521 [DEBUG] Executing Step: * create a "250" by "250" image
+16:20:50.523 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+16:20:50.530 [INFO] Executing scenario: check pixels are valid with in image bounds
+16:20:50.531 [DEBUG] Executing Step: * create a "200" by "100" image
+16:20:50.532 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+16:20:50.641 [DEBUG] Plugin [Html Report] with pid [57663] has exited
+16:20:50.641 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+16:20:50.641 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
+16:20:50.641 [INFO] Total time taken: 17ms
+19:19:54.981 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:19:55.669 [ERROR] Validation failed. The following steps have errors
+19:19:55.669 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:44: Step implementation not found. mock a "1" by "1" image
+19:19:55.669 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:45: Step implementation not found. create a pixel
+19:19:55.669 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:46: Step implementation not found. set colour to "A"
+19:19:55.724 [INFO] Executing specification: Pixel co-ordinates Specification
+19:19:55.725 [INFO] Executing scenario: Create a an image with maximum size
+19:19:55.726 [DEBUG] Executing Step: * create a "250" by "250" image
+19:19:55.727 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:19:55.731 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:19:55.732 [DEBUG] Executing Step: * create a "200" by "100" image
+19:19:55.733 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:19:55.843 [DEBUG] Plugin [Html Report] with pid [77499] has exited
+19:19:55.843 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+19:19:55.843 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+19:19:55.843 [INFO] Total time taken: 14ms
+19:34:27.257 [INFO] No specifications found.
+19:34:34.042 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:34:34.043 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:34:34.783 [ERROR] Validation failed. The following steps have errors
+19:34:34.783 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:44: Step implementation not found. mock a "1" by "1" image
+19:34:34.783 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:45: Step implementation not found. create a pixel
+19:34:34.783 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:46: Step implementation not found. set colour to "A"
+19:34:34.837 [INFO] Executing specification: Pixel co-ordinates Specification
+19:34:34.838 [INFO] Executing scenario: Create a an image with maximum size
+19:34:34.838 [DEBUG] Executing Step: * create a "250" by "250" image
+19:34:34.840 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:34:34.844 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:34:34.844 [DEBUG] Executing Step: * create a "200" by "100" image
+19:34:34.846 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:34:34.956 [DEBUG] Plugin [Html Report] with pid [79686] has exited
+19:34:34.956 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+19:34:34.956 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+19:34:34.956 [INFO] Total time taken: 14ms
+19:35:21.905 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:35:21.905 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:35:22.578 [ERROR] Validation failed. The following steps have errors
+19:35:22.579 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:45: Step implementation not found. create a pixel
+19:35:22.579 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:46: Step implementation not found. set colour to "A"
+19:35:22.590 [INFO] Executing specification: Pixel co-ordinates Specification
+19:35:22.590 [INFO] Executing scenario: Create a an image with maximum size
+19:35:22.591 [DEBUG] Executing Step: * create a "250" by "250" image
+19:35:22.592 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:35:22.595 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:35:22.596 [DEBUG] Executing Step: * create a "200" by "100" image
+19:35:22.598 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:35:22.707 [DEBUG] Plugin [Html Report] with pid [79831] has exited
+19:35:22.707 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+19:35:22.707 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+19:35:22.707 [INFO] Total time taken: 13ms
+19:42:59.212 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:42:59.212 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:42:59.362 [INFO] /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+19:42:59.362 [INFO] : /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21: syntax error, unexpected '(', expecting ';' or '\n' (SyntaxError)
+    def def initialize(pixel,x,y)
+                       ^
+/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21: syntax error, unexpected ')', expecting '='
+/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:41: syntax error, unexpected keyword_end, expecting end-of-input
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `block in load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `each'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:75:in `<module:Runtime>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	from -e:1:in `<main>'
+19:42:59.366 [ERROR] Validation failed. The following steps have errors
+19:42:59.366 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:11: write tcp [::1]:58243->[::1]:58246: use of closed network connection. create a "250" by "250" image
+19:42:59.367 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:12: write tcp [::1]:58243->[::1]:58246: use of closed network connection. create and validate pixels
+19:42:59.367 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:26: write tcp [::1]:58243->[::1]:58246: use of closed network connection. create a "200" by "100" image
+19:42:59.367 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:27: write tcp [::1]:58243->[::1]:58246: use of closed network connection. create and validate pixels
+19:42:59.367 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:44: write tcp [::1]:58243->[::1]:58246: use of closed network connection. create a "1" by "1" stub image
+19:42:59.367 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:45: write tcp [::1]:58243->[::1]:58246: use of closed network connection. create a pixel cordinate "1,1"
+19:42:59.367 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:46: write tcp [::1]:58243->[::1]:58246: use of closed network connection. set colour to "A"
+19:42:59.374 [INFO] Failed to start Gauge Ruby runner. exit status 1
+19:42:59.375 [DEBUG] Runner exited with error: exit status 1
+19:42:59.378 [ERROR] Failed to initialize suite datastore. Error: write tcp [::1]:58243->[::1]:58246: use of closed network connection
+19:42:59.483 [DEBUG] Plugin [Html Report] with pid [80814] has exited
+19:42:59.483 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 0 skipped
+19:42:59.483 [INFO] Scenarios: 	-3 executed, -3 passed, 0 failed, 3 skipped
+19:42:59.483 [INFO] Total time taken: 0
+19:43:15.525 [INFO] No specifications found.
+19:43:18.407 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:43:18.407 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:43:19.083 [ERROR] Validation failed. The following steps have errors
+19:43:19.083 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:45: Step implementation not found. create a pixel cordinate "1,1"
+19:43:19.083 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:46: Step implementation not found. set colour to "A"
+19:43:19.093 [INFO] Executing specification: Pixel co-ordinates Specification
+19:43:19.094 [INFO] Executing scenario: Create a an image with maximum size
+19:43:19.094 [DEBUG] Executing Step: * create a "250" by "250" image
+19:43:19.096 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:43:19.456 [ERROR] Failed step: create and validate pixels
+19:43:19.456 [ERROR] Error Message: undefined method `new' for nil:NilClass
+19:43:19.456 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:38:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:46:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:46:in `block (3 levels) in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:66:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:66:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:46:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:44:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:44:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+19:43:19.459 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:43:19.460 [DEBUG] Executing Step: * create a "200" by "100" image
+19:43:19.461 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:43:19.775 [ERROR] Failed step: create and validate pixels
+19:43:19.775 [ERROR] Error Message: undefined method `new' for nil:NilClass
+19:43:19.775 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:38:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:48:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:48:in `block (3 levels) in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:66:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:66:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:47:in `deny'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:48:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:44:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:44:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+19:43:19.886 [DEBUG] Plugin [Html Report] with pid [80877] has exited
+19:43:19.886 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+19:43:19.886 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 1 skipped
+19:43:19.886 [INFO] Total time taken: 686ms
+19:43:52.866 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:43:52.866 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:43:53.539 [ERROR] Validation failed. The following steps have errors
+19:43:53.539 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:45: Step implementation not found. create a pixel cordinate "1,1"
+19:43:53.539 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:46: Step implementation not found. set colour to "A"
+19:43:53.549 [INFO] Executing specification: Pixel co-ordinates Specification
+19:43:53.549 [INFO] Executing scenario: Create a an image with maximum size
+19:43:53.550 [DEBUG] Executing Step: * create a "250" by "250" image
+19:43:53.552 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:43:53.555 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:43:53.556 [DEBUG] Executing Step: * create a "200" by "100" image
+19:43:53.557 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:43:53.662 [DEBUG] Plugin [Html Report] with pid [80971] has exited
+19:43:53.662 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+19:43:53.662 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+19:43:53.662 [INFO] Total time taken: 13ms
+19:46:24.428 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:46:25.078 [ERROR] Validation failed. The following steps have errors
+19:46:25.078 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:46: Step implementation not found. set colour to "A"
+19:46:25.088 [INFO] Executing specification: Pixel co-ordinates Specification
+19:46:25.088 [INFO] Executing scenario: Create a an image with maximum size
+19:46:25.089 [DEBUG] Executing Step: * create a "250" by "250" image
+19:46:25.091 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:46:25.094 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:46:25.095 [DEBUG] Executing Step: * create a "200" by "100" image
+19:46:25.097 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:46:25.206 [DEBUG] Plugin [Html Report] with pid [81331] has exited
+19:46:25.206 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+19:46:25.206 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+19:46:25.206 [INFO] Total time taken: 14ms
+19:46:41.542 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:46:42.200 [ERROR] Validation failed. The following steps have errors
+19:46:42.200 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:46: Step implementation not found. set colour to "A"
+19:46:42.211 [INFO] Executing specification: Pixel co-ordinates Specification
+19:46:42.211 [INFO] Executing scenario: Create a an image with maximum size
+19:46:42.212 [DEBUG] Executing Step: * create a "250" by "250" image
+19:46:42.213 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:46:42.217 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:46:42.217 [DEBUG] Executing Step: * create a "200" by "100" image
+19:46:42.219 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:46:42.324 [DEBUG] Plugin [Html Report] with pid [81374] has exited
+19:46:42.324 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+19:46:42.324 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+19:46:42.324 [INFO] Total time taken: 13ms
+19:52:52.839 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:52:53.512 [ERROR] Validation failed. The following steps have errors
+19:52:53.512 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:46: Step implementation not found. set colour to "A"
+19:52:53.522 [INFO] Executing specification: Pixel co-ordinates Specification
+19:52:53.523 [INFO] Executing scenario: Create a an image with maximum size
+19:52:53.524 [DEBUG] Executing Step: * create a "250" by "250" image
+19:52:53.526 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:52:53.529 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:52:53.530 [DEBUG] Executing Step: * create a "200" by "100" image
+19:52:53.532 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:52:53.640 [DEBUG] Plugin [Html Report] with pid [82186] has exited
+19:52:53.640 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+19:52:53.640 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+19:52:53.640 [INFO] Total time taken: 14ms
+19:53:41.266 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:53:41.937 [INFO] Executing specification: Pixel co-ordinates Specification
+19:53:41.938 [INFO] Executing scenario: Create a an image with maximum size
+19:53:41.938 [DEBUG] Executing Step: * create a "250" by "250" image
+19:53:41.940 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:53:41.943 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:53:41.944 [DEBUG] Executing Step: * create a "200" by "100" image
+19:53:41.945 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:53:41.948 [INFO] Executing scenario: Fill a pixel with a colour
+19:53:41.949 [DEBUG] Executing Step: * create a "1" by "1" stub image
+19:53:42.272 [ERROR] Failed step: create a "1" by "1" stub image
+19:53:42.272 [ERROR] Error Message: undefined method `stub' for main:Object
+19:53:42.272 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+19:53:42.379 [DEBUG] Plugin [Html Report] with pid [82298] has exited
+19:53:42.379 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+19:53:42.379 [INFO] Scenarios: 	3 executed, 2 passed, 1 failed, 0 skipped
+19:53:42.379 [INFO] Total time taken: 338ms
+19:57:47.025 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:57:47.026 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:57:48.152 [ERROR] Validation failed. The following steps have errors
+19:57:48.152 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:45: Step implementation not found. create a pixel cordinate "1,1"
+19:57:48.162 [INFO] Executing specification: Pixel co-ordinates Specification
+19:57:48.162 [INFO] Executing scenario: Create a an image with maximum size
+19:57:48.163 [DEBUG] Executing Step: * create a "250" by "250" image
+19:57:48.165 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:57:48.168 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:57:48.169 [DEBUG] Executing Step: * create a "200" by "100" image
+19:57:48.170 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:57:48.279 [DEBUG] Plugin [Html Report] with pid [82900] has exited
+19:57:48.279 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+19:57:48.279 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+19:57:48.279 [INFO] Total time taken: 14ms
+19:58:12.166 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:58:12.166 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:58:13.254 [INFO] Executing specification: Pixel co-ordinates Specification
+19:58:13.255 [INFO] Executing scenario: Create a an image with maximum size
+19:58:13.255 [DEBUG] Executing Step: * create a "250" by "250" image
+19:58:13.257 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:58:13.260 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:58:13.261 [DEBUG] Executing Step: * create a "200" by "100" image
+19:58:13.262 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:58:13.265 [INFO] Executing scenario: Fill a pixel with a colour
+19:58:13.266 [DEBUG] Executing Step: * create a "1" by "1" stub image
+19:58:13.597 [ERROR] Failed step: create a "1" by "1" stub image
+19:58:13.597 [ERROR] Error Message: undefined method `stub' for main:Object
+19:58:13.597 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+19:58:13.707 [DEBUG] Plugin [Html Report] with pid [82966] has exited
+19:58:13.707 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+19:58:13.707 [INFO] Scenarios: 	3 executed, 2 passed, 1 failed, 0 skipped
+19:58:13.707 [INFO] Total time taken: 346ms
+19:58:34.148 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:58:34.148 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:58:35.235 [INFO] Executing specification: Pixel co-ordinates Specification
+19:58:35.235 [INFO] Executing scenario: Create a an image with maximum size
+19:58:35.236 [DEBUG] Executing Step: * create a "250" by "250" image
+19:58:35.237 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:58:35.240 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:58:35.241 [DEBUG] Executing Step: * create a "200" by "100" image
+19:58:35.242 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:58:35.246 [INFO] Executing scenario: Fill a pixel with a colour
+19:58:35.247 [DEBUG] Executing Step: * create a "1" by "1" stub image
+19:58:35.577 [ERROR] Failed step: create a "1" by "1" stub image
+19:58:35.577 [ERROR] Error Message: undefined method `mock' for main:Object
+19:58:35.577 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+19:58:35.687 [DEBUG] Plugin [Html Report] with pid [83027] has exited
+19:58:35.687 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+19:58:35.687 [INFO] Scenarios: 	3 executed, 2 passed, 1 failed, 0 skipped
+19:58:35.687 [INFO] Total time taken: 346ms
+19:58:49.798 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+19:58:49.798 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+19:58:50.900 [INFO] Executing specification: Pixel co-ordinates Specification
+19:58:50.900 [INFO] Executing scenario: Create a an image with maximum size
+19:58:50.901 [DEBUG] Executing Step: * create a "250" by "250" image
+19:58:50.902 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+19:58:50.906 [INFO] Executing scenario: check pixels are valid with in image bounds
+19:58:50.906 [DEBUG] Executing Step: * create a "200" by "100" image
+19:58:50.908 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+19:58:50.911 [INFO] Executing scenario: Fill a pixel with a colour
+19:58:50.912 [DEBUG] Executing Step: * create a "1" by "1" stub image
+19:58:51.241 [ERROR] Failed step: create a "1" by "1" stub image
+19:58:51.241 [ERROR] Error Message: undefined method `mock' for main:Object
+19:58:51.241 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+19:58:51.351 [DEBUG] Plugin [Html Report] with pid [83071] has exited
+19:58:51.351 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+19:58:51.351 [INFO] Scenarios: 	3 executed, 2 passed, 1 failed, 0 skipped
+19:58:51.351 [INFO] Total time taken: 345ms
+20:00:29.325 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+20:00:29.325 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:00:30.462 [INFO] Executing specification: Pixel co-ordinates Specification
+20:00:30.462 [INFO] Executing scenario: Create a an image with maximum size
+20:00:30.463 [DEBUG] Executing Step: * create a "250" by "250" image
+20:00:30.464 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+20:00:30.468 [INFO] Executing scenario: check pixels are valid with in image bounds
+20:00:30.469 [DEBUG] Executing Step: * create a "200" by "100" image
+20:00:30.470 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+20:00:30.473 [INFO] Executing scenario: Fill a pixel with a colour
+20:00:30.474 [DEBUG] Executing Step: * create a "1" by "1" image
+20:00:30.476 [DEBUG] Executing Step: * create a pixel cordinate "1,1"
+20:00:30.506 [INFO] 
+[1mFrom:[0m /Users/coocoder/Desktop/carwow/step_implementations/steps.rb @ line 60 :
+
+    [1;34m55[0m:   mock(@image).x { x.to_i }
+    [1;34m56[0m:   mock(@image).y { y.to_i }
+    [1;34m57[0m: [32mend[0m
+    [1;34m58[0m: 
+    [1;34m59[0m: step [31m[1;31m'[0m[31mcreate a pixel cordinate <co>[1;31m'[0m[31m[0m [32mdo[0m |co|
+ => [1;34m60[0m:   binding.pry
+    [1;34m61[0m: [32mend[0m
+    [1;34m62[0m: 
+    [1;34m63[0m: step [31m[1;31m'[0m[31mset colour to <color>[1;31m'[0m[31m[0m [32mdo[0m |color|
+    [1;34m64[0m: 
+    [1;34m65[0m: [32mend[0m
+
+20:00:30.506 [INFO] [0G
+20:00:30.507 [INFO] [1] pry(main)> 
+20:00:33.703 [INFO] c
+20:00:33.855 [INFO] o
+20:00:34.015 [INFO]  
+20:00:34.135 [INFO] [K
+20:00:34.311 [INFO] 
+20:00:34.318 [INFO] => [31m[1;31m"[0m[31m1,1[1;31m"[0m[31m[0m
+20:00:34.319 [INFO] [2] pry(main)> 
+20:00:35.799 [INFO] w
+20:00:36.007 [INFO] z
+20:00:36.631 [INFO] [K
+20:00:36.839 [INFO] [K
+20:03:11.119 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+20:03:11.119 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:03:11.267 [INFO] /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+20:03:11.267 [INFO] : /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55: syntax error, unexpected keyword_end (SyntaxError)
+/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:64: syntax error, unexpected end-of-input, expecting keyword_end
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `block in load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `each'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:75:in `<module:Runtime>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	from -e:1:in `<main>'
+20:03:11.273 [ERROR] Validation failed. The following steps have errors
+20:03:11.273 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:11: write tcp [::1]:58389->[::1]:58392: use of closed network connection. create a "250" by "250" image
+20:03:11.273 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:12: write tcp [::1]:58389->[::1]:58392: use of closed network connection. create and validate pixels
+20:03:11.273 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:26: write tcp [::1]:58389->[::1]:58392: use of closed network connection. create a "200" by "100" image
+20:03:11.273 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:27: write tcp [::1]:58389->[::1]:58392: use of closed network connection. create and validate pixels
+20:03:11.273 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:43: write tcp [::1]:58389->[::1]:58392: use of closed network connection. create a "1" by "1" image
+20:03:11.273 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:44: write tcp [::1]:58389->[::1]:58392: use of closed network connection. set coordinate "1,1" to "A"
+20:03:11.280 [INFO] Failed to start Gauge Ruby runner. exit status 1
+20:03:11.280 [DEBUG] Runner exited with error: exit status 1
+20:03:11.283 [ERROR] Failed to initialize suite datastore. Error: write tcp [::1]:58389->[::1]:58392: use of closed network connection
+20:03:11.386 [DEBUG] Plugin [Html Report] with pid [83714] has exited
+20:03:11.387 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 0 skipped
+20:03:11.387 [INFO] Scenarios: 	-3 executed, -3 passed, 0 failed, 3 skipped
+20:03:11.387 [INFO] Total time taken: 0
+20:05:11.777 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+20:05:11.777 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:05:12.817 [ERROR] Validation failed. The following steps have errors
+20:05:12.817 [ERROR] /Users/coocoder/desktop/carwow/specs/pixel.spec:44: Step implementation not found. set coordinate "1,1" to "A"
+20:05:12.826 [INFO] Executing specification: Pixel co-ordinates Specification
+20:05:12.827 [INFO] Executing scenario: Create a an image with maximum size
+20:05:12.827 [DEBUG] Executing Step: * create a "250" by "250" image
+20:05:12.829 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+20:05:12.832 [INFO] Executing scenario: check pixels are valid with in image bounds
+20:05:12.833 [DEBUG] Executing Step: * create a "200" by "100" image
+20:05:12.835 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+20:05:12.942 [DEBUG] Plugin [Html Report] with pid [83970] has exited
+20:05:12.942 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:05:12.942 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 1 skipped
+20:05:12.942 [INFO] Total time taken: 13ms
+20:05:42.794 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+20:05:42.794 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:05:43.870 [INFO] Executing specification: Pixel co-ordinates Specification
+20:05:43.870 [INFO] Executing scenario: Create a an image with maximum size
+20:05:43.871 [DEBUG] Executing Step: * create a "250" by "250" image
+20:05:43.873 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+20:05:43.876 [INFO] Executing scenario: check pixels are valid with in image bounds
+20:05:43.877 [DEBUG] Executing Step: * create a "200" by "100" image
+20:05:43.878 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+20:05:43.988 [DEBUG] Plugin [Html Report] with pid [84108] has exited
+20:05:43.988 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:05:43.988 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
+20:05:43.988 [INFO] Total time taken: 13ms
+20:06:18.671 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+20:06:18.672 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:06:19.704 [INFO] Executing specification: Pixel co-ordinates Specification
+20:06:19.705 [INFO] Executing scenario: Create a an image with maximum size
+20:06:19.705 [DEBUG] Executing Step: * create a "250" by "250" image
+20:06:19.707 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+20:06:19.710 [INFO] Executing scenario: check pixels are valid with in image bounds
+20:06:19.711 [DEBUG] Executing Step: * create a "200" by "100" image
+20:06:19.712 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+20:06:19.822 [DEBUG] Plugin [Html Report] with pid [84201] has exited
+20:06:19.822 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:06:19.822 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
+20:06:19.822 [INFO] Total time taken: 13ms

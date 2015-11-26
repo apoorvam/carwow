@@ -53,3 +53,5 @@ the parser must read line by line.
 the l method.
 * the method first checks that the cordinate is in the bounds of the image and then updates the colour
 value , else it throws an out of bound error.
+
+* add exception handling for out of bounds
