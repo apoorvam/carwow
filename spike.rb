@@ -6,13 +6,10 @@ image = ImageBuilder.new(5,6) do
   s
 end
 
-image =
-ImageBuilder.new
+image = ImageBuilder.new
   .i(5,6)
   .l(2,3,A)
   .s()
-
-
 
 #clear the image
 bitmap
