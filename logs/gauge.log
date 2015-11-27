@@ -12911,3 +12911,27 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 08:10:23.739 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 08:10:23.739 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
 08:10:23.739 [INFO] Total time taken: 42ms
+08:11:55.302 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+08:11:55.302 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:11:56.356 [INFO] Executing specification: Image Specification
+08:11:56.460 [DEBUG] Plugin [Html Report] with pid [4731] has exited
+08:11:56.460 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+08:11:56.460 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+08:11:56.460 [INFO] Total time taken: 1ms
+08:12:59.801 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+08:12:59.802 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:13:00.976 [INFO] Executing specification: Image Specification
+08:13:01.082 [DEBUG] Plugin [Html Report] with pid [4914] has exited
+08:13:01.082 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+08:13:01.083 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+08:13:01.083 [INFO] Total time taken: 2ms
+09:15:29.067 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:15:30.275 [INFO] Executing specification: Image Specification
+09:15:30.382 [DEBUG] Plugin [Html Report] with pid [7020] has exited
+09:15:30.383 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:15:30.383 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+09:15:30.383 [INFO] Total time taken: 3ms
