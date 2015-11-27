@@ -1,9 +1,9 @@
 Pixel co-ordinates Specification
 ================================
 
-Pixel co-ordinates are a pair of integers:
-a column number between 1 and 250,
-and a row number between 1 and 250.
+Pixel co-ordinates are a pair of integers
+the x value must be greater than 1 and less than the Image width.
+the y value must be greater than 1 and less than the Image Height.
 
 Create a an image with maximum size
 -----------------------------------
