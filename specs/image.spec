@@ -23,3 +23,18 @@ Create Images
   |250|251|A height of 251 is greater than the maximum height of 250  |
   |0  |250|A width of 0 is less than the minimum width of 1           |
   |250|0  |A height of 0 is less than the minimum height of 1         |
+
+
+Set Color of Pixel
+------------------
+
+the x value must be greater than 1 and less than the Image width.
+the y value must be greater than 1 and less than the Image Height.
+
+* create a "3" by "3" image
+* set pixel colors
+  |x  |y  |color   |
+  |---|---|--------|
+  |3  |3  |A       |
+  |2  |2  |A       |
+  |1  |1  |A       |

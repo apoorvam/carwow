@@ -35,7 +35,8 @@ class Image
 end
 
 class Pixel
-  attr_reader :coordinate,:image,:color
+  attr_reader :coordinate,:image
+  attr_accessor :color
   class Coordinate
     attr_reader :x,:y,:pixel
     def initialize(pixel,x,y)
@@ -49,6 +50,32 @@ class Pixel
     @coordinate =Pixel::Coordinate.new(self,x,y)
   end
 
+end
+
+class LCommand
+  def initialize(image,x,y,color)
+    @image = image
+    @x = x
+    @y = y
+    @color = color
+  end
+  def execute()
+    pixel =  @image.pixels.find{|pixel| pixel.coordinate.x == @x && pixel.coordinate.y == @y}
+    pixel.color = @color
+    pixel
+  end
+end
+
+step "create a <width> by <height> image" do |width,height|
+  @image = Image.new(width.to_i,height.to_i)
+end
+
+step "set pixel colors <table>" do |table|
+  table.rows.each do |row|
+    command = LCommand.new(@image,row[0].to_i,row[1].to_i,row[2])
+    pixel =command.execute()
+    assert{pixel.color == row[2]}
+  end
 end
 
 step 'initialize valid images <table>' do |table|
