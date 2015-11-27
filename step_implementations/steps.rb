@@ -17,8 +17,7 @@ class Image
     if valid?
       for i in  1..x do
         for j in 1..y do
-          p = Pixel.new(self,i,j)
-          @pixels << p if p.valid?
+          @pixels << Pixel.new(self,i,j)
         end
       end
     end
@@ -28,8 +27,6 @@ class Image
     return InvalidHeightError if self.y > 250
     return InvalidWidthError if self.x < 1
     return InvalidHeightError if self.y < 1
-    return InvalidWidthError if self.x > @pixel.image.x
-    return InvalidHeightError if self.y > @pixel.image.y
     return true
   end
 end
@@ -51,7 +48,7 @@ class Pixel
 
 end
 
-step 'Create valid images <table>' do |table|
+step 'Create images <table>' do |table|
   table.rows.each do |row|
     image = Image.new(row[0].to_i,row[1].to_i)
     assert{image.pixels.count == row[2].to_i}
