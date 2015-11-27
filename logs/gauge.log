@@ -3444,3 +3444,27 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 07:41:15.187 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 07:41:15.187 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
 07:41:15.187 [INFO] Total time taken: 2ms
+07:45:12.489 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+07:45:12.489 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:45:13.640 [INFO] Executing specification: Image Specification
+07:45:13.747 [DEBUG] Plugin [Html Report] with pid [99025] has exited
+07:45:13.747 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+07:45:13.747 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:45:13.747 [INFO] Total time taken: 2ms
+07:46:17.618 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:46:18.816 [INFO] Executing specification: Image Specification
+07:46:18.921 [DEBUG] Plugin [Html Report] with pid [99204] has exited
+07:46:18.921 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+07:46:18.921 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:46:18.921 [INFO] Total time taken: 2ms
+07:49:45.977 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:49:47.227 [INFO] Executing specification: Image Specification
+07:49:47.331 [DEBUG] Plugin [Html Report] with pid [99776] has exited
+07:49:47.331 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+07:49:47.331 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:49:47.331 [INFO] Total time taken: 2ms

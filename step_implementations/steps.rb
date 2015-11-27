@@ -4,6 +4,9 @@ require "pry"
 
 include Wrong
 
+class InvalidWidthError < StandardError;end
+class InvalidHeightError < StandardError;end
+
 class Image
   attr_reader :x,:y,:pixels
   def initialize(x,y)s
@@ -11,12 +14,23 @@ class Image
     @y = y
     @pixels = []
 
-    for i in  1..x do
-      for j in 1..y do
-        p = Pixel.new(self,i,j)
-        @pixels << p if p.valid?
+    if valid?
+      for i in  1..x do
+        for j in 1..y do
+          p = Pixel.new(self,i,j)
+          @pixels << p if p.valid?
+        end
       end
     end
+  end
+  def valid?
+    return InvalidWidthError if self.x > 250
+    return InvalidHeightError if self.y > 250
+    return InvalidWidthError if self.x < 1
+    return InvalidHeightError if self.y < 1
+    return InvalidWidthError if self.x > @pixel.image.x
+    return InvalidHeightError if self.y > @pixel.image.y
+    return true
   end
 end
 
@@ -29,15 +43,6 @@ class Pixel
       @x = x
       @y = y
     end
-    def valid?
-      return false if self.x > 250
-      return false if self.y > 250
-      return false if self.x < 1
-      return false if self.y < 1
-      return false if self.x > @pixel.image.x
-      return false if self.y > @pixel.image.y
-      return true
-    end
   end
   def initialize(image,x,y)
     @image = image
@@ -48,14 +53,11 @@ end
 
 step 'Initialize  images <table>' do |table|
   table.rows.each do |row|
-    @image = Image.new(x.to_i,y.to_i)
+    image = Image.new(x.to_i,y.to_i)
+    assert{image.pixels.count == count.to_i}
   end
 end
 
-step 'create a <x> by <y> image' do |x,y|
-
-end
-
 step 'check that the image has <count> pixels' do | count|
-  assert{@image.pixels.count == count.to_i}
+
 end
