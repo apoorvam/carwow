@@ -10,6 +10,12 @@ class Image
     @x = x
     @y = y
     @pixels = []
+
+    for i in  1..x do
+      for j in 1..y do
+        @pixels << Pixel.new(self,i,j)
+      end
+    end
   end
 end
 
@@ -51,4 +57,8 @@ end
 
 step 'create a <x> by <y> image' do |x,y|
   @image = Image.new(x.to_i,y.to_i)
+end
+
+step 'check that the image has <count> pixels' do | count|
+  assert{@image.pixels.count == count.to_i}
 end

@@ -2028,3 +2028,1153 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 20:06:19.822 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 20:06:19.822 [INFO] Scenarios: 	2 executed, 2 passed, 0 failed, 0 skipped
 20:06:19.822 [INFO] Total time taken: 13ms
+20:12:27.912 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+20:12:27.913 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:12:28.956 [ERROR] Validation failed. The following steps have errors
+20:12:28.956 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:8: Step implementation not found. check that the image has 9 pixels
+20:12:28.967 [INFO] Executing specification: Image Specification
+20:12:29.072 [DEBUG] Plugin [Html Report] with pid [85058] has exited
+20:12:29.072 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:12:29.072 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 1 skipped
+20:12:29.072 [INFO] Total time taken: 2ms
+20:13:59.383 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+20:13:59.383 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:14:00.432 [ERROR] Validation failed. The following steps have errors
+20:14:00.432 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:8: Step implementation not found. check that the image has 9 pixels
+20:14:00.441 [INFO] Executing specification: Image Specification
+20:14:00.546 [DEBUG] Plugin [Html Report] with pid [85264] has exited
+20:14:00.546 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:14:00.547 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 1 skipped
+20:14:00.547 [INFO] Total time taken: 2ms
+20:14:14.039 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:14:15.069 [ERROR] Validation failed. The following steps have errors
+20:14:15.069 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:8: Step implementation not found. check that the image has 9 pixels
+20:14:15.079 [INFO] Executing specification: Image Specification
+20:14:15.183 [DEBUG] Plugin [Html Report] with pid [85307] has exited
+20:14:15.183 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:14:15.184 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 1 skipped
+20:14:15.184 [INFO] Total time taken: 1ms
+20:14:34.877 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+20:14:34.877 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:14:35.951 [INFO] Executing specification: Image Specification
+20:14:35.951 [INFO] Executing scenario: Create an image
+20:14:35.952 [DEBUG] Executing Step: * create a "3" by "3" image
+20:14:35.953 [DEBUG] Executing Step: * check that the image has "9" pixels
+20:14:36.061 [DEBUG] Plugin [Html Report] with pid [85366] has exited
+20:14:36.061 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:14:36.061 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:14:36.061 [INFO] Total time taken: 6ms
+05:49:17.550 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:49:18.937 [INFO] Executing specification: Image Specification
+05:49:18.938 [INFO] Executing scenario: Create an image
+05:49:18.938 [DEBUG] Executing Step: * create a "3" by "3" image
+05:49:18.940 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:49:19.353 [ERROR] Failed step: check that the image has "9" pixels
+05:49:19.353 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 0
+    @image.pixels is []
+    @image is #<Image:0x007fbdfe8d10d0 @pixels=[], @x=3, @y=3>
+    count is "9"
+05:49:19.353 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:57:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:49:19.460 [DEBUG] Plugin [Html Report] with pid [88122] has exited
+05:49:19.460 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:49:19.460 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:49:19.460 [INFO] Total time taken: 420ms
+05:53:38.780 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+05:53:38.781 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:53:40.032 [INFO] Executing specification: Image Specification
+05:53:40.032 [INFO] Executing scenario: Create an image
+05:53:40.033 [DEBUG] Executing Step: * create a "3" by "3" image
+05:53:40.035 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:53:40.456 [ERROR] Failed step: check that the image has "9" pixels
+05:53:40.456 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 16
+    @image.pixels is [#<Pixel:0x007fc815329350
+        @coordinate=#<Pixel::Coordinate:0x007fc815329300 @pixel=#<Pixel:0x007fc815329350 ...>, @x=0, @y=0>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc8153292d8
+        @coordinate=#<Pixel::Coordinate:0x007fc815329288 @pixel=#<Pixel:0x007fc8153292d8 ...>, @x=0, @y=1>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815329260
+        @coordinate=#<Pixel::Coordinate:0x007fc815329238 @pixel=#<Pixel:0x007fc815329260 ...>, @x=0, @y=2>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815329210
+        @coordinate=#<Pixel::Coordinate:0x007fc8153291c0 @pixel=#<Pixel:0x007fc815329210 ...>, @x=0, @y=3>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815329120
+        @coordinate=#<Pixel::Coordinate:0x007fc8153290f8 @pixel=#<Pixel:0x007fc815329120 ...>, @x=1, @y=0>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc8153290d0
+        @coordinate=#<Pixel::Coordinate:0x007fc8153290a8 @pixel=#<Pixel:0x007fc8153290d0 ...>, @x=1, @y=1>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815329080
+        @coordinate=#<Pixel::Coordinate:0x007fc815329030 @pixel=#<Pixel:0x007fc815329080 ...>, @x=1, @y=2>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328fb8
+        @coordinate=#<Pixel::Coordinate:0x007fc815328f90 @pixel=#<Pixel:0x007fc815328fb8 ...>, @x=1, @y=3>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328f40
+        @coordinate=#<Pixel::Coordinate:0x007fc815328f18 @pixel=#<Pixel:0x007fc815328f40 ...>, @x=2, @y=0>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328ef0
+        @coordinate=#<Pixel::Coordinate:0x007fc815328ec8 @pixel=#<Pixel:0x007fc815328ef0 ...>, @x=2, @y=1>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328ea0
+        @coordinate=#<Pixel::Coordinate:0x007fc815328e50 @pixel=#<Pixel:0x007fc815328ea0 ...>, @x=2, @y=2>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328e28
+        @coordinate=#<Pixel::Coordinate:0x007fc815328dd8 @pixel=#<Pixel:0x007fc815328e28 ...>, @x=2, @y=3>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328d88
+        @coordinate=#<Pixel::Coordinate:0x007fc815328d38 @pixel=#<Pixel:0x007fc815328d88 ...>, @x=3, @y=0>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328d10
+        @coordinate=#<Pixel::Coordinate:0x007fc815328cc0 @pixel=#<Pixel:0x007fc815328d10 ...>, @x=3, @y=1>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328c98
+        @coordinate=#<Pixel::Coordinate:0x007fc815328c48 @pixel=#<Pixel:0x007fc815328c98 ...>, @x=3, @y=2>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fc815328bd0
+        @coordinate=#<Pixel::Coordinate:0x007fc815328ba8 @pixel=#<Pixel:0x007fc815328bd0 ...>, @x=3, @y=3>,
+        @image=#<Image:0x007fc8153295a8 @pixels=[...], @x=3, @y=3>>]
+    @image is #<Image:0x007fc8153295a8
+       @pixels=
+        [#<Pixel:0x007fc815329350
+          @coordinate=#<Pixel::Coordinate:0x007fc815329300 @pixel=#<Pixel:0x007fc815329350 ...>, @x=0, @y=0>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc8153292d8
+          @coordinate=#<Pixel::Coordinate:0x007fc815329288 @pixel=#<Pixel:0x007fc8153292d8 ...>, @x=0, @y=1>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815329260
+          @coordinate=#<Pixel::Coordinate:0x007fc815329238 @pixel=#<Pixel:0x007fc815329260 ...>, @x=0, @y=2>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815329210
+          @coordinate=#<Pixel::Coordinate:0x007fc8153291c0 @pixel=#<Pixel:0x007fc815329210 ...>, @x=0, @y=3>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815329120
+          @coordinate=#<Pixel::Coordinate:0x007fc8153290f8 @pixel=#<Pixel:0x007fc815329120 ...>, @x=1, @y=0>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc8153290d0
+          @coordinate=#<Pixel::Coordinate:0x007fc8153290a8 @pixel=#<Pixel:0x007fc8153290d0 ...>, @x=1, @y=1>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815329080
+          @coordinate=#<Pixel::Coordinate:0x007fc815329030 @pixel=#<Pixel:0x007fc815329080 ...>, @x=1, @y=2>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328fb8
+          @coordinate=#<Pixel::Coordinate:0x007fc815328f90 @pixel=#<Pixel:0x007fc815328fb8 ...>, @x=1, @y=3>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328f40
+          @coordinate=#<Pixel::Coordinate:0x007fc815328f18 @pixel=#<Pixel:0x007fc815328f40 ...>, @x=2, @y=0>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328ef0
+          @coordinate=#<Pixel::Coordinate:0x007fc815328ec8 @pixel=#<Pixel:0x007fc815328ef0 ...>, @x=2, @y=1>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328ea0
+          @coordinate=#<Pixel::Coordinate:0x007fc815328e50 @pixel=#<Pixel:0x007fc815328ea0 ...>, @x=2, @y=2>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328e28
+          @coordinate=#<Pixel::Coordinate:0x007fc815328dd8 @pixel=#<Pixel:0x007fc815328e28 ...>, @x=2, @y=3>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328d88
+          @coordinate=#<Pixel::Coordinate:0x007fc815328d38 @pixel=#<Pixel:0x007fc815328d88 ...>, @x=3, @y=0>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328d10
+          @coordinate=#<Pixel::Coordinate:0x007fc815328cc0 @pixel=#<Pixel:0x007fc815328d10 ...>, @x=3, @y=1>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328c98
+          @coordinate=#<Pixel::Coordinate:0x007fc815328c48 @pixel=#<Pixel:0x007fc815328c98 ...>, @x=3, @y=2>,
+          @image=#<Image:0x007fc8153295a8 ...>>,
+         #<Pixel:0x007fc815328bd0
+          @coordinate=#<Pixel::Coordinate:0x007fc815328ba8 @pixel=#<Pixel:0x007fc815328bd0 ...>, @x=3, @y=3>,
+          @image=#<Image:0x007fc8153295a8 ...>>],
+       @x=3,
+       @y=3>
+    count is "9"
+05:53:40.457 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:63:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:53:40.561 [DEBUG] Plugin [Html Report] with pid [88700] has exited
+05:53:40.561 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:53:40.561 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:53:40.561 [INFO] Total time taken: 429ms
+05:54:03.542 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+05:54:03.543 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:54:04.760 [INFO] Executing specification: Image Specification
+05:54:04.761 [INFO] Executing scenario: Create an image
+05:54:04.762 [DEBUG] Executing Step: * create a "3" by "3" image
+05:54:04.763 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:54:05.139 [ERROR] Failed step: check that the image has "9" pixels
+05:54:05.139 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 9
+    @image.pixels is [#<Pixel:0x007f81acd13280
+        @coordinate=#<Pixel::Coordinate:0x007f81acd13230 @pixel=#<Pixel:0x007f81acd13280 ...>, @x=0, @y=0>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f81acd131e0
+        @coordinate=#<Pixel::Coordinate:0x007f81acd13168 @pixel=#<Pixel:0x007f81acd131e0 ...>, @x=0, @y=1>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f81acd13140
+        @coordinate=#<Pixel::Coordinate:0x007f81acd130f0 @pixel=#<Pixel:0x007f81acd13140 ...>, @x=0, @y=2>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f81acd13078
+        @coordinate=#<Pixel::Coordinate:0x007f81acd13050 @pixel=#<Pixel:0x007f81acd13078 ...>, @x=1, @y=0>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f81acd13028
+        @coordinate=#<Pixel::Coordinate:0x007f81acd12fd8 @pixel=#<Pixel:0x007f81acd13028 ...>, @x=1, @y=1>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f81acd12fb0
+        @coordinate=#<Pixel::Coordinate:0x007f81acd12f88 @pixel=#<Pixel:0x007f81acd12fb0 ...>, @x=1, @y=2>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f81acd12f38
+        @coordinate=#<Pixel::Coordinate:0x007f81acd12ee8 @pixel=#<Pixel:0x007f81acd12f38 ...>, @x=2, @y=0>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f81acd12e48
+        @coordinate=#<Pixel::Coordinate:0x007f81acd12e20 @pixel=#<Pixel:0x007f81acd12e48 ...>, @x=2, @y=1>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f81acd12df8
+        @coordinate=#<Pixel::Coordinate:0x007f81acd12dd0 @pixel=#<Pixel:0x007f81acd12df8 ...>, @x=2, @y=2>,
+        @image=#<Image:0x007f81acd13460 @pixels=[...], @x=3, @y=3>>]
+    @image is #<Image:0x007f81acd13460
+       @pixels=
+        [#<Pixel:0x007f81acd13280
+          @coordinate=#<Pixel::Coordinate:0x007f81acd13230 @pixel=#<Pixel:0x007f81acd13280 ...>, @x=0, @y=0>,
+          @image=#<Image:0x007f81acd13460 ...>>,
+         #<Pixel:0x007f81acd131e0
+          @coordinate=#<Pixel::Coordinate:0x007f81acd13168 @pixel=#<Pixel:0x007f81acd131e0 ...>, @x=0, @y=1>,
+          @image=#<Image:0x007f81acd13460 ...>>,
+         #<Pixel:0x007f81acd13140
+          @coordinate=#<Pixel::Coordinate:0x007f81acd130f0 @pixel=#<Pixel:0x007f81acd13140 ...>, @x=0, @y=2>,
+          @image=#<Image:0x007f81acd13460 ...>>,
+         #<Pixel:0x007f81acd13078
+          @coordinate=#<Pixel::Coordinate:0x007f81acd13050 @pixel=#<Pixel:0x007f81acd13078 ...>, @x=1, @y=0>,
+          @image=#<Image:0x007f81acd13460 ...>>,
+         #<Pixel:0x007f81acd13028
+          @coordinate=#<Pixel::Coordinate:0x007f81acd12fd8 @pixel=#<Pixel:0x007f81acd13028 ...>, @x=1, @y=1>,
+          @image=#<Image:0x007f81acd13460 ...>>,
+         #<Pixel:0x007f81acd12fb0
+          @coordinate=#<Pixel::Coordinate:0x007f81acd12f88 @pixel=#<Pixel:0x007f81acd12fb0 ...>, @x=1, @y=2>,
+          @image=#<Image:0x007f81acd13460 ...>>,
+         #<Pixel:0x007f81acd12f38
+          @coordinate=#<Pixel::Coordinate:0x007f81acd12ee8 @pixel=#<Pixel:0x007f81acd12f38 ...>, @x=2, @y=0>,
+          @image=#<Image:0x007f81acd13460 ...>>,
+         #<Pixel:0x007f81acd12e48
+          @coordinate=#<Pixel::Coordinate:0x007f81acd12e20 @pixel=#<Pixel:0x007f81acd12e48 ...>, @x=2, @y=1>,
+          @image=#<Image:0x007f81acd13460 ...>>,
+         #<Pixel:0x007f81acd12df8
+          @coordinate=#<Pixel::Coordinate:0x007f81acd12dd0 @pixel=#<Pixel:0x007f81acd12df8 ...>, @x=2, @y=2>,
+          @image=#<Image:0x007f81acd13460 ...>>],
+       @x=3,
+       @y=3>
+    count is "9"
+05:54:05.139 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:63:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:54:05.249 [DEBUG] Plugin [Html Report] with pid [88763] has exited
+05:54:05.249 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:54:05.249 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:54:05.249 [INFO] Total time taken: 382ms
+05:54:42.836 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:54:44.021 [INFO] Executing specification: Image Specification
+05:54:44.021 [INFO] Executing scenario: Create an image
+05:54:44.022 [DEBUG] Executing Step: * create a "3" by "3" image
+05:54:44.023 [INFO] 0
+0
+05:54:44.023 [INFO] 0
+1
+0
+2
+1
+0
+1
+1
+05:54:44.023 [INFO] 1
+2
+2
+0
+05:54:44.023 [INFO] 
+2
+1
+2
+2
+05:54:44.024 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:54:44.375 [ERROR] Failed step: check that the image has "9" pixels
+05:54:44.375 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 9
+    @image.pixels is [#<Pixel:0x007fe88cb953f8
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb953a8 @pixel=#<Pixel:0x007fe88cb953f8 ...>, @x=0, @y=0>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe88cb95150
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb95100 @pixel=#<Pixel:0x007fe88cb95150 ...>, @x=0, @y=1>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe88cb94fc0
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb94f48 @pixel=#<Pixel:0x007fe88cb94fc0 ...>, @x=0, @y=2>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe88cb94d68
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb94d18 @pixel=#<Pixel:0x007fe88cb94d68 ...>, @x=1, @y=0>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe88cb94bd8
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb94bb0 @pixel=#<Pixel:0x007fe88cb94bd8 ...>, @x=1, @y=1>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe88cb94a70
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb94980 @pixel=#<Pixel:0x007fe88cb94a70 ...>, @x=1, @y=2>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe88cb94818
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb947c8 @pixel=#<Pixel:0x007fe88cb94818 ...>, @x=2, @y=0>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe88cb94660
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb94638 @pixel=#<Pixel:0x007fe88cb94660 ...>, @x=2, @y=1>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe88cb94480
+        @coordinate=#<Pixel::Coordinate:0x007fe88cb94458 @pixel=#<Pixel:0x007fe88cb94480 ...>, @x=2, @y=2>,
+        @image=#<Image:0x007fe88cb95790 @pixels=[...], @x=3, @y=3>>]
+    @image is #<Image:0x007fe88cb95790
+       @pixels=
+        [#<Pixel:0x007fe88cb953f8
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb953a8 @pixel=#<Pixel:0x007fe88cb953f8 ...>, @x=0, @y=0>,
+          @image=#<Image:0x007fe88cb95790 ...>>,
+         #<Pixel:0x007fe88cb95150
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb95100 @pixel=#<Pixel:0x007fe88cb95150 ...>, @x=0, @y=1>,
+          @image=#<Image:0x007fe88cb95790 ...>>,
+         #<Pixel:0x007fe88cb94fc0
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb94f48 @pixel=#<Pixel:0x007fe88cb94fc0 ...>, @x=0, @y=2>,
+          @image=#<Image:0x007fe88cb95790 ...>>,
+         #<Pixel:0x007fe88cb94d68
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb94d18 @pixel=#<Pixel:0x007fe88cb94d68 ...>, @x=1, @y=0>,
+          @image=#<Image:0x007fe88cb95790 ...>>,
+         #<Pixel:0x007fe88cb94bd8
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb94bb0 @pixel=#<Pixel:0x007fe88cb94bd8 ...>, @x=1, @y=1>,
+          @image=#<Image:0x007fe88cb95790 ...>>,
+         #<Pixel:0x007fe88cb94a70
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb94980 @pixel=#<Pixel:0x007fe88cb94a70 ...>, @x=1, @y=2>,
+          @image=#<Image:0x007fe88cb95790 ...>>,
+         #<Pixel:0x007fe88cb94818
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb947c8 @pixel=#<Pixel:0x007fe88cb94818 ...>, @x=2, @y=0>,
+          @image=#<Image:0x007fe88cb95790 ...>>,
+         #<Pixel:0x007fe88cb94660
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb94638 @pixel=#<Pixel:0x007fe88cb94660 ...>, @x=2, @y=1>,
+          @image=#<Image:0x007fe88cb95790 ...>>,
+         #<Pixel:0x007fe88cb94480
+          @coordinate=#<Pixel::Coordinate:0x007fe88cb94458 @pixel=#<Pixel:0x007fe88cb94480 ...>, @x=2, @y=2>,
+          @image=#<Image:0x007fe88cb95790 ...>>],
+       @x=3,
+       @y=3>
+    count is "9"
+05:54:44.375 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:65:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:54:44.481 [DEBUG] Plugin [Html Report] with pid [88887] has exited
+05:54:44.481 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:54:44.481 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:54:44.481 [INFO] Total time taken: 358ms
+05:55:04.719 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+05:55:04.719 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:55:05.897 [INFO] Executing specification: Image Specification
+05:55:05.898 [INFO] Executing scenario: Create an image
+05:55:05.898 [DEBUG] Executing Step: * create a "3" by "3" image
+05:55:05.899 [INFO] 1
+1
+1
+05:55:05.899 [INFO] 2
+1
+3
+2
+1
+2
+2
+05:55:05.899 [INFO] 
+2
+3
+3
+05:55:05.899 [INFO] 
+1
+3
+05:55:05.899 [INFO] 2
+3
+3
+05:55:05.899 [INFO] 
+05:55:05.900 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:55:06.263 [ERROR] Failed step: check that the image has "9" pixels
+05:55:06.263 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 9
+    @image.pixels is [#<Pixel:0x007fe9f48d6838
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d6810 @pixel=#<Pixel:0x007fe9f48d6838 ...>, @x=1, @y=1>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe9f48d6680
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d65b8 @pixel=#<Pixel:0x007fe9f48d6680 ...>, @x=1, @y=2>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe9f48d6388
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d6310 @pixel=#<Pixel:0x007fe9f48d6388 ...>, @x=1, @y=3>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe9f48d6180
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d6130 @pixel=#<Pixel:0x007fe9f48d6180 ...>, @x=2, @y=1>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe9f48d5f00
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d5ed8 @pixel=#<Pixel:0x007fe9f48d5f00 ...>, @x=2, @y=2>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe9f48d5d20
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d5cd0 @pixel=#<Pixel:0x007fe9f48d5d20 ...>, @x=2, @y=3>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe9f48d5ac8
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d5aa0 @pixel=#<Pixel:0x007fe9f48d5ac8 ...>, @x=3, @y=1>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe9f48d5898
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d5870 @pixel=#<Pixel:0x007fe9f48d5898 ...>, @x=3, @y=2>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fe9f48d5690
+        @coordinate=#<Pixel::Coordinate:0x007fe9f48d5618 @pixel=#<Pixel:0x007fe9f48d5690 ...>, @x=3, @y=3>,
+        @image=#<Image:0x007fe9f48d6f40 @pixels=[...], @x=3, @y=3>>]
+    @image is #<Image:0x007fe9f48d6f40
+       @pixels=
+        [#<Pixel:0x007fe9f48d6838
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d6810 @pixel=#<Pixel:0x007fe9f48d6838 ...>, @x=1, @y=1>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>,
+         #<Pixel:0x007fe9f48d6680
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d65b8 @pixel=#<Pixel:0x007fe9f48d6680 ...>, @x=1, @y=2>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>,
+         #<Pixel:0x007fe9f48d6388
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d6310 @pixel=#<Pixel:0x007fe9f48d6388 ...>, @x=1, @y=3>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>,
+         #<Pixel:0x007fe9f48d6180
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d6130 @pixel=#<Pixel:0x007fe9f48d6180 ...>, @x=2, @y=1>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>,
+         #<Pixel:0x007fe9f48d5f00
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d5ed8 @pixel=#<Pixel:0x007fe9f48d5f00 ...>, @x=2, @y=2>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>,
+         #<Pixel:0x007fe9f48d5d20
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d5cd0 @pixel=#<Pixel:0x007fe9f48d5d20 ...>, @x=2, @y=3>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>,
+         #<Pixel:0x007fe9f48d5ac8
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d5aa0 @pixel=#<Pixel:0x007fe9f48d5ac8 ...>, @x=3, @y=1>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>,
+         #<Pixel:0x007fe9f48d5898
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d5870 @pixel=#<Pixel:0x007fe9f48d5898 ...>, @x=3, @y=2>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>,
+         #<Pixel:0x007fe9f48d5690
+          @coordinate=#<Pixel::Coordinate:0x007fe9f48d5618 @pixel=#<Pixel:0x007fe9f48d5690 ...>, @x=3, @y=3>,
+          @image=#<Image:0x007fe9f48d6f40 ...>>],
+       @x=3,
+       @y=3>
+    count is "9"
+05:55:06.264 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:65:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:55:06.371 [DEBUG] Plugin [Html Report] with pid [88944] has exited
+05:55:06.371 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:55:06.371 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:55:06.371 [INFO] Total time taken: 370ms
+05:55:15.888 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+05:55:15.888 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:55:16.938 [INFO] Executing specification: Image Specification
+05:55:16.938 [INFO] Executing scenario: Create an image
+05:55:16.939 [DEBUG] Executing Step: * create a "3" by "3" image
+05:55:16.940 [INFO] 1
+1
+05:55:16.940 [INFO] 1
+2
+1
+3
+2
+1
+2
+2
+2
+3
+3
+1
+3
+2
+05:55:16.940 [INFO] 
+3
+3
+05:55:16.941 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:55:17.299 [ERROR] Failed step: check that the image has "9" pixels
+05:55:17.299 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 9
+    @image.pixels is [#<Pixel:0x007fd3a71d3ad0
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d3a58 @pixel=#<Pixel:0x007fd3a71d3ad0 ...>, @x=1, @y=1>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd3a71d3850
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d3800 @pixel=#<Pixel:0x007fd3a71d3850 ...>, @x=1, @y=2>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd3a71d3670
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d3620 @pixel=#<Pixel:0x007fd3a71d3670 ...>, @x=1, @y=3>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd3a71d34b8
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d3490 @pixel=#<Pixel:0x007fd3a71d34b8 ...>, @x=2, @y=1>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd3a71d3328
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d3300 @pixel=#<Pixel:0x007fd3a71d3328 ...>, @x=2, @y=2>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd3a71d3198
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d30f8 @pixel=#<Pixel:0x007fd3a71d3198 ...>, @x=2, @y=3>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd3a71d2fb8
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d2f90 @pixel=#<Pixel:0x007fd3a71d2fb8 ...>, @x=3, @y=1>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd3a71d2d10
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d2ce8 @pixel=#<Pixel:0x007fd3a71d2d10 ...>, @x=3, @y=2>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd3a71d2b58
+        @coordinate=#<Pixel::Coordinate:0x007fd3a71d2ae0 @pixel=#<Pixel:0x007fd3a71d2b58 ...>, @x=3, @y=3>,
+        @image=#<Image:0x007fd3a71d3e90 @pixels=[...], @x=3, @y=3>>]
+    @image is #<Image:0x007fd3a71d3e90
+       @pixels=
+        [#<Pixel:0x007fd3a71d3ad0
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d3a58 @pixel=#<Pixel:0x007fd3a71d3ad0 ...>, @x=1, @y=1>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>,
+         #<Pixel:0x007fd3a71d3850
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d3800 @pixel=#<Pixel:0x007fd3a71d3850 ...>, @x=1, @y=2>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>,
+         #<Pixel:0x007fd3a71d3670
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d3620 @pixel=#<Pixel:0x007fd3a71d3670 ...>, @x=1, @y=3>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>,
+         #<Pixel:0x007fd3a71d34b8
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d3490 @pixel=#<Pixel:0x007fd3a71d34b8 ...>, @x=2, @y=1>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>,
+         #<Pixel:0x007fd3a71d3328
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d3300 @pixel=#<Pixel:0x007fd3a71d3328 ...>, @x=2, @y=2>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>,
+         #<Pixel:0x007fd3a71d3198
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d30f8 @pixel=#<Pixel:0x007fd3a71d3198 ...>, @x=2, @y=3>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>,
+         #<Pixel:0x007fd3a71d2fb8
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d2f90 @pixel=#<Pixel:0x007fd3a71d2fb8 ...>, @x=3, @y=1>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>,
+         #<Pixel:0x007fd3a71d2d10
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d2ce8 @pixel=#<Pixel:0x007fd3a71d2d10 ...>, @x=3, @y=2>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>,
+         #<Pixel:0x007fd3a71d2b58
+          @coordinate=#<Pixel::Coordinate:0x007fd3a71d2ae0 @pixel=#<Pixel:0x007fd3a71d2b58 ...>, @x=3, @y=3>,
+          @image=#<Image:0x007fd3a71d3e90 ...>>],
+       @x=3,
+       @y=3>
+    count is "9"
+05:55:17.299 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:65:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:55:17.409 [DEBUG] Plugin [Html Report] with pid [89012] has exited
+05:55:17.409 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:55:17.409 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:55:17.409 [INFO] Total time taken: 365ms
+05:55:53.047 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:55:54.360 [INFO] Executing specification: Image Specification
+05:55:54.360 [INFO] Executing scenario: Create an image
+05:55:54.361 [DEBUG] Executing Step: * create a "3" by "3" image
+05:55:54.362 [INFO] 1
+1
+05:55:54.362 [INFO] 
+1
+2
+1
+3
+2
+05:55:54.362 [INFO] 
+1
+2
+2
+2
+05:55:54.362 [INFO] 
+3
+3
+1
+05:55:54.362 [INFO] 
+3
+2
+3
+3
+05:55:54.364 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:55:54.742 [ERROR] Failed step: check that the image has "9" pixels
+05:55:54.742 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 9
+    @image.pixels is [#<Pixel:0x007f8f3395f398
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395f370 @pixel=#<Pixel:0x007f8f3395f398 ...>, @x=1, @y=1>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f8f3395f258
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395f1e0 @pixel=#<Pixel:0x007f8f3395f258 ...>, @x=1, @y=2>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f8f3395f0f0
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395f0c8 @pixel=#<Pixel:0x007f8f3395f0f0 ...>, @x=1, @y=3>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f8f3395ef60
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395ef38 @pixel=#<Pixel:0x007f8f3395ef60 ...>, @x=2, @y=1>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f8f3395ee70
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395ee20 @pixel=#<Pixel:0x007f8f3395ee70 ...>, @x=2, @y=2>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f8f3395ecb8
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395ec68 @pixel=#<Pixel:0x007f8f3395ecb8 ...>, @x=2, @y=3>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f8f3395ea88
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395ea60 @pixel=#<Pixel:0x007f8f3395ea88 ...>, @x=3, @y=1>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f8f3395e948
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395e920 @pixel=#<Pixel:0x007f8f3395e948 ...>, @x=3, @y=2>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f8f3395e7e0
+        @coordinate=#<Pixel::Coordinate:0x007f8f3395e768 @pixel=#<Pixel:0x007f8f3395e7e0 ...>, @x=3, @y=3>,
+        @image=#<Image:0x007f8f3395f640 @pixels=[...], @x=3, @y=3>>]
+    @image is #<Image:0x007f8f3395f640
+       @pixels=
+        [#<Pixel:0x007f8f3395f398
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395f370 @pixel=#<Pixel:0x007f8f3395f398 ...>, @x=1, @y=1>,
+          @image=#<Image:0x007f8f3395f640 ...>>,
+         #<Pixel:0x007f8f3395f258
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395f1e0 @pixel=#<Pixel:0x007f8f3395f258 ...>, @x=1, @y=2>,
+          @image=#<Image:0x007f8f3395f640 ...>>,
+         #<Pixel:0x007f8f3395f0f0
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395f0c8 @pixel=#<Pixel:0x007f8f3395f0f0 ...>, @x=1, @y=3>,
+          @image=#<Image:0x007f8f3395f640 ...>>,
+         #<Pixel:0x007f8f3395ef60
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395ef38 @pixel=#<Pixel:0x007f8f3395ef60 ...>, @x=2, @y=1>,
+          @image=#<Image:0x007f8f3395f640 ...>>,
+         #<Pixel:0x007f8f3395ee70
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395ee20 @pixel=#<Pixel:0x007f8f3395ee70 ...>, @x=2, @y=2>,
+          @image=#<Image:0x007f8f3395f640 ...>>,
+         #<Pixel:0x007f8f3395ecb8
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395ec68 @pixel=#<Pixel:0x007f8f3395ecb8 ...>, @x=2, @y=3>,
+          @image=#<Image:0x007f8f3395f640 ...>>,
+         #<Pixel:0x007f8f3395ea88
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395ea60 @pixel=#<Pixel:0x007f8f3395ea88 ...>, @x=3, @y=1>,
+          @image=#<Image:0x007f8f3395f640 ...>>,
+         #<Pixel:0x007f8f3395e948
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395e920 @pixel=#<Pixel:0x007f8f3395e948 ...>, @x=3, @y=2>,
+          @image=#<Image:0x007f8f3395f640 ...>>,
+         #<Pixel:0x007f8f3395e7e0
+          @coordinate=#<Pixel::Coordinate:0x007f8f3395e768 @pixel=#<Pixel:0x007f8f3395e7e0 ...>, @x=3, @y=3>,
+          @image=#<Image:0x007f8f3395f640 ...>>],
+       @x=3,
+       @y=3>
+    count is "9"
+05:55:54.743 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:65:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:55:54.852 [DEBUG] Plugin [Html Report] with pid [89856] has exited
+05:55:54.852 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:55:54.852 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:55:54.852 [INFO] Total time taken: 387ms
+05:56:00.886 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:56:01.991 [INFO] Executing specification: Image Specification
+05:56:01.991 [INFO] Executing scenario: Create an image
+05:56:01.992 [DEBUG] Executing Step: * create a "3" by "3" image
+05:56:01.993 [INFO] 1
+05:56:01.993 [INFO] 1
+1
+2
+1
+3
+2
+1
+2
+2
+2
+3
+3
+1
+05:56:01.993 [INFO] 3
+2
+3
+05:56:01.993 [INFO] 3
+05:56:01.994 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:56:02.351 [ERROR] Failed step: check that the image has "9" pixels
+05:56:02.351 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 9
+    @image.pixels is [#<Pixel:0x007f9f162234b0
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16223460
+          @pixel=#<Pixel:0x007f9f162234b0 ...>,
+          @x=1,
+          @y=1>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f9f162232d0
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16223280
+          @pixel=#<Pixel:0x007f9f162232d0 ...>,
+          @x=1,
+          @y=2>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f9f16223168
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16223118
+          @pixel=#<Pixel:0x007f9f16223168 ...>,
+          @x=1,
+          @y=3>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f9f16222f10
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16222ec0
+          @pixel=#<Pixel:0x007f9f16222f10 ...>,
+          @x=2,
+          @y=1>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f9f16222da8
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16222d30
+          @pixel=#<Pixel:0x007f9f16222da8 ...>,
+          @x=2,
+          @y=2>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f9f16222c68
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16222c18
+          @pixel=#<Pixel:0x007f9f16222c68 ...>,
+          @x=2,
+          @y=3>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f9f16222ab0
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16222a88
+          @pixel=#<Pixel:0x007f9f16222ab0 ...>,
+          @x=3,
+          @y=1>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f9f16222948
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16222920
+          @pixel=#<Pixel:0x007f9f16222948 ...>,
+          @x=3,
+          @y=2>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007f9f16222830
+        @coordinate=
+         #<Pixel::Coordinate:0x007f9f16222808
+          @pixel=#<Pixel:0x007f9f16222830 ...>,
+          @x=3,
+          @y=3>,
+        @image=#<Image:0x007f9f162237d0 @pixels=[...], @x=3, @y=3>>]
+    @image is #<Image:0x007f9f162237d0
+       @pixels=
+        [#<Pixel:0x007f9f162234b0
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16223460
+            @pixel=#<Pixel:0x007f9f162234b0 ...>,
+            @x=1,
+            @y=1>,
+          @image=#<Image:0x007f9f162237d0 ...>>,
+         #<Pixel:0x007f9f162232d0
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16223280
+            @pixel=#<Pixel:0x007f9f162232d0 ...>,
+            @x=1,
+            @y=2>,
+          @image=#<Image:0x007f9f162237d0 ...>>,
+         #<Pixel:0x007f9f16223168
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16223118
+            @pixel=#<Pixel:0x007f9f16223168 ...>,
+            @x=1,
+            @y=3>,
+          @image=#<Image:0x007f9f162237d0 ...>>,
+         #<Pixel:0x007f9f16222f10
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16222ec0
+            @pixel=#<Pixel:0x007f9f16222f10 ...>,
+            @x=2,
+            @y=1>,
+          @image=#<Image:0x007f9f162237d0 ...>>,
+         #<Pixel:0x007f9f16222da8
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16222d30
+            @pixel=#<Pixel:0x007f9f16222da8 ...>,
+            @x=2,
+            @y=2>,
+          @image=#<Image:0x007f9f162237d0 ...>>,
+         #<Pixel:0x007f9f16222c68
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16222c18
+            @pixel=#<Pixel:0x007f9f16222c68 ...>,
+            @x=2,
+            @y=3>,
+          @image=#<Image:0x007f9f162237d0 ...>>,
+         #<Pixel:0x007f9f16222ab0
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16222a88
+            @pixel=#<Pixel:0x007f9f16222ab0 ...>,
+            @x=3,
+            @y=1>,
+          @image=#<Image:0x007f9f162237d0 ...>>,
+         #<Pixel:0x007f9f16222948
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16222920
+            @pixel=#<Pixel:0x007f9f16222948 ...>,
+            @x=3,
+            @y=2>,
+          @image=#<Image:0x007f9f162237d0 ...>>,
+         #<Pixel:0x007f9f16222830
+          @coordinate=
+           #<Pixel::Coordinate:0x007f9f16222808
+            @pixel=#<Pixel:0x007f9f16222830 ...>,
+            @x=3,
+            @y=3>,
+          @image=#<Image:0x007f9f162237d0 ...>>],
+       @x=3,
+       @y=3>
+    count is "9"
+05:56:02.352 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:65:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:56:02.460 [DEBUG] Plugin [Html Report] with pid [89939] has exited
+05:56:02.461 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:56:02.461 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:56:02.461 [INFO] Total time taken: 365ms
+05:56:06.872 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:56:08.176 [INFO] Executing specification: Image Specification
+05:56:08.176 [INFO] Executing scenario: Create an image
+05:56:08.177 [DEBUG] Executing Step: * create a "3" by "3" image
+05:56:08.178 [INFO] 1
+1
+05:56:08.178 [INFO] 
+1
+2
+1
+3
+2
+1
+2
+2
+05:56:08.178 [INFO] 
+2
+3
+3
+1
+3
+05:56:08.178 [INFO] 
+2
+3
+3
+05:56:08.179 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:56:08.581 [ERROR] Failed step: check that the image has "9" pixels
+05:56:08.581 [ERROR] Error Message: Expected (@image.pixels.count == count), but
+    @image.pixels.count is 9
+    @image.pixels is [#<Pixel:0x007fd5426e15f8
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e15a8
+          @pixel=#<Pixel:0x007fd5426e15f8 ...>,
+          @x=1,
+          @y=1>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd5426e1490
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e1468
+          @pixel=#<Pixel:0x007fd5426e1490 ...>,
+          @x=1,
+          @y=2>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd5426e1350
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e1328
+          @pixel=#<Pixel:0x007fd5426e1350 ...>,
+          @x=1,
+          @y=3>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd5426e1210
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e11e8
+          @pixel=#<Pixel:0x007fd5426e1210 ...>,
+          @x=2,
+          @y=1>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd5426e10f8
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e10d0
+          @pixel=#<Pixel:0x007fd5426e10f8 ...>,
+          @x=2,
+          @y=2>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd5426e0fe0
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e0fb8
+          @pixel=#<Pixel:0x007fd5426e0fe0 ...>,
+          @x=2,
+          @y=3>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd5426e0ec8
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e0e78
+          @pixel=#<Pixel:0x007fd5426e0ec8 ...>,
+          @x=3,
+          @y=1>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd5426e0db0
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e0d88
+          @pixel=#<Pixel:0x007fd5426e0db0 ...>,
+          @x=3,
+          @y=2>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>,
+       #<Pixel:0x007fd5426e0c70
+        @coordinate=
+         #<Pixel::Coordinate:0x007fd5426e0c48
+          @pixel=#<Pixel:0x007fd5426e0c70 ...>,
+          @x=3,
+          @y=3>,
+        @image=#<Image:0x007fd5426e1828 @pixels=[...], @x=3, @y=3>>]
+    @image is #<Image:0x007fd5426e1828
+       @pixels=
+        [#<Pixel:0x007fd5426e15f8
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e15a8
+            @pixel=#<Pixel:0x007fd5426e15f8 ...>,
+            @x=1,
+            @y=1>,
+          @image=#<Image:0x007fd5426e1828 ...>>,
+         #<Pixel:0x007fd5426e1490
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e1468
+            @pixel=#<Pixel:0x007fd5426e1490 ...>,
+            @x=1,
+            @y=2>,
+          @image=#<Image:0x007fd5426e1828 ...>>,
+         #<Pixel:0x007fd5426e1350
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e1328
+            @pixel=#<Pixel:0x007fd5426e1350 ...>,
+            @x=1,
+            @y=3>,
+          @image=#<Image:0x007fd5426e1828 ...>>,
+         #<Pixel:0x007fd5426e1210
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e11e8
+            @pixel=#<Pixel:0x007fd5426e1210 ...>,
+            @x=2,
+            @y=1>,
+          @image=#<Image:0x007fd5426e1828 ...>>,
+         #<Pixel:0x007fd5426e10f8
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e10d0
+            @pixel=#<Pixel:0x007fd5426e10f8 ...>,
+            @x=2,
+            @y=2>,
+          @image=#<Image:0x007fd5426e1828 ...>>,
+         #<Pixel:0x007fd5426e0fe0
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e0fb8
+            @pixel=#<Pixel:0x007fd5426e0fe0 ...>,
+            @x=2,
+            @y=3>,
+          @image=#<Image:0x007fd5426e1828 ...>>,
+         #<Pixel:0x007fd5426e0ec8
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e0e78
+            @pixel=#<Pixel:0x007fd5426e0ec8 ...>,
+            @x=3,
+            @y=1>,
+          @image=#<Image:0x007fd5426e1828 ...>>,
+         #<Pixel:0x007fd5426e0db0
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e0d88
+            @pixel=#<Pixel:0x007fd5426e0db0 ...>,
+            @x=3,
+            @y=2>,
+          @image=#<Image:0x007fd5426e1828 ...>>,
+         #<Pixel:0x007fd5426e0c70
+          @coordinate=
+           #<Pixel::Coordinate:0x007fd5426e0c48
+            @pixel=#<Pixel:0x007fd5426e0c70 ...>,
+            @x=3,
+            @y=3>,
+          @image=#<Image:0x007fd5426e1828 ...>>],
+       @x=3,
+       @y=3>
+    count is "9"
+05:56:08.582 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:65:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+05:56:08.690 [DEBUG] Plugin [Html Report] with pid [89967] has exited
+05:56:08.690 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:56:08.690 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+05:56:08.690 [INFO] Total time taken: 409ms
+05:57:14.450 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:57:15.781 [INFO] Executing specification: Image Specification
+05:57:15.782 [INFO] Executing scenario: Create an image
+05:57:15.783 [DEBUG] Executing Step: * create a "3" by "3" image
+05:57:15.784 [INFO] 1
+05:57:15.784 [INFO] 1
+1
+2
+1
+3
+2
+05:57:15.784 [INFO] 1
+2
+2
+2
+3
+3
+1
+3
+2
+3
+3
+05:57:15.785 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:57:15.893 [DEBUG] Plugin [Html Report] with pid [90112] has exited
+05:57:15.893 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+05:57:15.893 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+05:57:15.893 [INFO] Total time taken: 9ms
+05:57:33.558 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:57:34.804 [INFO] Executing specification: Image Specification
+05:57:34.804 [INFO] Executing scenario: Create an image
+05:57:34.805 [DEBUG] Executing Step: * create a "3" by "3" image
+05:57:34.806 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:57:34.915 [DEBUG] Plugin [Html Report] with pid [90165] has exited
+05:57:34.915 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+05:57:34.915 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+05:57:34.915 [INFO] Total time taken: 6ms
