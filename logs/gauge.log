@@ -12935,3 +12935,872 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 09:15:30.383 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 09:15:30.383 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
 09:15:30.383 [INFO] Total time taken: 3ms
+09:17:54.802 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:17:54.802 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:17:56.006 [INFO] Executing specification: Image Specification
+09:17:56.112 [DEBUG] Plugin [Html Report] with pid [7371] has exited
+09:17:56.112 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:17:56.112 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+09:17:56.112 [INFO] Total time taken: 2ms
+09:19:00.632 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:19:01.750 [ERROR] Validation failed. The following steps have errors
+09:19:01.750 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:11: Step implementation not found. initialize images
+09:19:01.809 [INFO] Executing specification: Image Specification
+09:19:01.914 [DEBUG] Plugin [Html Report] with pid [7535] has exited
+09:19:01.915 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:19:01.915 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 1 skipped
+09:19:01.915 [INFO] Total time taken: 3ms
+09:19:20.787 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:19:21.969 [INFO] Executing specification: Image Specification
+09:19:21.969 [INFO] Executing scenario: Create Images
+09:19:21.970 [DEBUG] Executing Step: * initialize images 
+     |x  |y  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:19:22.259 [ERROR] Failed step: initialize images
+09:19:22.259 [ERROR] Error Message: undefined method `x' for #<Image:0x007fd82d4a5e18 @width=3, @height=3, @pixels=[]>
+09:19:22.259 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:19:22.367 [DEBUG] Plugin [Html Report] with pid [7592] has exited
+09:19:22.367 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:19:22.367 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:19:22.367 [INFO] Total time taken: 294ms
+09:19:49.204 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:19:50.257 [INFO] Executing specification: Image Specification
+09:19:50.258 [INFO] Executing scenario: Create Images
+09:19:50.258 [DEBUG] Executing Step: * initialize images 
+     |x  |y  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:19:50.526 [ERROR] Failed step: initialize images
+09:19:50.526 [ERROR] Error Message: bad value for range
+09:19:50.526 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `block in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:26:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:26:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:19:50.633 [DEBUG] Plugin [Html Report] with pid [7703] has exited
+09:19:50.633 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:19:50.633 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:19:50.633 [INFO] Total time taken: 273ms
+09:20:07.577 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:20:08.608 [INFO] Executing specification: Image Specification
+09:20:08.609 [INFO] Executing scenario: Create Images
+09:20:08.609 [DEBUG] Executing Step: * initialize images 
+     |x  |y  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:20:08.752 [DEBUG] Plugin [Html Report] with pid [7759] has exited
+09:20:08.752 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:20:08.752 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:20:08.752 [INFO] Total time taken: 43ms
+09:20:44.675 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:20:44.675 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:20:45.713 [INFO] Executing specification: Image Specification
+09:20:45.713 [INFO] Executing scenario: Create Images
+09:20:45.714 [DEBUG] Executing Step: * initialize images 
+     |x  |y  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+     |251|250|0          |none     |
+09:20:46.064 [ERROR] Failed step: initialize images
+09:20:46.064 [ERROR] Error Message: 251 is greater than the maximum width of 250
+09:20:46.064 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:20:46.174 [DEBUG] Plugin [Html Report] with pid [7866] has exited
+09:20:46.174 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:20:46.174 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:20:46.174 [INFO] Total time taken: 356ms
+09:21:57.627 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:21:57.627 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:21:58.676 [INFO] Executing specification: Image Specification
+09:21:58.676 [INFO] Executing scenario: Create Images
+09:21:58.677 [DEBUG] Executing Step: * initialize images 
+     |x  |y  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+     |251|250|0          |none     |
+09:21:58.980 [ERROR] Failed step: initialize images
+09:21:58.980 [ERROR] Error Message: A width of 251 is greater than the maximum width of 250
+09:21:58.980 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:21:59.088 [DEBUG] Plugin [Html Report] with pid [8028] has exited
+09:21:59.088 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:21:59.088 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:21:59.088 [INFO] Total time taken: 308ms
+09:25:07.121 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:25:08.168 [ERROR] Validation failed. The following steps have errors
+09:25:08.169 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:18: Step implementation not found. initialize invalid images
+09:25:08.180 [INFO] Executing specification: Image Specification
+09:25:08.283 [DEBUG] Plugin [Html Report] with pid [8473] has exited
+09:25:08.283 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:25:08.283 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 1 skipped
+09:25:08.283 [INFO] Total time taken: 2ms
+09:30:37.212 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:30:38.422 [INFO] Executing specification: Image Specification
+09:30:38.423 [INFO] Executing scenario: Create Images
+09:30:38.424 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+     |251|250|0          |none     |
+09:30:38.742 [ERROR] Failed step: initialize valid images
+09:30:38.742 [ERROR] Error Message: A width of 251 is greater than the maximum width of 250
+09:30:38.742 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:30:38.851 [DEBUG] Plugin [Html Report] with pid [9196] has exited
+09:30:38.851 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:30:38.851 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:30:38.851 [INFO] Total time taken: 324ms
+09:31:19.318 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:31:20.452 [INFO] Executing specification: Image Specification
+09:31:20.452 [INFO] Executing scenario: Create Images
+09:31:20.453 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+     |251|250|0          |none     |
+09:31:20.792 [ERROR] Failed step: initialize valid images
+09:31:20.792 [ERROR] Error Message: A width of 251 is greater than the maximum width of 250
+09:31:20.792 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:31:20.900 [DEBUG] Plugin [Html Report] with pid [9299] has exited
+09:31:20.900 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:31:20.900 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:31:20.900 [INFO] Total time taken: 344ms
+09:32:58.154 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:32:58.155 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:32:58.302 [INFO] /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+09:32:58.302 [INFO] : /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:65: syntax error, unexpected tSTRING_DEND, expecting keyword_end (SyntaxError)
+/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:69: syntax error, unexpected end-of-input, expecting keyword_end
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `block in load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `each'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:75:in `<module:Runtime>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	from -e:1:in `<main>'
+09:32:58.308 [ERROR] Validation failed. The following steps have errors
+09:32:58.308 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:11: write tcp [::1]:54815->[::1]:54819: use of closed network connection. initialize valid images
+09:32:58.308 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:18: write tcp [::1]:54815->[::1]:54819: use of closed network connection. initialize invalid images
+09:32:58.316 [INFO] Failed to start Gauge Ruby runner. exit status 1
+09:32:58.316 [DEBUG] Runner exited with error: exit status 1
+09:32:58.317 [ERROR] Failed to initialize suite datastore. Error: write tcp [::1]:54815->[::1]:54819: use of closed network connection
+09:32:58.419 [DEBUG] Plugin [Html Report] with pid [9509] has exited
+09:32:58.420 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 0 skipped
+09:32:58.420 [INFO] Scenarios: 	-1 executed, -1 passed, 0 failed, 1 skipped
+09:32:58.420 [INFO] Total time taken: 0
+09:39:37.448 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:39:37.450 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:39:38.605 [INFO] Executing specification: Image Specification
+09:39:38.606 [INFO] Executing scenario: Create Images
+09:39:38.606 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+     |251|250|0          |none     |
+09:39:38.931 [ERROR] Failed step: initialize valid images
+09:39:38.931 [ERROR] Error Message: A width of 251 is greater than the maximum width of 250
+09:39:38.931 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:39:39.040 [DEBUG] Plugin [Html Report] with pid [10468] has exited
+09:39:39.040 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:39:39.040 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:39:39.040 [INFO] Total time taken: 330ms
+09:40:45.762 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:40:45.763 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:40:46.924 [INFO] Executing specification: Image Specification
+09:40:46.925 [INFO] Executing scenario: Create Images
+09:40:46.926 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+     |251|250|0          |none     |
+09:40:47.280 [ERROR] Failed step: initialize valid images
+09:40:47.280 [ERROR] Error Message: A width of 251 is greater than the maximum width of 250
+09:40:47.280 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:40:47.391 [DEBUG] Plugin [Html Report] with pid [10656] has exited
+09:40:47.391 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:40:47.391 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:40:47.391 [INFO] Total time taken: 362ms
+09:42:09.504 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:42:09.504 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:42:10.538 [INFO] Executing specification: Image Specification
+09:42:10.538 [INFO] Executing scenario: Create Images
+09:42:10.539 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+     |251|250|0          |none     |
+09:42:10.878 [ERROR] Failed step: initialize valid images
+09:42:10.878 [ERROR] Error Message: A width of 251 is greater than the maximum width of 250
+09:42:10.878 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:21:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:56:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:55:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:42:10.987 [DEBUG] Plugin [Html Report] with pid [10843] has exited
+09:42:10.987 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:42:10.987 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:42:10.987 [INFO] Total time taken: 344ms
+09:42:59.505 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:42:59.506 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:43:00.565 [INFO] Executing specification: Image Specification
+09:43:00.565 [INFO] Executing scenario: Create Images
+09:43:00.566 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:43:00.625 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                      |
+     |---|---|-------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250|
+09:43:00.664 [INFO] 
+[1mFrom:[0m /Users/coocoder/Desktop/carwow/step_implementations/steps.rb @ line 63 :
+
+    [1;34m58[0m:   [32mend[0m
+    [1;34m59[0m: [32mend[0m
+    [1;34m60[0m: 
+    [1;34m61[0m: step [31m[1;31m'[0m[31minitialize invalid images <table>[1;31m'[0m[31m[0m [32mdo[0m |table|
+    [1;34m62[0m:   table.rows.each [32mdo[0m |row|
+ => [1;34m63[0m:     binding.pry
+    [1;34m64[0m:     rescuing{[1;34;4mImage[0m.new(row[[1;34m0[0m].to_i,row[[1;34m1[0m].to_i)}
+    [1;34m65[0m:   [32mend[0m
+    [1;34m66[0m: [32mend[0m
+
+09:43:00.664 [INFO] [0G
+09:43:00.666 [INFO] [1] pry(main)> 
+09:43:26.682 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:43:26.682 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:43:27.740 [INFO] Executing specification: Image Specification
+09:43:27.741 [INFO] Executing scenario: Create Images
+09:43:27.741 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:43:27.781 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                      |
+     |---|---|-------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250|
+09:43:27.889 [DEBUG] Plugin [Html Report] with pid [11043] has exited
+09:43:27.889 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:43:27.889 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:43:27.889 [INFO] Total time taken: 45ms
+09:43:36.939 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:43:36.940 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:43:37.975 [INFO] Executing specification: Image Specification
+09:43:37.975 [INFO] Executing scenario: Create Images
+09:43:37.976 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:43:38.017 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                      |
+     |---|---|-------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250|
+09:43:38.018 [INFO] A width of 251 is greater than the maximum width of 250
+09:43:38.124 [DEBUG] Plugin [Html Report] with pid [11078] has exited
+09:43:38.124 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:43:38.124 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:43:38.124 [INFO] Total time taken: 46ms
+09:44:05.572 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:44:06.644 [INFO] Executing specification: Image Specification
+09:44:06.645 [INFO] Executing scenario: Create Images
+09:44:06.645 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:44:06.704 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                      |
+     |---|---|-------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250|
+09:44:06.811 [DEBUG] Plugin [Html Report] with pid [11145] has exited
+09:44:06.811 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:44:06.811 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:44:06.811 [INFO] Total time taken: 63ms
+09:45:19.905 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:45:19.906 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:45:21.084 [INFO] Executing specification: Image Specification
+09:45:21.084 [INFO] Executing scenario: Create Images
+09:45:21.085 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:45:21.126 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                      |
+     |---|---|-------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250|
+     |250|251|A width of 251 is greater than the maximum width of 250|
+09:45:21.422 [ERROR] Failed step: initialize invalid images
+09:45:21.422 [ERROR] Error Message: Expected (rescuing { Image.new(row[0].to_i, row[1].to_i) }.message == row[2]), but
+Strings differ at position 2:
+ first: "A height of 251 is greater than the maximum height of 250"
+second: "A width of 251 is greater than the maximum width of 250"
+    rescuing { Image.new(row[0].to_i, row[1].to_i) }.message is "A height of 251 is greater than the maximum height of 250"
+    Image.new(row[0].to_i, row[1].to_i) raises InvalidHeightError: A height of 251 is greater than the maximum height of 250
+    row[0].to_i is 250
+    row[0] is "250"
+    row is ["250", "251", "A width of 251 is greater than the maximum width of 250"]
+    row[1].to_i is 251
+    row[1] is "251"
+    row[2] is "A width of 251 is greater than the maximum width of 250"
+09:45:21.422 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:63:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:45:21.530 [DEBUG] Plugin [Html Report] with pid [11376] has exited
+09:45:21.530 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:45:21.530 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:45:21.530 [INFO] Total time taken: 343ms
+09:45:46.451 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:45:47.540 [INFO] Executing specification: Image Specification
+09:45:47.541 [INFO] Executing scenario: Create Images
+09:45:47.541 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:45:47.592 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+09:45:47.701 [DEBUG] Plugin [Html Report] with pid [11445] has exited
+09:45:47.701 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:45:47.701 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:45:47.701 [INFO] Total time taken: 56ms
+09:46:14.411 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:46:15.463 [INFO] Executing specification: Image Specification
+09:46:15.464 [INFO] Executing scenario: Create Images
+09:46:15.464 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:46:15.506 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A height of 251 is greater than the maximum height of 250|
+09:46:15.770 [ERROR] Failed step: initialize invalid images
+09:46:15.770 [ERROR] Error Message: Expected (rescuing { Image.new(row[0].to_i, row[1].to_i) }.message == row[2]), but
+Strings differ at position 2:
+ first: "A width of 0 is less than the minimum width of 1"
+second: "A height of 251 is greater than the maximum height of 250"
+    rescuing { Image.new(row[0].to_i, row[1].to_i) }.message is "A width of 0 is less than the minimum width of 1"
+    Image.new(row[0].to_i, row[1].to_i) raises InvalidWidthError: A width of 0 is less than the minimum width of 1
+    row[0].to_i is 0
+    row[0] is "0"
+    row is ["0", "250", "A height of 251 is greater than the maximum height of 250"]
+    row[1].to_i is 250
+    row[1] is "250"
+    row[2] is "A height of 251 is greater than the maximum height of 250"
+09:46:15.770 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:63:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:46:15.879 [DEBUG] Plugin [Html Report] with pid [11514] has exited
+09:46:15.879 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:46:15.879 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:46:15.879 [INFO] Total time taken: 310ms
+09:46:32.367 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:46:32.367 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:46:33.433 [INFO] Executing specification: Image Specification
+09:46:33.433 [INFO] Executing scenario: Create Images
+09:46:33.434 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:46:33.475 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+09:46:33.582 [DEBUG] Plugin [Html Report] with pid [11567] has exited
+09:46:33.582 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:46:33.582 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:46:33.582 [INFO] Total time taken: 46ms
+09:47:11.220 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:47:12.274 [INFO] Executing specification: Image Specification
+09:47:12.274 [INFO] Executing scenario: Create Images
+09:47:12.275 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:47:12.316 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A width of 0 is less than the minimum width of 1         |
+09:47:12.614 [ERROR] Failed step: initialize invalid images
+09:47:12.614 [ERROR] Error Message: Expected (rescuing { Image.new(row[0].to_i, row[1].to_i) }.message == row[2]), but
+Strings differ at position 2:
+ first: "A heightc of 0 is greater than the minimum height of 1"
+second: "A width of 0 is less than the minimum width of 1"
+    rescuing { Image.new(row[0].to_i, row[1].to_i) }.message is "A heightc of 0 is greater than the minimum height of 1"
+    Image.new(row[0].to_i, row[1].to_i) raises InvalidHeightError: A heightc of 0 is greater than the minimum height of 1
+    row[0].to_i is 250
+    row[0] is "250"
+    row is ["250", "0", "A width of 0 is less than the minimum width of 1"]
+    row[1].to_i is 0
+    row[1] is "0"
+    row[2] is "A width of 0 is less than the minimum width of 1"
+09:47:12.614 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:63:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:47:12.724 [DEBUG] Plugin [Html Report] with pid [11656] has exited
+09:47:12.724 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:47:12.724 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:47:12.724 [INFO] Total time taken: 344ms
+09:48:08.982 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:48:10.112 [INFO] Executing specification: Image Specification
+09:48:10.113 [INFO] Executing scenario: Create Images
+09:48:10.113 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:48:10.153 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A width of 0 is less than the minimum width of 1         |
+09:48:10.419 [ERROR] Failed step: initialize invalid images
+09:48:10.419 [ERROR] Error Message: Expected (rescuing { Image.new(row[0].to_i, row[1].to_i) }.message == row[2]), but
+Strings differ at position 2:
+ first: "A height of 0 is less than the minimum width of 1"
+second: "A width of 0 is less than the minimum width of 1"
+    rescuing { Image.new(row[0].to_i, row[1].to_i) }.message is "A height of 0 is less than the minimum width of 1"
+    Image.new(row[0].to_i, row[1].to_i) raises InvalidHeightError: A height of 0 is less than the minimum width of 1
+    row[0].to_i is 250
+    row[0] is "250"
+    row is ["250", "0", "A width of 0 is less than the minimum width of 1"]
+    row[1].to_i is 0
+    row[1] is "0"
+    row[2] is "A width of 0 is less than the minimum width of 1"
+09:48:10.419 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:63:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:48:10.528 [DEBUG] Plugin [Html Report] with pid [11792] has exited
+09:48:10.529 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:48:10.529 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:48:10.529 [INFO] Total time taken: 311ms
+09:48:24.393 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:48:25.429 [INFO] Executing specification: Image Specification
+09:48:25.430 [INFO] Executing scenario: Create Images
+09:48:25.430 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:48:25.476 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A width of 0 is less than the minimum width of 1         |
+09:48:25.768 [ERROR] Failed step: initialize invalid images
+09:48:25.768 [ERROR] Error Message: Expected (rescuing { Image.new(row[0].to_i, row[1].to_i) }.message == row[2]), but
+Strings differ at position 2:
+ first: "A height of 0 is less than the minimum height of 1"
+second: "A width of 0 is less than the minimum width of 1"
+    rescuing { Image.new(row[0].to_i, row[1].to_i) }.message is "A height of 0 is less than the minimum height of 1"
+    Image.new(row[0].to_i, row[1].to_i) raises InvalidHeightError: A height of 0 is less than the minimum height of 1
+    row[0].to_i is 250
+    row[0] is "250"
+    row is ["250", "0", "A width of 0 is less than the minimum width of 1"]
+    row[1].to_i is 0
+    row[1] is "0"
+    row[2] is "A width of 0 is less than the minimum width of 1"
+09:48:25.768 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:63:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:62:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:48:25.878 [DEBUG] Plugin [Html Report] with pid [11835] has exited
+09:48:25.878 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:48:25.878 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:48:25.878 [INFO] Total time taken: 342ms
+09:48:54.830 [WARNING] /Users/coocoder/desktop/carwow/specs/image.spec : line no: 13, Table not associated with a step, ignoring table
+09:48:54.831 [WARNING] /Users/coocoder/desktop/carwow/specs/image.spec : line no: 20, Table not associated with a step, ignoring table
+09:48:55.062 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:48:55.062 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:48:56.101 [ERROR] Validation failed. The following steps have errors
+09:48:56.101 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:11: Step implementation not found. initialize valid images
+09:48:56.101 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:18: Step implementation not found. initialize invalid images
+09:48:56.111 [INFO] Executing specification: Image Specification
+09:48:56.218 [DEBUG] Plugin [Html Report] with pid [11914] has exited
+09:48:56.218 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:48:56.218 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 1 skipped
+09:48:56.218 [INFO] Total time taken: 2ms
+09:49:07.553 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+09:49:07.553 [INFO] warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:49:08.633 [INFO] Executing specification: Image Specification
+09:49:08.633 [INFO] Executing scenario: Create Images
+09:49:08.634 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:49:08.691 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:49:08.803 [DEBUG] Plugin [Html Report] with pid [11962] has exited
+09:49:08.803 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:49:08.803 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:49:08.803 [INFO] Total time taken: 65ms
+09:50:38.970 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:50:38.970 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:50:40.096 [INFO] Executing specification: Image Specification
+09:50:40.097 [INFO] Executing scenario: Create Images
+09:50:40.097 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:50:40.147 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:50:40.256 [DEBUG] Plugin [Html Report] with pid [12200] has exited
+09:50:40.256 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:50:40.256 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:50:40.256 [INFO] Total time taken: 56ms
+09:50:44.231 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:50:44.231 [INFO] 
+09:50:45.283 [INFO] Executing specification: Image Specification
+09:50:45.284 [INFO] Executing scenario: Create Images
+09:50:45.284 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:50:45.325 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:50:45.433 [DEBUG] Plugin [Html Report] with pid [12240] has exited
+09:50:45.433 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:50:45.433 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:50:45.433 [INFO] Total time taken: 46ms

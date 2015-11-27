@@ -18,14 +18,14 @@ class Image
     @height = height
     @pixels = []
 
-    raise InvalidWidthError.new("#{@width} is greater than the maximum width of #{MAXIMUM_WIDTH}") if self.x > MAXIMUM_WIDTH
-    raise InvalidHeightError.new("#{@height} is greater than the maximum height of #{MAXIMUM_HEIGHT}") if self.y > MAXIMUM_HEIGHT
-    raise InvalidWidthError.new("#{@width} is less than the minimum width of #{MINIMUM_WIDTH}") if self.x < MINIMUM_WIDTH
-    raise InvalidHeightError.new("#{@height} is greater than the minimum height of #{MINIMUM_HEIGHT}") if self.y < MINIMUM_HEIGHT
+    raise InvalidWidthError.new("A width of #{@width} is greater than the maximum width of #{MAXIMUM_WIDTH}") if self.width > MAXIMUM_WIDTH
+    raise InvalidHeightError.new("A height of #{@height} is greater than the maximum height of #{MAXIMUM_HEIGHT}") if self.height > MAXIMUM_HEIGHT
+    raise InvalidWidthError.new("A width of #{@width} is less than the minimum width of #{MINIMUM_WIDTH}") if self.width < MINIMUM_WIDTH
+    raise InvalidHeightError.new("A height of #{@height} is less than the minimum height of #{MINIMUM_HEIGHT}") if self.height < MINIMUM_HEIGHT
 
-    for i in  1..x do
-      for j in 1..y do
-        @pixels << Pixel.new(self,i,j)
+    for x in  MINIMUM_WIDTH..width do
+      for y in MINIMUM_HEIGHT..height do
+        @pixels << Pixel.new(self,x,y)
       end
     end
 
@@ -51,9 +51,15 @@ class Pixel
 
 end
 
-step 'Create images <table>' do |table|
+step 'initialize valid images <table>' do |table|
   table.rows.each do |row|
     image = Image.new(row[0].to_i,row[1].to_i)
     assert{image.pixels.count == row[2].to_i}
+  end
+end
+
+step 'initialize invalid images <table>' do |table|
+  table.rows.each do |row|
+    assert{rescuing{Image.new(row[0].to_i,row[1].to_i)}.message == row[2]}
   end
 end
