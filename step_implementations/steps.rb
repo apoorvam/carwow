@@ -51,13 +51,9 @@ class Pixel
 
 end
 
-step 'Initialize  images <table>' do |table|
+step 'Create valid images <table>' do |table|
   table.rows.each do |row|
-    image = Image.new(x.to_i,y.to_i)
-    assert{image.pixels.count == count.to_i}
+    image = Image.new(row[0].to_i,row[1].to_i)
+    assert{image.pixels.count == row[2].to_i}
   end
-end
-
-step 'check that the image has <count> pixels' do | count|
-
 end

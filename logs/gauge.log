@@ -3468,3 +3468,47 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 07:49:47.331 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 07:49:47.331 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
 07:49:47.331 [INFO] Total time taken: 2ms
+07:51:40.235 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:51:41.390 [ERROR] Validation failed. The following steps have errors
+07:51:41.390 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:9: Step implementation not found. Initialize valid  images
+07:51:41.545 [DEBUG] Plugin [Html Report] with pid [251] has exited
+07:51:41.545 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 1 skipped
+07:51:41.545 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:51:41.545 [INFO] Total time taken: 1ms
+07:52:07.419 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:52:08.467 [ERROR] Validation failed. The following steps have errors
+07:52:08.467 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:9: Step implementation not found. Initialize valid  images
+07:52:08.583 [DEBUG] Plugin [Html Report] with pid [389] has exited
+07:52:08.583 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 1 skipped
+07:52:08.583 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:52:08.583 [INFO] Total time taken: 1ms
+07:52:17.793 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:52:18.828 [ERROR] Validation failed. The following steps have errors
+07:52:18.828 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:9: Step implementation not found. Initialize valid  images
+07:52:18.944 [DEBUG] Plugin [Html Report] with pid [451] has exited
+07:52:18.944 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 1 skipped
+07:52:18.944 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:52:18.944 [INFO] Total time taken: 2ms
+07:53:04.017 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+07:53:04.017 [INFO] warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:53:05.037 [ERROR] Validation failed. The following steps have errors
+07:53:05.037 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:9: Step implementation not found. Create valid images
+07:53:05.153 [DEBUG] Plugin [Html Report] with pid [589] has exited
+07:53:05.153 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 1 skipped
+07:53:05.153 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:53:05.153 [INFO] Total time taken: 1ms
+07:54:21.869 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+07:54:21.870 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:54:23.062 [INFO] Executing specification: Image Specification
+07:54:23.165 [DEBUG] Plugin [Html Report] with pid [806] has exited
+07:54:23.165 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+07:54:23.165 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:54:23.165 [INFO] Total time taken: 4ms
