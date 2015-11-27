@@ -60,7 +60,7 @@ class LCommand
     @color = color
   end
   def execute()
-    pixel =  @image.pixels.find{|pixel| pixel.coordinate.x == @x && pixel.coordinate.y == @y}
+    pixel =  @image.pixels.find{|pixel| pixel.coordinate.x == @x.to_i && pixel.coordinate.y == @y.to_i}
     pixel.color = @color
     pixel
   end
@@ -72,7 +72,7 @@ end
 
 step "set pixel colors <table>" do |table|
   table.rows.each do |row|
-    command = LCommand.new(@image,row[0].to_i,row[1].to_i,row[2])
+    command = LCommand.new(@image,row[0],row[1],row[2])
     pixel =command.execute()
     assert{pixel.color == row[2]}
   end
