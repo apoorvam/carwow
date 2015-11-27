@@ -32,6 +32,12 @@ class Image
 
   end
 
+  def set_color(x,y,color)
+    pixel =  self.pixels.find{|pixel| pixel.coordinate.x == x.to_i && pixel.coordinate.y == y.to_i}
+    pixel.color = color
+    pixel
+  end
+
 end
 
 class Pixel
@@ -52,28 +58,13 @@ class Pixel
 
 end
 
-class LCommand
-  def initialize(image,x,y,color)
-    @image = image
-    @x = x
-    @y = y
-    @color = color
-  end
-  def execute()
-    pixel =  @image.pixels.find{|pixel| pixel.coordinate.x == @x.to_i && pixel.coordinate.y == @y.to_i}
-    pixel.color = @color
-    pixel
-  end
-end
-
 step "create a <width> by <height> image" do |width,height|
   @image = Image.new(width.to_i,height.to_i)
 end
 
 step "set pixel colors <table>" do |table|
   table.rows.each do |row|
-    command = LCommand.new(@image,row[0],row[1],row[2])
-    pixel =command.execute()
+    pixel =@image.set_color(row[0],row[1],row[2])
     assert{pixel.color == row[2]}
   end
 end
