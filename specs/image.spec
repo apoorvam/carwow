@@ -1,8 +1,13 @@
 Image Specification
 ===================
 
-Create an image
----------------
 
-*create a "3" by "3" image
-*check that the image has "9" pixels
+An image can be a maximum of 250 pixels in width
+An image can be a maximum  of 250 pixels in height
+
+
+* Initialize  images
+  |x  |y  |pixel count  |Exception         |
+  |---|---|-------------|------------------|
+  |3  |3  |9            |none              |
+  

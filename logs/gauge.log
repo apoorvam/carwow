@@ -3178,3 +3178,269 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 05:57:34.915 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 05:57:34.915 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
 05:57:34.915 [INFO] Total time taken: 6ms
+05:59:46.205 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+05:59:46.206 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+05:59:47.450 [INFO] Executing specification: Image Specification
+05:59:47.451 [INFO] Executing scenario: Create an image
+05:59:47.451 [DEBUG] Executing Step: * create a "3" by "3" image
+05:59:47.453 [DEBUG] Executing Step: * check that the image has "9" pixels
+05:59:47.455 [INFO] Executing specification: Pixel co-ordinates Specification
+05:59:47.455 [INFO] Executing scenario: Create a an image with maximum size
+05:59:47.456 [DEBUG] Executing Step: * create a "250" by "250" image
+05:59:47.509 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+05:59:47.513 [INFO] Executing scenario: check pixels are valid with in image bounds
+05:59:47.514 [DEBUG] Executing Step: * create a "200" by "100" image
+05:59:47.534 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+05:59:47.641 [DEBUG] Plugin [Html Report] with pid [90527] has exited
+05:59:47.641 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+05:59:47.641 [INFO] Scenarios: 	3 executed, 3 passed, 0 failed, 0 skipped
+05:59:47.641 [INFO] Total time taken: 89ms
+06:01:28.214 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+06:01:29.530 [INFO] Executing specification: Image Specification
+06:01:29.531 [INFO] Executing scenario: Create a valid image
+06:01:29.531 [DEBUG] Executing Step: * create a "3" by "3" image
+06:01:29.533 [DEBUG] Executing Step: * check that the image has "9" pixels
+06:01:29.536 [INFO] Executing scenario: Create am invalid image
+06:01:29.537 [DEBUG] Executing Step: * create a "251" by "251" image
+06:01:29.593 [DEBUG] Executing Step: * check that the image has "0" pixels
+06:02:05.661 [ERROR] Failed step: check that the image has "0" pixels
+06:02:13.087 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:63:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+06:02:13.100 [INFO] Executing specification: Pixel co-ordinates Specification
+06:02:13.101 [INFO] Executing scenario: Create a an image with maximum size
+06:02:13.102 [DEBUG] Executing Step: * create a "250" by "250" image
+06:02:13.212 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|true  |
+     |250|1  |true  |
+     |1  |250|true  |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+06:02:13.222 [INFO] Executing scenario: check pixels are valid with in image bounds
+06:02:13.224 [DEBUG] Executing Step: * create a "200" by "100" image
+06:02:13.267 [DEBUG] Executing Step: * create and validate pixels 
+     |x  |y  |valid?|
+     |---|---|------|
+     |250|250|false |
+     |250|1  |false |
+     |1  |250|false |
+     |1  |251|false |
+     |251|1  |false |
+     |0  |1  |false |
+     |1  |0  |false |
+     |200|100|true  |
+     |100|200|false |
+06:02:14.416 [DEBUG] Plugin [Html Report] with pid [90739] has exited
+06:02:14.416 [INFO] Specifications: 	2 executed, 1 passed, 1 failed, 0 skipped
+06:02:14.417 [INFO] Scenarios: 	4 executed, 3 passed, 1 failed, 0 skipped
+06:02:14.417 [INFO] Total time taken: 43.746s
+06:02:51.848 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+06:02:52.976 [INFO] Executing specification: Image Specification
+06:02:52.976 [INFO] Executing scenario: Create a valid image
+06:02:52.977 [DEBUG] Executing Step: * create a "3" by "3" image
+06:02:53.342 [ERROR] Failed step: create a "3" by "3" image
+06:02:53.342 [ERROR] Error Message: undefined method `valid?' for #<Pixel:0x007fc89c8b12c8>
+06:02:53.342 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:17:in `block (2 levels) in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `block in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+06:02:53.345 [INFO] Executing scenario: Create am invalid image
+06:02:53.345 [DEBUG] Executing Step: * create a "251" by "251" image
+06:02:53.672 [ERROR] Failed step: create a "251" by "251" image
+06:02:53.672 [ERROR] Error Message: undefined method `valid?' for #<Pixel:0x007fc89c0b2e50>
+06:02:53.672 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:17:in `block (2 levels) in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `block in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+06:02:53.675 [INFO] Executing specification: Pixel co-ordinates Specification
+06:02:53.676 [INFO] Executing scenario: Create a an image with maximum size
+06:02:53.677 [DEBUG] Executing Step: * create a "250" by "250" image
+06:02:54.010 [ERROR] Failed step: create a "250" by "250" image
+06:02:54.010 [ERROR] Error Message: undefined method `valid?' for #<Pixel:0x007fc89a1e2160>
+06:02:54.010 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:17:in `block (2 levels) in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `block in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+06:02:54.012 [INFO] Executing scenario: check pixels are valid with in image bounds
+06:02:54.013 [DEBUG] Executing Step: * create a "200" by "100" image
+06:02:54.349 [ERROR] Failed step: create a "200" by "100" image
+06:02:54.349 [ERROR] Error Message: undefined method `valid?' for #<Pixel:0x007fc89a1448e8>
+06:02:54.349 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:17:in `block (2 levels) in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `block in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+06:02:54.468 [DEBUG] Plugin [Html Report] with pid [90940] has exited
+06:02:54.469 [INFO] Specifications: 	2 executed, 0 passed, 2 failed, 0 skipped
+06:02:54.469 [INFO] Scenarios: 	4 executed, 0 passed, 4 failed, 0 skipped
+06:02:54.469 [INFO] Total time taken: 1.376s
+06:19:19.830 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+06:19:20.944 [ERROR] Validation failed. The following steps have errors
+06:19:20.945 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:13: Step implementation not found. check that we get a "InvalidImageWidth" error
+06:19:20.999 [INFO] Executing specification: Image Specification
+06:19:21.000 [INFO] Executing scenario: Create a valid image
+06:19:21.000 [DEBUG] Executing Step: * create a "3" by "3" image
+06:19:21.372 [ERROR] Failed step: create a "3" by "3" image
+06:19:21.372 [ERROR] Error Message: undefined method `valid?' for #<Pixel:0x007fd51d45eb98>
+06:19:21.372 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:17:in `block (2 levels) in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:15:in `block in initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:14:in `initialize'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `new'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:60:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+06:19:21.479 [DEBUG] Plugin [Html Report] with pid [94774] has exited
+06:19:21.479 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+06:19:21.479 [INFO] Scenarios: 	1 executed, 0 passed, 1 failed, 1 skipped
+06:19:21.479 [INFO] Total time taken: 377ms
+06:36:20.161 [CRITICAL] [ParseError] /Users/coocoder/desktop/carwow/specs/image.spec : line no: 7, Table header cannot have repeated column values
+06:36:48.386 [CRITICAL] [ParseError] /Users/coocoder/desktop/carwow/specs/image.spec : line no: 7, Table header cannot have repeated column values
+06:36:57.687 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+06:36:57.688 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+06:36:58.826 [ERROR] Validation failed. The following steps have errors
+06:36:58.826 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:4: Step implementation not found. Initialize  images
+06:36:58.983 [DEBUG] Plugin [Html Report] with pid [96904] has exited
+06:36:58.983 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 1 skipped
+06:36:58.983 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+06:36:58.983 [INFO] Total time taken: 1ms
+07:41:13.901 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+07:41:15.083 [INFO] Executing specification: Image Specification
+07:41:15.187 [DEBUG] Plugin [Html Report] with pid [98523] has exited
+07:41:15.187 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+07:41:15.187 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 0 skipped
+07:41:15.187 [INFO] Total time taken: 2ms

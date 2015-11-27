@@ -7,6 +7,7 @@ representing a colour.
 
 Program input
 
+
 The input consists of a string containing a sequence of commands, where
 a command is represented by a single capital letter at the beginning of the line.
 Parameters of the command are separated by white spaces and they follow the command character.
@@ -59,3 +60,11 @@ After implementing the required features, please implement a feature you think w
 Submission
 
 Please submit a fully completed answer within the time allowed. Please provide source code and full GIT repository. Please commit often and with good commit messages. That will allow us to see how you've approached the problem. Don't worry about changing things around often.
+
+
+|250|1  |250          |none              |
+|1  |250|250          |none              |
+|1  |251|0            |InvalidImageWidth |
+|251|1  |0            |InvalidImageHeight|
+|0  |1  |false        |InvalidImageWidth |
+|1  |0  |false        |InvalidImageHeight|

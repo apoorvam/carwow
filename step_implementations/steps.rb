@@ -13,7 +13,8 @@ class Image
 
     for i in  1..x do
       for j in 1..y do
-        @pixels << Pixel.new(self,i,j)
+        p = Pixel.new(self,i,j)
+        @pixels << p if p.valid?
       end
     end
   end
@@ -45,18 +46,14 @@ class Pixel
 
 end
 
-step 'create and validate pixels <table>' do |table|
+step 'Initialize  images <table>' do |table|
   table.rows.each do |row|
-    if row.last == "true"
-      assert {Pixel.new(@image,row[0].to_i,row[1].to_i).coordinate.valid? }
-    else
-      deny {Pixel.new(@image,row[0].to_i,row[1].to_i).coordinate.valid? }
-    end
+    @image = Image.new(x.to_i,y.to_i)
   end
 end
 
 step 'create a <x> by <y> image' do |x,y|
-  @image = Image.new(x.to_i,y.to_i)
+
 end
 
 step 'check that the image has <count> pixels' do | count|
