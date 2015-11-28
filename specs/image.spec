@@ -51,7 +51,7 @@ the y value must be greater than 1 and less than the Image Height.
   |1  |1  |A       |
 
 
-Set vertical color
+Set column color
 ------------------
 
 * create a "10" by "10" image
@@ -59,3 +59,13 @@ Set vertical color
   |x  |from|to      |color   |
   |---|----|--------|--------|
   |2  |3   |4       |W       |
+
+
+Set row color
+------------------
+
+* create a "10" by "10" image
+* set pixel horizontal colors
+  |y  |from|to      |color   |
+  |---|----|--------|--------|
+  |2  |4   |2       |Z       |

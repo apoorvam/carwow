@@ -32,6 +32,17 @@ step "set pixel vertical colors <table>" do |table|
   end
 end
 
+step "set pixel horizontal colors <table>" do |table|
+  table.rows.each do |row|
+
+    @image.set_row_color(row[0].to_i,row[1].to_i,row[2].to_i,row[3])
+
+    for x in (row[1].to_i..row[2].to_i) do
+      assert{@image.get_pixel_at(x,row[0]).color == row[3]}
+    end
+  end
+end
+
 
 
 step 'initialize valid images <table>' do |table|
