@@ -28,21 +28,23 @@ class Image
   end
 
 
-
+  def get_pixel_at(x,y)
+    pixels.find{|pixel| pixel.coordinate.x == x.to_i && pixel.coordinate.y == y.to_i}
+  end
 
   def set_color(x,y,color)
 
     raise OutOfImageBoundsError.new("#{x} is outside the width of the image") unless (1..self.width).include? x.to_i
     raise OutOfImageBoundsError.new("#{y} is outside the height of the image") unless (1..self.height).include? y.to_i
 
-    pixel =  self.pixels.find{|pixel| pixel.coordinate.x == x.to_i && pixel.coordinate.y == y.to_i}
+    pixel = get_pixel_at(x,y)
     pixel.color = color
     pixel
   end
-
-  def get_column(x)
-    raise OutOfImageBoundsError.new("#{x} is outside the width of the image") unless (1..self.width).include? x.to_i
-    pixels.select{|pixel| pixel.coordinate.x == x.to_i}
+  def set_column_color(x,from,to,color)
+    for y in (from..to) do
+      set_color(x,y,color)
+    end
   end
 
 end

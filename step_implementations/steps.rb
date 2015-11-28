@@ -25,12 +25,10 @@ end
 
 step "set pixel vertical colors <table>" do |table|
   table.rows.each do |row|
-    x = row[0].to_i
+    @image.set_column_color(row[0].to_i,row[1].to_i,row[2].to_i,row[3])
     for y in (row[1].to_i..row[2].to_i) do
-      pixel = @image.set_color(x,y,row[3])
-      assert{pixel.color == row[3]}
+      assert{@image.get_pixel_at(row[0],y).color == row[3]}
     end
-
   end
 end
 

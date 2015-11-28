@@ -17646,3 +17646,225 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 09:54:49.742 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 09:54:49.742 [INFO] Scenarios: 	4 executed, 4 passed, 0 failed, 0 skipped
 09:54:49.742 [INFO] Total time taken: 75ms
+10:24:59.826 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:25:00.989 [INFO] Executing specification: Image Specification
+10:25:00.990 [INFO] Executing scenario: Create Images
+10:25:00.990 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:25:01.033 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:25:01.036 [INFO] Executing scenario: check image bounds
+10:25:01.037 [DEBUG] Executing Step: * create a "3" by "3" image
+10:25:01.038 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:25:01.041 [INFO] Executing scenario: Set Color of Pixel
+10:25:01.041 [DEBUG] Executing Step: * create a "3" by "3" image
+10:25:01.043 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:25:01.046 [INFO] Executing scenario: Set vertical color
+10:25:01.047 [DEBUG] Executing Step: * create a "10" by "10" image
+10:25:01.048 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:25:01.403 [ERROR] Failed step: set pixel vertical colors
+10:25:01.403 [ERROR] Error Message: undefined local variable or method `x' for main:Object
+10:25:01.403 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:29:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+10:25:01.507 [DEBUG] Plugin [Html Report] with pid [8788] has exited
+10:25:01.507 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+10:25:01.507 [INFO] Scenarios: 	4 executed, 3 passed, 1 failed, 0 skipped
+10:25:01.508 [INFO] Total time taken: 418ms
+10:26:50.501 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+10:26:50.501 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:26:51.536 [INFO] Executing specification: Image Specification
+10:26:51.536 [INFO] Executing scenario: Create Images
+10:26:51.537 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:26:51.577 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:26:51.580 [INFO] Executing scenario: check image bounds
+10:26:51.581 [DEBUG] Executing Step: * create a "3" by "3" image
+10:26:51.582 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:26:51.585 [INFO] Executing scenario: Set Color of Pixel
+10:26:51.585 [DEBUG] Executing Step: * create a "3" by "3" image
+10:26:51.587 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:26:51.590 [INFO] Executing scenario: Set vertical color
+10:26:51.590 [DEBUG] Executing Step: * create a "10" by "10" image
+10:26:51.592 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:26:51.919 [ERROR] Failed step: set pixel vertical colors
+10:26:51.919 [ERROR] Error Message: undefined local variable or method `x' for main:Object
+10:26:51.919 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:32:in `block (4 levels) in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:66:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:66:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:32:in `block (3 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:31:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:31:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+10:26:52.028 [DEBUG] Plugin [Html Report] with pid [9055] has exited
+10:26:52.028 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+10:26:52.028 [INFO] Scenarios: 	4 executed, 3 passed, 1 failed, 0 skipped
+10:26:52.029 [INFO] Total time taken: 387ms
+10:27:16.155 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+10:27:16.155 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:27:17.208 [INFO] Executing specification: Image Specification
+10:27:17.208 [INFO] Executing scenario: Create Images
+10:27:17.209 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:27:17.266 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:27:17.270 [INFO] Executing scenario: check image bounds
+10:27:17.271 [DEBUG] Executing Step: * create a "3" by "3" image
+10:27:17.273 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:27:17.276 [INFO] Executing scenario: Set Color of Pixel
+10:27:17.277 [DEBUG] Executing Step: * create a "3" by "3" image
+10:27:17.279 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:27:17.281 [INFO] Executing scenario: Set vertical color
+10:27:17.281 [DEBUG] Executing Step: * create a "10" by "10" image
+10:27:17.283 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:27:17.388 [DEBUG] Plugin [Html Report] with pid [9115] has exited
+10:27:17.388 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+10:27:17.388 [INFO] Scenarios: 	4 executed, 4 passed, 0 failed, 0 skipped
+10:27:17.388 [INFO] Total time taken: 78ms
+10:28:46.041 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:28:47.088 [INFO] Executing specification: Image Specification
+10:28:47.088 [INFO] Executing scenario: Create Images
+10:28:47.089 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:28:47.130 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:28:47.133 [INFO] Executing scenario: check image bounds
+10:28:47.134 [DEBUG] Executing Step: * create a "3" by "3" image
+10:28:47.135 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:28:47.138 [INFO] Executing scenario: Set Color of Pixel
+10:28:47.139 [DEBUG] Executing Step: * create a "3" by "3" image
+10:28:47.140 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:28:47.143 [INFO] Executing scenario: Set vertical color
+10:28:47.144 [DEBUG] Executing Step: * create a "10" by "10" image
+10:28:47.145 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:28:47.250 [DEBUG] Plugin [Html Report] with pid [9327] has exited
+10:28:47.250 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+10:28:47.250 [INFO] Scenarios: 	4 executed, 4 passed, 0 failed, 0 skipped
+10:28:47.250 [INFO] Total time taken: 61ms
