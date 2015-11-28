@@ -53,6 +53,12 @@ class Image
     end
   end
 
+  def clear
+    @pixels.each do |pixel|
+      set_color(pixel.coordinate.x,pixel.coordinate.y,"O")
+    end
+  end
+
 end
 
 class Pixel
@@ -64,6 +70,7 @@ class Pixel
       @pixel = pixel
       @x = x
       @y = y
+      @color="O"
     end
   end
   def initialize(image,x,y)

@@ -43,6 +43,16 @@ step "set pixel horizontal colors <table>" do |table|
   end
 end
 
+step 'clear image' do
+
+  @image.clear
+
+  @image.pixels.each do |pixel|
+    assert{pixel.color == "O"}
+  end
+
+end
+
 
 
 step 'initialize valid images <table>' do |table|

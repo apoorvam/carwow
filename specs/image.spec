@@ -69,3 +69,16 @@ Set row color
   |y  |from|to      |color   |
   |---|----|--------|--------|
   |2  |4   |2       |Z       |
+
+Clear image
+------------------
+* create a "10" by "10" image
+* set pixel horizontal colors
+  |y  |from|to      |color   |
+  |---|----|--------|--------|
+  |2  |4   |2       |Z       |
+* set pixel vertical colors
+  |x  |from|to      |color   |
+  |---|----|--------|--------|
+  |2  |3   |4       |W       |
+* clear image

@@ -17962,3 +17962,1205 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 10:40:13.215 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 10:40:13.215 [INFO] Scenarios: 	5 executed, 5 passed, 0 failed, 0 skipped
 10:40:13.215 [INFO] Total time taken: 66ms
+10:40:36.317 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:40:37.425 [INFO] Executing specification: Image Specification
+10:40:37.425 [INFO] Executing scenario: Create Images
+10:40:37.426 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:40:37.467 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:40:37.470 [INFO] Executing scenario: check image bounds
+10:40:37.470 [DEBUG] Executing Step: * create a "3" by "3" image
+10:40:37.472 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:40:37.474 [INFO] Executing scenario: Set Color of Pixel
+10:40:37.475 [DEBUG] Executing Step: * create a "3" by "3" image
+10:40:37.477 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:40:37.479 [INFO] Executing scenario: Set column color
+10:40:37.480 [DEBUG] Executing Step: * create a "10" by "10" image
+10:40:37.481 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:40:37.483 [INFO] Executing scenario: Set row color
+10:40:37.484 [DEBUG] Executing Step: * create a "10" by "10" image
+10:40:37.486 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:40:37.591 [DEBUG] Plugin [Html Report] with pid [10981] has exited
+10:40:37.591 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+10:40:37.591 [INFO] Scenarios: 	5 executed, 5 passed, 0 failed, 0 skipped
+10:40:37.591 [INFO] Total time taken: 64ms
+10:47:37.376 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+10:47:37.377 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:47:38.535 [INFO] Executing specification: Image Specification
+10:47:38.535 [INFO] Executing scenario: Create Images
+10:47:38.536 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:47:38.633 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:47:38.637 [INFO] Executing scenario: check image bounds
+10:47:38.638 [DEBUG] Executing Step: * create a "3" by "3" image
+10:47:38.640 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:47:38.644 [INFO] Executing scenario: Set Color of Pixel
+10:47:38.645 [DEBUG] Executing Step: * create a "3" by "3" image
+10:47:38.647 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:47:38.651 [INFO] Executing scenario: Set column color
+10:47:38.651 [DEBUG] Executing Step: * create a "10" by "10" image
+10:47:38.653 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:47:38.656 [INFO] Executing scenario: Set row color
+10:47:38.657 [DEBUG] Executing Step: * create a "10" by "10" image
+10:47:38.659 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:47:38.661 [INFO] Executing scenario: Clear image
+10:47:38.662 [DEBUG] Executing Step: * create a "10" by "10" image
+10:47:38.664 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:47:38.666 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:47:38.771 [DEBUG] Plugin [Html Report] with pid [11849] has exited
+10:47:38.771 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+10:47:38.771 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+10:47:38.771 [INFO] Total time taken: 136ms
+10:47:58.654 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+10:47:58.655 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:47:59.730 [ERROR] Validation failed. The following steps have errors
+10:47:59.730 [ERROR] /Users/coocoder/Desktop/carwow/specs/image.spec:84: Step implementation not found. clear image
+10:47:59.741 [INFO] Executing specification: Image Specification
+10:47:59.741 [INFO] Executing scenario: Create Images
+10:47:59.742 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:47:59.819 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:47:59.822 [INFO] Executing scenario: check image bounds
+10:47:59.823 [DEBUG] Executing Step: * create a "3" by "3" image
+10:47:59.824 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:47:59.828 [INFO] Executing scenario: Set Color of Pixel
+10:47:59.829 [DEBUG] Executing Step: * create a "3" by "3" image
+10:47:59.830 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:47:59.833 [INFO] Executing scenario: Set column color
+10:47:59.833 [DEBUG] Executing Step: * create a "10" by "10" image
+10:47:59.835 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:47:59.837 [INFO] Executing scenario: Set row color
+10:47:59.838 [DEBUG] Executing Step: * create a "10" by "10" image
+10:47:59.840 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:47:59.947 [DEBUG] Plugin [Html Report] with pid [11906] has exited
+10:47:59.947 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+10:47:59.947 [INFO] Scenarios: 	5 executed, 5 passed, 0 failed, 1 skipped
+10:47:59.947 [INFO] Total time taken: 102ms
+10:48:27.125 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+10:48:27.125 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:48:28.171 [INFO] Executing specification: Image Specification
+10:48:28.172 [INFO] Executing scenario: Create Images
+10:48:28.173 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:48:28.263 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:48:28.266 [INFO] Executing scenario: check image bounds
+10:48:28.266 [DEBUG] Executing Step: * create a "3" by "3" image
+10:48:28.268 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:48:28.271 [INFO] Executing scenario: Set Color of Pixel
+10:48:28.271 [DEBUG] Executing Step: * create a "3" by "3" image
+10:48:28.273 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:48:28.275 [INFO] Executing scenario: Set column color
+10:48:28.276 [DEBUG] Executing Step: * create a "10" by "10" image
+10:48:28.278 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:48:28.280 [INFO] Executing scenario: Set row color
+10:48:28.280 [DEBUG] Executing Step: * create a "10" by "10" image
+10:48:28.282 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:48:28.284 [INFO] Executing scenario: Clear image
+10:48:28.285 [DEBUG] Executing Step: * create a "10" by "10" image
+10:48:28.286 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:48:28.288 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:48:28.289 [DEBUG] Executing Step: * clear image
+10:48:28.396 [DEBUG] Plugin [Html Report] with pid [11977] has exited
+10:48:28.396 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+10:48:28.396 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+10:48:28.396 [INFO] Total time taken: 120ms
+10:50:42.559 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+10:50:42.559 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:50:43.667 [INFO] Executing specification: Image Specification
+10:50:43.667 [INFO] Executing scenario: Create Images
+10:50:43.668 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:50:43.747 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:50:43.750 [INFO] Executing scenario: check image bounds
+10:50:43.751 [DEBUG] Executing Step: * create a "3" by "3" image
+10:50:43.753 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:50:43.756 [INFO] Executing scenario: Set Color of Pixel
+10:50:43.756 [DEBUG] Executing Step: * create a "3" by "3" image
+10:50:43.758 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:50:43.761 [INFO] Executing scenario: Set column color
+10:50:43.762 [DEBUG] Executing Step: * create a "10" by "10" image
+10:50:43.763 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:50:43.765 [INFO] Executing scenario: Set row color
+10:50:43.766 [DEBUG] Executing Step: * create a "10" by "10" image
+10:50:43.768 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:50:43.770 [INFO] Executing scenario: Clear image
+10:50:43.771 [DEBUG] Executing Step: * create a "10" by "10" image
+10:50:43.772 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:50:43.774 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:50:43.775 [DEBUG] Executing Step: * clear image
+10:50:44.131 [ERROR] Failed step: clear image
+10:50:44.131 [ERROR] Error Message: undefined method `clear' for #<Image:0x007f86eff6e320>
+10:50:44.131 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+10:50:44.240 [DEBUG] Plugin [Html Report] with pid [12242] has exited
+10:50:44.240 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+10:50:44.240 [INFO] Scenarios: 	6 executed, 5 passed, 1 failed, 0 skipped
+10:50:44.240 [INFO] Total time taken: 467ms
+10:51:20.273 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+10:51:21.324 [INFO] Executing specification: Image Specification
+10:51:21.325 [INFO] Executing scenario: Create Images
+10:51:21.325 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+10:51:21.402 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+10:51:21.405 [INFO] Executing scenario: check image bounds
+10:51:21.406 [DEBUG] Executing Step: * create a "3" by "3" image
+10:51:21.408 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+10:51:21.410 [INFO] Executing scenario: Set Color of Pixel
+10:51:21.411 [DEBUG] Executing Step: * create a "3" by "3" image
+10:51:21.412 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+10:51:21.415 [INFO] Executing scenario: Set column color
+10:51:21.415 [DEBUG] Executing Step: * create a "10" by "10" image
+10:51:21.417 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+10:51:21.419 [INFO] Executing scenario: Set row color
+10:51:21.420 [DEBUG] Executing Step: * create a "10" by "10" image
+10:51:21.421 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:51:21.423 [INFO] Executing scenario: Clear image
+10:51:21.424 [DEBUG] Executing Step: * create a "10" by "10" image
+10:51:21.425 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:51:21.427 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+10:51:21.428 [DEBUG] Executing Step: * clear image
+10:51:21.784 [ERROR] Failed step: clear image
+10:51:21.784 [ERROR] Error Message: Expected (pixel.color == "O"), but
+    pixel.color is nil
+    pixel is #<Pixel:0x007ff8b4a13510
+       @coordinate=#<Pixel::Coordinate:0x007ff8b4a134c0 @color="O", @pixel=#<Pixel:0x007ff8b4a13510 ...>, @x=1, @y=1>,
+       @image=
+        #<Image:0x007ff8b4a13650
+         @height=10,
+         @pixels=
+          [#<Pixel:0x007ff8b4a13510 ...>,
+           #<Pixel:0x007ff8b4a13470
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a13420 @color="O", @pixel=#<Pixel:0x007ff8b4a13470 ...>, @x=1, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a133a8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a13380 @color="O", @pixel=#<Pixel:0x007ff8b4a133a8 ...>, @x=1, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a13308
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a132e0 @color="O", @pixel=#<Pixel:0x007ff8b4a13308 ...>, @x=1, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a13218
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a131c8 @color="O", @pixel=#<Pixel:0x007ff8b4a13218 ...>, @x=1, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a130d8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a130b0 @color="O", @pixel=#<Pixel:0x007ff8b4a130d8 ...>, @x=1, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a13038
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a13010 @color="O", @pixel=#<Pixel:0x007ff8b4a13038 ...>, @x=1, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12fc0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12f98 @color="O", @pixel=#<Pixel:0x007ff8b4a12fc0 ...>, @x=1, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12f48
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12f20 @color="O", @pixel=#<Pixel:0x007ff8b4a12f48 ...>, @x=1, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12ea8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12e80 @color="O", @pixel=#<Pixel:0x007ff8b4a12ea8 ...>, @x=1, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12de0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12db8 @color="O", @pixel=#<Pixel:0x007ff8b4a12de0 ...>, @x=2, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12d68
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12d40 @color="O", @pixel=#<Pixel:0x007ff8b4a12d68 ...>, @x=2, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12cf0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12cc8 @color="O", @pixel=#<Pixel:0x007ff8b4a12cf0 ...>, @x=2, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12c78
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12c28 @color="O", @pixel=#<Pixel:0x007ff8b4a12c78 ...>, @x=2, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12bd8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12b88 @color="O", @pixel=#<Pixel:0x007ff8b4a12bd8 ...>, @x=2, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12b38
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12b10 @color="O", @pixel=#<Pixel:0x007ff8b4a12b38 ...>, @x=2, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12a98
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12a70 @color="O", @pixel=#<Pixel:0x007ff8b4a12a98 ...>, @x=2, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12a20
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a129d0 @color="O", @pixel=#<Pixel:0x007ff8b4a12a20 ...>, @x=2, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12958
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12908 @color="O", @pixel=#<Pixel:0x007ff8b4a12958 ...>, @x=2, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12890
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12868 @color="O", @pixel=#<Pixel:0x007ff8b4a12890 ...>, @x=2, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a127f0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a127c8 @color="O", @pixel=#<Pixel:0x007ff8b4a127f0 ...>, @x=3, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12778
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12750 @color="O", @pixel=#<Pixel:0x007ff8b4a12778 ...>, @x=3, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a126d8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a126b0 @color="O", @pixel=#<Pixel:0x007ff8b4a126d8 ...>, @x=3, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12610
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a125c0 @color="O", @pixel=#<Pixel:0x007ff8b4a12610 ...>, @x=3, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12570
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12548 @color="O", @pixel=#<Pixel:0x007ff8b4a12570 ...>, @x=3, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a124f8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a124d0 @color="O", @pixel=#<Pixel:0x007ff8b4a124f8 ...>, @x=3, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12458
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12430 @color="O", @pixel=#<Pixel:0x007ff8b4a12458 ...>, @x=3, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a123e0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a123b8 @color="O", @pixel=#<Pixel:0x007ff8b4a123e0 ...>, @x=3, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12368
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12340 @color="O", @pixel=#<Pixel:0x007ff8b4a12368 ...>, @x=3, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a122f0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a122c8 @color="O", @pixel=#<Pixel:0x007ff8b4a122f0 ...>, @x=3, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12250
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12228 @color="O", @pixel=#<Pixel:0x007ff8b4a12250 ...>, @x=4, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a121d8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a121b0 @color="O", @pixel=#<Pixel:0x007ff8b4a121d8 ...>, @x=4, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12160
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12138 @color="O", @pixel=#<Pixel:0x007ff8b4a12160 ...>, @x=4, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a120e8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a120c0 @color="O", @pixel=#<Pixel:0x007ff8b4a120e8 ...>, @x=4, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a12070
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12048 @color="O", @pixel=#<Pixel:0x007ff8b4a12070 ...>, @x=4, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11ff8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11fd0 @color="O", @pixel=#<Pixel:0x007ff8b4a11ff8 ...>, @x=4, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11f80
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11f58 @color="O", @pixel=#<Pixel:0x007ff8b4a11f80 ...>, @x=4, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11f08
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11ee0 @color="O", @pixel=#<Pixel:0x007ff8b4a11f08 ...>, @x=4, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11e90
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11e40 @color="O", @pixel=#<Pixel:0x007ff8b4a11e90 ...>, @x=4, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11df0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11da0 @color="O", @pixel=#<Pixel:0x007ff8b4a11df0 ...>, @x=4, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11d28
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11d00 @color="O", @pixel=#<Pixel:0x007ff8b4a11d28 ...>, @x=5, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11cb0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11c88 @color="O", @pixel=#<Pixel:0x007ff8b4a11cb0 ...>, @x=5, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11c10
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11be8 @color="O", @pixel=#<Pixel:0x007ff8b4a11c10 ...>, @x=5, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11b98
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11b70 @color="O", @pixel=#<Pixel:0x007ff8b4a11b98 ...>, @x=5, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11af8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11ad0 @color="O", @pixel=#<Pixel:0x007ff8b4a11af8 ...>, @x=5, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11a58
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11a30 @color="O", @pixel=#<Pixel:0x007ff8b4a11a58 ...>, @x=5, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a119e0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a119b8 @color="O", @pixel=#<Pixel:0x007ff8b4a119e0 ...>, @x=5, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11968
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11918 @color="O", @pixel=#<Pixel:0x007ff8b4a11968 ...>, @x=5, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a118c8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a118a0 @color="O", @pixel=#<Pixel:0x007ff8b4a118c8 ...>, @x=5, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11850
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11828 @color="O", @pixel=#<Pixel:0x007ff8b4a11850 ...>, @x=5, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a117b0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11788 @color="O", @pixel=#<Pixel:0x007ff8b4a117b0 ...>, @x=6, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11710
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a116e8 @color="O", @pixel=#<Pixel:0x007ff8b4a11710 ...>, @x=6, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11670
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11648 @color="O", @pixel=#<Pixel:0x007ff8b4a11670 ...>, @x=6, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a115f8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a115d0 @color="O", @pixel=#<Pixel:0x007ff8b4a115f8 ...>, @x=6, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11580
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11558 @color="O", @pixel=#<Pixel:0x007ff8b4a11580 ...>, @x=6, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11508
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a114e0 @color="O", @pixel=#<Pixel:0x007ff8b4a11508 ...>, @x=6, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11490
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11468 @color="O", @pixel=#<Pixel:0x007ff8b4a11490 ...>, @x=6, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11418
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a113f0 @color="O", @pixel=#<Pixel:0x007ff8b4a11418 ...>, @x=6, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a113a0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11378 @color="O", @pixel=#<Pixel:0x007ff8b4a113a0 ...>, @x=6, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11328
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11300 @color="O", @pixel=#<Pixel:0x007ff8b4a11328 ...>, @x=6, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11288
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11260 @color="O", @pixel=#<Pixel:0x007ff8b4a11288 ...>, @x=7, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11210
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a111e8 @color="O", @pixel=#<Pixel:0x007ff8b4a11210 ...>, @x=7, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11198
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11170 @color="O", @pixel=#<Pixel:0x007ff8b4a11198 ...>, @x=7, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11120
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a110f8 @color="O", @pixel=#<Pixel:0x007ff8b4a11120 ...>, @x=7, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a110a8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11080 @color="O", @pixel=#<Pixel:0x007ff8b4a110a8 ...>, @x=7, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11030
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11008 @color="O", @pixel=#<Pixel:0x007ff8b4a11030 ...>, @x=7, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10fb8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10f90 @color="O", @pixel=#<Pixel:0x007ff8b4a10fb8 ...>, @x=7, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10f18
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10ef0 @color="O", @pixel=#<Pixel:0x007ff8b4a10f18 ...>, @x=7, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10ea0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10e78 @color="O", @pixel=#<Pixel:0x007ff8b4a10ea0 ...>, @x=7, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10e28
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10e00 @color="O", @pixel=#<Pixel:0x007ff8b4a10e28 ...>, @x=7, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10d88
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10d60 @color="O", @pixel=#<Pixel:0x007ff8b4a10d88 ...>, @x=8, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10d10
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10cc0 @color="O", @pixel=#<Pixel:0x007ff8b4a10d10 ...>, @x=8, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10c20
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10bf8 @color="O", @pixel=#<Pixel:0x007ff8b4a10c20 ...>, @x=8, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10ba8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10b80 @color="O", @pixel=#<Pixel:0x007ff8b4a10ba8 ...>, @x=8, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10b30
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10b08 @color="O", @pixel=#<Pixel:0x007ff8b4a10b30 ...>, @x=8, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10ab8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10a90 @color="O", @pixel=#<Pixel:0x007ff8b4a10ab8 ...>, @x=8, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10a40
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10a18 @color="O", @pixel=#<Pixel:0x007ff8b4a10a40 ...>, @x=8, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a109c8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a109a0 @color="O", @pixel=#<Pixel:0x007ff8b4a109c8 ...>, @x=8, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10950
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a108d8 @color="O", @pixel=#<Pixel:0x007ff8b4a10950 ...>, @x=8, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10888
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10860 @color="O", @pixel=#<Pixel:0x007ff8b4a10888 ...>, @x=8, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10798
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10748 @color="O", @pixel=#<Pixel:0x007ff8b4a10798 ...>, @x=9, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a106f8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a106d0 @color="O", @pixel=#<Pixel:0x007ff8b4a106f8 ...>, @x=9, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10630
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10608 @color="O", @pixel=#<Pixel:0x007ff8b4a10630 ...>, @x=9, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10590
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10568 @color="O", @pixel=#<Pixel:0x007ff8b4a10590 ...>, @x=9, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a104f0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a104a0 @color="O", @pixel=#<Pixel:0x007ff8b4a104f0 ...>, @x=9, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10400
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a103d8 @color="O", @pixel=#<Pixel:0x007ff8b4a10400 ...>, @x=9, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10388
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10360 @color="O", @pixel=#<Pixel:0x007ff8b4a10388 ...>, @x=9, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a102e8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10270 @color="O", @pixel=#<Pixel:0x007ff8b4a102e8 ...>, @x=9, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10220
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a101d0 @color="O", @pixel=#<Pixel:0x007ff8b4a10220 ...>, @x=9, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10180
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10158 @color="O", @pixel=#<Pixel:0x007ff8b4a10180 ...>, @x=9, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a100b8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10090 @color="O", @pixel=#<Pixel:0x007ff8b4a100b8 ...>, @x=10, @y=1>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10040
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a102c0 @color="O", @pixel=#<Pixel:0x007ff8b4a10040 ...>, @x=10, @y=2>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a10680
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a10838 @color="O", @pixel=#<Pixel:0x007ff8b4a10680 ...>, @x=10, @y=3>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11940
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a11aa8 @color="O", @pixel=#<Pixel:0x007ff8b4a11940 ...>, @x=10, @y=4>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a11e68
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a12728 @color="O", @pixel=#<Pixel:0x007ff8b4a11e68 ...>, @x=10, @y=5>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a13240
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a134e8 @color="O", @pixel=#<Pixel:0x007ff8b4a13240 ...>, @x=10, @y=6>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a136f0
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a137b8 @color="O", @pixel=#<Pixel:0x007ff8b4a136f0 ...>, @x=10, @y=7>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a03f70
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a03f48 @color="O", @pixel=#<Pixel:0x007ff8b4a03f70 ...>, @x=10, @y=8>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a03ef8
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a03ed0 @color="O", @pixel=#<Pixel:0x007ff8b4a03ef8 ...>, @x=10, @y=9>,
+            @image=#<Image:0x007ff8b4a13650 ...>>,
+           #<Pixel:0x007ff8b4a03e58
+            @coordinate=#<Pixel::Coordinate:0x007ff8b4a03e08 @color="O", @pixel=#<Pixel:0x007ff8b4a03e58 ...>, @x=10, @y=10>,
+            @image=#<Image:0x007ff8b4a13650 ...>>],
+         @width=10>>
+10:51:21.787 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:51:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:50:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:50:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+10:51:21.896 [DEBUG] Plugin [Html Report] with pid [12326] has exited
+10:51:21.896 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+10:51:21.896 [INFO] Scenarios: 	6 executed, 5 passed, 1 failed, 0 skipped
+10:51:21.896 [INFO] Total time taken: 465ms
+16:24:36.720 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+16:24:37.942 [INFO] Executing specification: Image Specification
+16:24:37.943 [INFO] Executing scenario: Create Images
+16:24:37.943 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+16:24:38.032 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+16:24:38.036 [INFO] Executing scenario: check image bounds
+16:24:38.037 [DEBUG] Executing Step: * create a "3" by "3" image
+16:24:38.039 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+16:24:38.041 [INFO] Executing scenario: Set Color of Pixel
+16:24:38.042 [DEBUG] Executing Step: * create a "3" by "3" image
+16:24:38.044 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+16:24:38.046 [INFO] Executing scenario: Set column color
+16:24:38.047 [DEBUG] Executing Step: * create a "10" by "10" image
+16:24:38.048 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+16:24:38.051 [INFO] Executing scenario: Set row color
+16:24:38.051 [DEBUG] Executing Step: * create a "10" by "10" image
+16:24:38.053 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+16:24:38.055 [INFO] Executing scenario: Clear image
+16:24:38.056 [DEBUG] Executing Step: * create a "10" by "10" image
+16:24:38.057 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+16:24:38.059 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+16:24:38.060 [DEBUG] Executing Step: * clear image
+16:24:38.455 [ERROR] Failed step: clear image
+16:24:38.455 [ERROR] Error Message: Expected (pixel.color == "O"), but
+    pixel.color is nil
+    pixel is #<Pixel:0x007f94fbbdb838
+       @coordinate=#<Pixel::Coordinate:0x007f94fbbdb810 @color="O", @pixel=#<Pixel:0x007f94fbbdb838 ...>, @x=1, @y=1>,
+       @image=
+        #<Image:0x007f94fbbdb8d8
+         @height=10,
+         @pixels=
+          [#<Pixel:0x007f94fbbdb838 ...>,
+           #<Pixel:0x007f94fbbdb7c0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb798 @color="O", @pixel=#<Pixel:0x007f94fbbdb7c0 ...>, @x=1, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb748
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb720 @color="O", @pixel=#<Pixel:0x007f94fbbdb748 ...>, @x=1, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb6d0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb6a8 @color="O", @pixel=#<Pixel:0x007f94fbbdb6d0 ...>, @x=1, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb658
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb630 @color="O", @pixel=#<Pixel:0x007f94fbbdb658 ...>, @x=1, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb5e0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb5b8 @color="O", @pixel=#<Pixel:0x007f94fbbdb5e0 ...>, @x=1, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb568
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb540 @color="O", @pixel=#<Pixel:0x007f94fbbdb568 ...>, @x=1, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb4f0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb4c8 @color="O", @pixel=#<Pixel:0x007f94fbbdb4f0 ...>, @x=1, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb478
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb450 @color="O", @pixel=#<Pixel:0x007f94fbbdb478 ...>, @x=1, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb400
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb3d8 @color="O", @pixel=#<Pixel:0x007f94fbbdb400 ...>, @x=1, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb360
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb338 @color="O", @pixel=#<Pixel:0x007f94fbbdb360 ...>, @x=2, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb2e8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb2c0 @color="O", @pixel=#<Pixel:0x007f94fbbdb2e8 ...>, @x=2, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb270
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb248 @color="O", @pixel=#<Pixel:0x007f94fbbdb270 ...>, @x=2, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb1f8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb1d0 @color="O", @pixel=#<Pixel:0x007f94fbbdb1f8 ...>, @x=2, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb180
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb158 @color="O", @pixel=#<Pixel:0x007f94fbbdb180 ...>, @x=2, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb108
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb0e0 @color="O", @pixel=#<Pixel:0x007f94fbbdb108 ...>, @x=2, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb090
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdb068 @color="O", @pixel=#<Pixel:0x007f94fbbdb090 ...>, @x=2, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdb018
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdaff0 @color="O", @pixel=#<Pixel:0x007f94fbbdb018 ...>, @x=2, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdafa0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdaf78 @color="O", @pixel=#<Pixel:0x007f94fbbdafa0 ...>, @x=2, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdaf28
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdaf00 @color="O", @pixel=#<Pixel:0x007f94fbbdaf28 ...>, @x=2, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdae88
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdae60 @color="O", @pixel=#<Pixel:0x007f94fbbdae88 ...>, @x=3, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdae10
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdade8 @color="O", @pixel=#<Pixel:0x007f94fbbdae10 ...>, @x=3, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdad98
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdad70 @color="O", @pixel=#<Pixel:0x007f94fbbdad98 ...>, @x=3, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdad20
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdacf8 @color="O", @pixel=#<Pixel:0x007f94fbbdad20 ...>, @x=3, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdaca8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdac80 @color="O", @pixel=#<Pixel:0x007f94fbbdaca8 ...>, @x=3, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdac30
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdac08 @color="O", @pixel=#<Pixel:0x007f94fbbdac30 ...>, @x=3, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdabb8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdab90 @color="O", @pixel=#<Pixel:0x007f94fbbdabb8 ...>, @x=3, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdab40
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdab18 @color="O", @pixel=#<Pixel:0x007f94fbbdab40 ...>, @x=3, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdaac8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdaaa0 @color="O", @pixel=#<Pixel:0x007f94fbbdaac8 ...>, @x=3, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbdaa50
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbdaa28 @color="O", @pixel=#<Pixel:0x007f94fbbdaa50 ...>, @x=3, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda9b0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda988 @color="O", @pixel=#<Pixel:0x007f94fbbda9b0 ...>, @x=4, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda938
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda910 @color="O", @pixel=#<Pixel:0x007f94fbbda938 ...>, @x=4, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda8c0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda898 @color="O", @pixel=#<Pixel:0x007f94fbbda8c0 ...>, @x=4, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda848
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda820 @color="O", @pixel=#<Pixel:0x007f94fbbda848 ...>, @x=4, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda7d0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda7a8 @color="O", @pixel=#<Pixel:0x007f94fbbda7d0 ...>, @x=4, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda758
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda730 @color="O", @pixel=#<Pixel:0x007f94fbbda758 ...>, @x=4, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda6e0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda6b8 @color="O", @pixel=#<Pixel:0x007f94fbbda6e0 ...>, @x=4, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda668
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda640 @color="O", @pixel=#<Pixel:0x007f94fbbda668 ...>, @x=4, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda5f0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda5c8 @color="O", @pixel=#<Pixel:0x007f94fbbda5f0 ...>, @x=4, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda578
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda550 @color="O", @pixel=#<Pixel:0x007f94fbbda578 ...>, @x=4, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda4d8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda4b0 @color="O", @pixel=#<Pixel:0x007f94fbbda4d8 ...>, @x=5, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda460
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda438 @color="O", @pixel=#<Pixel:0x007f94fbbda460 ...>, @x=5, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda3e8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda3c0 @color="O", @pixel=#<Pixel:0x007f94fbbda3e8 ...>, @x=5, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda370
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda348 @color="O", @pixel=#<Pixel:0x007f94fbbda370 ...>, @x=5, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda2f8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda2d0 @color="O", @pixel=#<Pixel:0x007f94fbbda2f8 ...>, @x=5, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda280
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda258 @color="O", @pixel=#<Pixel:0x007f94fbbda280 ...>, @x=5, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda208
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda1e0 @color="O", @pixel=#<Pixel:0x007f94fbbda208 ...>, @x=5, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda190
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda168 @color="O", @pixel=#<Pixel:0x007f94fbbda190 ...>, @x=5, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda118
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda0f0 @color="O", @pixel=#<Pixel:0x007f94fbbda118 ...>, @x=5, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda0a0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbda078 @color="O", @pixel=#<Pixel:0x007f94fbbda0a0 ...>, @x=5, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbda000
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9fd8 @color="O", @pixel=#<Pixel:0x007f94fbbda000 ...>, @x=6, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9f88
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9f60 @color="O", @pixel=#<Pixel:0x007f94fbbd9f88 ...>, @x=6, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9f10
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9ee8 @color="O", @pixel=#<Pixel:0x007f94fbbd9f10 ...>, @x=6, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9e98
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9e70 @color="O", @pixel=#<Pixel:0x007f94fbbd9e98 ...>, @x=6, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9e20
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9df8 @color="O", @pixel=#<Pixel:0x007f94fbbd9e20 ...>, @x=6, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9da8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9d80 @color="O", @pixel=#<Pixel:0x007f94fbbd9da8 ...>, @x=6, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9d30
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9d08 @color="O", @pixel=#<Pixel:0x007f94fbbd9d30 ...>, @x=6, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9cb8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9c90 @color="O", @pixel=#<Pixel:0x007f94fbbd9cb8 ...>, @x=6, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9c40
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9c18 @color="O", @pixel=#<Pixel:0x007f94fbbd9c40 ...>, @x=6, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9bc8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9ba0 @color="O", @pixel=#<Pixel:0x007f94fbbd9bc8 ...>, @x=6, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9b28
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9b00 @color="O", @pixel=#<Pixel:0x007f94fbbd9b28 ...>, @x=7, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9ab0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9a88 @color="O", @pixel=#<Pixel:0x007f94fbbd9ab0 ...>, @x=7, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9a38
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9a10 @color="O", @pixel=#<Pixel:0x007f94fbbd9a38 ...>, @x=7, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd99c0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9998 @color="O", @pixel=#<Pixel:0x007f94fbbd99c0 ...>, @x=7, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9948
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9920 @color="O", @pixel=#<Pixel:0x007f94fbbd9948 ...>, @x=7, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd98d0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd98a8 @color="O", @pixel=#<Pixel:0x007f94fbbd98d0 ...>, @x=7, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9858
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9830 @color="O", @pixel=#<Pixel:0x007f94fbbd9858 ...>, @x=7, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd97e0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd97b8 @color="O", @pixel=#<Pixel:0x007f94fbbd97e0 ...>, @x=7, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9768
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9740 @color="O", @pixel=#<Pixel:0x007f94fbbd9768 ...>, @x=7, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd96f0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd96c8 @color="O", @pixel=#<Pixel:0x007f94fbbd96f0 ...>, @x=7, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9650
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9628 @color="O", @pixel=#<Pixel:0x007f94fbbd9650 ...>, @x=8, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd95d8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd95b0 @color="O", @pixel=#<Pixel:0x007f94fbbd95d8 ...>, @x=8, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9560
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9538 @color="O", @pixel=#<Pixel:0x007f94fbbd9560 ...>, @x=8, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd94e8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd94c0 @color="O", @pixel=#<Pixel:0x007f94fbbd94e8 ...>, @x=8, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9470
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9448 @color="O", @pixel=#<Pixel:0x007f94fbbd9470 ...>, @x=8, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd93f8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd93d0 @color="O", @pixel=#<Pixel:0x007f94fbbd93f8 ...>, @x=8, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9380
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9358 @color="O", @pixel=#<Pixel:0x007f94fbbd9380 ...>, @x=8, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9308
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd92e0 @color="O", @pixel=#<Pixel:0x007f94fbbd9308 ...>, @x=8, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9290
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9268 @color="O", @pixel=#<Pixel:0x007f94fbbd9290 ...>, @x=8, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9218
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd91f0 @color="O", @pixel=#<Pixel:0x007f94fbbd9218 ...>, @x=8, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9178
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9150 @color="O", @pixel=#<Pixel:0x007f94fbbd9178 ...>, @x=9, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9100
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd90d8 @color="O", @pixel=#<Pixel:0x007f94fbbd9100 ...>, @x=9, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9088
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd9060 @color="O", @pixel=#<Pixel:0x007f94fbbd9088 ...>, @x=9, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd9010
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8fe8 @color="O", @pixel=#<Pixel:0x007f94fbbd9010 ...>, @x=9, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8f98
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8f70 @color="O", @pixel=#<Pixel:0x007f94fbbd8f98 ...>, @x=9, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8f20
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8ef8 @color="O", @pixel=#<Pixel:0x007f94fbbd8f20 ...>, @x=9, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8ea8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8e80 @color="O", @pixel=#<Pixel:0x007f94fbbd8ea8 ...>, @x=9, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8e30
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8e08 @color="O", @pixel=#<Pixel:0x007f94fbbd8e30 ...>, @x=9, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8db8
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8d90 @color="O", @pixel=#<Pixel:0x007f94fbbd8db8 ...>, @x=9, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8d40
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8d18 @color="O", @pixel=#<Pixel:0x007f94fbbd8d40 ...>, @x=9, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8ca0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8c78 @color="O", @pixel=#<Pixel:0x007f94fbbd8ca0 ...>, @x=10, @y=1>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8c28
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8c00 @color="O", @pixel=#<Pixel:0x007f94fbbd8c28 ...>, @x=10, @y=2>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8bb0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8b88 @color="O", @pixel=#<Pixel:0x007f94fbbd8bb0 ...>, @x=10, @y=3>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8b38
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8b10 @color="O", @pixel=#<Pixel:0x007f94fbbd8b38 ...>, @x=10, @y=4>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8ac0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8a98 @color="O", @pixel=#<Pixel:0x007f94fbbd8ac0 ...>, @x=10, @y=5>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8a48
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8a20 @color="O", @pixel=#<Pixel:0x007f94fbbd8a48 ...>, @x=10, @y=6>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd89d0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd89a8 @color="O", @pixel=#<Pixel:0x007f94fbbd89d0 ...>, @x=10, @y=7>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8958
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8930 @color="O", @pixel=#<Pixel:0x007f94fbbd8958 ...>, @x=10, @y=8>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd88e0
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd88b8 @color="O", @pixel=#<Pixel:0x007f94fbbd88e0 ...>, @x=10, @y=9>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>,
+           #<Pixel:0x007f94fbbd8868
+            @coordinate=#<Pixel::Coordinate:0x007f94fbbd8840 @color="O", @pixel=#<Pixel:0x007f94fbbd8868 ...>, @x=10, @y=10>,
+            @image=#<Image:0x007f94fbbdb8d8 ...>>],
+         @width=10>>
+16:24:38.458 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:51:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:50:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:50:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+16:24:38.566 [DEBUG] Plugin [Html Report] with pid [18105] has exited
+16:24:38.566 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+16:24:38.566 [INFO] Scenarios: 	6 executed, 5 passed, 1 failed, 0 skipped
+16:24:38.566 [INFO] Total time taken: 519ms
+16:27:03.780 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+16:27:03.782 [INFO] warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+16:27:04.946 [INFO] Executing specification: Image Specification
+16:27:04.946 [INFO] Executing scenario: Create Images
+16:27:04.947 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+16:27:05.037 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+16:27:05.040 [INFO] Executing scenario: check image bounds
+16:27:05.041 [DEBUG] Executing Step: * create a "3" by "3" image
+16:27:05.042 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+16:27:05.045 [INFO] Executing scenario: Set Color of Pixel
+16:27:05.045 [DEBUG] Executing Step: * create a "3" by "3" image
+16:27:05.047 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+16:27:05.049 [INFO] Executing scenario: Set column color
+16:27:05.050 [DEBUG] Executing Step: * create a "10" by "10" image
+16:27:05.051 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+16:27:05.054 [INFO] Executing scenario: Set row color
+16:27:05.054 [DEBUG] Executing Step: * create a "10" by "10" image
+16:27:05.056 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+16:27:05.058 [INFO] Executing scenario: Clear image
+16:27:05.058 [DEBUG] Executing Step: * create a "10" by "10" image
+16:27:05.060 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+16:27:05.062 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+16:27:05.063 [DEBUG] Executing Step: * clear image
+16:27:05.171 [DEBUG] Plugin [Html Report] with pid [18389] has exited
+16:27:05.171 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+16:27:05.171 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+16:27:05.171 [INFO] Total time taken: 121ms
+16:28:09.491 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+16:28:09.492 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+16:28:10.656 [INFO] Executing specification: Image Specification
+16:28:10.656 [INFO] Executing scenario: Create Images
+16:28:10.657 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+16:28:10.742 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+16:28:10.745 [INFO] Executing scenario: check image bounds
+16:28:10.746 [DEBUG] Executing Step: * create a "3" by "3" image
+16:28:10.748 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+16:28:10.750 [INFO] Executing scenario: Set Color of Pixel
+16:28:10.751 [DEBUG] Executing Step: * create a "3" by "3" image
+16:28:10.752 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+16:28:10.755 [INFO] Executing scenario: Set column color
+16:28:10.756 [DEBUG] Executing Step: * create a "10" by "10" image
+16:28:10.757 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+16:28:10.759 [INFO] Executing scenario: Set row color
+16:28:10.760 [DEBUG] Executing Step: * create a "10" by "10" image
+16:28:10.762 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+16:28:10.764 [INFO] Executing scenario: Clear image
+16:28:10.765 [DEBUG] Executing Step: * create a "10" by "10" image
+16:28:10.766 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|4   |2 |Z    |
+16:28:10.768 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+16:28:10.770 [DEBUG] Executing Step: * clear image
+16:28:10.878 [DEBUG] Plugin [Html Report] with pid [18613] has exited
+16:28:10.878 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+16:28:10.878 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+16:28:10.878 [INFO] Total time taken: 118ms
