@@ -38,3 +38,16 @@ the y value must be greater than 1 and less than the Image Height.
   |3  |3  |A       |
   |2  |2  |A       |
   |1  |1  |A       |
+
+
+check image bounds
+------------------
+
+* create a "3" by "3" image
+* set invalid pixel colors
+  |x  |y  |Exception message                   |
+  |---|---|------------------------------------|
+  |4  |3  |4 is outside the width of the image |
+  |3  |4  |4 is outside the height of the image|
+  |0  |3  |0 is outside the width of the image |
+  |3  |0  |0 is outside the height of the image|

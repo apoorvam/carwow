@@ -6,6 +6,7 @@ include Wrong
 
 class InvalidWidthError < StandardError;end
 class InvalidHeightError < StandardError;end
+class OutOfImageBoundsError < StandardError;end
 
 class Image
   MAXIMUM_HEIGHT=250
@@ -32,7 +33,14 @@ class Image
 
   end
 
+  
+
+
   def set_color(x,y,color)
+
+    raise OutOfImageBoundsError.new("#{x} is outside the width of the image") unless (1..self.width).include? x.to_i
+    raise OutOfImageBoundsError.new("#{y} is outside the height of the image") unless (1..self.height).include? y.to_i
+
     pixel =  self.pixels.find{|pixel| pixel.coordinate.x == x.to_i && pixel.coordinate.y == y.to_i}
     pixel.color = color
     pixel
@@ -68,6 +76,14 @@ step "set pixel colors <table>" do |table|
     assert{pixel.color == row[2]}
   end
 end
+
+step "set invalid pixel colors <table>" do |table|
+  table.rows.each do |row|
+    assert{rescuing{@image.set_color(row[0],row[1],"A")}.message == row[2]}
+  end
+end
+
+
 
 step 'initialize valid images <table>' do |table|
   table.rows.each do |row|

@@ -1,2 +1,10 @@
-Image	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^class Image$/;"	class	line:3
-def	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^  def def initialize(x,y)$/;"	method	line:5	class:Image
+InvalidWidthError	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^class InvalidWidthError < StandardError;end$/;"	class	line:7
+InvalidHeightError	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^class InvalidHeightError < StandardError;end$/;"	class	line:8	class:InvalidWidthError
+OutOfImageBoundsError	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^class OutOfImageBoundsError < StandardError;end$/;"	class	line:9	class:InvalidWidthError.InvalidHeightError
+Image	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^class Image$/;"	class	line:11	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError
+initialize	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^  def initialize(width,height)$/;"	method	line:17	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image
+set_color	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^  def set_color(x,y,color)$/;"	method	line:39	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize
+Pixel	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^class Pixel$/;"	class	line:51	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize
+Coordinate	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^  class Coordinate$/;"	class	line:54	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize.Pixel
+initialize	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^    def initialize(pixel,x,y)$/;"	method	line:56	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize.Pixel.Coordinate
+initialize	/Users/coocoder/desktop/carwow/step_implementations/steps.rb	/^  def initialize(image,x,y)$/;"	method	line:62	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize.Pixel
