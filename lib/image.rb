@@ -40,6 +40,11 @@ class Image
     pixel
   end
 
+  def get_column(x)
+    raise OutOfImageBoundsError.new("#{x} is outside the width of the image") unless (1..self.width).include? x.to_i
+    pixels.select{|pixel| pixel.coordinate.x == x.to_i}
+  end
+
 end
 
 class Pixel

@@ -16811,3 +16811,838 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 08:19:33.141 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 08:19:33.142 [INFO] Scenarios: 	3 executed, 3 passed, 0 failed, 0 skipped
 08:19:33.142 [INFO] Total time taken: 93ms
+08:20:25.739 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:20:26.911 [INFO] Executing specification: Image Specification
+08:20:26.912 [INFO] Executing scenario: Create Images
+08:20:26.912 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:20:26.952 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:20:26.955 [INFO] Executing scenario: Set Color of Pixel
+08:20:26.956 [DEBUG] Executing Step: * create a "3" by "3" image
+08:20:26.957 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:20:26.960 [INFO] Executing scenario: check image bounds
+08:20:26.961 [DEBUG] Executing Step: * create a "3" by "3" image
+08:20:26.963 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:20:27.072 [DEBUG] Plugin [Html Report] with pid [99987] has exited
+08:20:27.073 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+08:20:27.073 [INFO] Scenarios: 	3 executed, 3 passed, 0 failed, 0 skipped
+08:20:27.073 [INFO] Total time taken: 56ms
+09:37:59.519 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:38:00.728 [INFO] Executing specification: Image Specification
+09:38:00.730 [INFO] Executing scenario: Create Images
+09:38:00.730 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:38:00.773 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:38:00.776 [INFO] Executing scenario: check image bounds
+09:38:00.777 [DEBUG] Executing Step: * create a "3" by "3" image
+09:38:00.779 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:38:00.781 [INFO] Executing scenario: Set Color of Pixel
+09:38:00.782 [DEBUG] Executing Step: * create a "3" by "3" image
+09:38:00.784 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:38:00.786 [INFO] Executing scenario: Set vertical color
+09:38:00.787 [DEBUG] Executing Step: * create a "10" by "10" image
+09:38:00.788 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:38:01.178 [ERROR] Failed step: set pixel vertical colors
+09:38:01.178 [ERROR] Error Message: undefined local variable or method `rows' for main:Object
+09:38:01.178 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:28:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:38:01.286 [DEBUG] Plugin [Html Report] with pid [2774] has exited
+09:38:01.286 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:38:01.286 [INFO] Scenarios: 	4 executed, 3 passed, 1 failed, 0 skipped
+09:38:01.286 [INFO] Total time taken: 454ms
+09:38:44.321 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:38:45.466 [INFO] Executing specification: Image Specification
+09:38:45.467 [INFO] Executing scenario: Create Images
+09:38:45.468 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:38:45.508 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:38:45.511 [INFO] Executing scenario: check image bounds
+09:38:45.512 [DEBUG] Executing Step: * create a "3" by "3" image
+09:38:45.513 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:38:45.516 [INFO] Executing scenario: Set Color of Pixel
+09:38:45.517 [DEBUG] Executing Step: * create a "3" by "3" image
+09:38:45.519 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:38:45.521 [INFO] Executing scenario: Set vertical color
+09:38:45.522 [DEBUG] Executing Step: * create a "10" by "10" image
+09:38:45.523 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:38:45.879 [ERROR] Failed step: set pixel vertical colors
+09:38:45.879 [ERROR] Error Message: undefined local variable or method `rows' for main:Object
+09:38:45.879 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:28:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:38:45.984 [DEBUG] Plugin [Html Report] with pid [2912] has exited
+09:38:45.984 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:38:45.984 [INFO] Scenarios: 	4 executed, 3 passed, 1 failed, 0 skipped
+09:38:45.984 [INFO] Total time taken: 417ms
+09:39:36.584 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:39:37.740 [INFO] Executing specification: Image Specification
+09:39:37.741 [INFO] Executing scenario: Create Images
+09:39:37.742 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:39:37.792 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:39:37.795 [INFO] Executing scenario: check image bounds
+09:39:37.796 [DEBUG] Executing Step: * create a "3" by "3" image
+09:39:37.798 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:39:37.800 [INFO] Executing scenario: Set Color of Pixel
+09:39:37.801 [DEBUG] Executing Step: * create a "3" by "3" image
+09:39:37.802 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:39:37.806 [INFO] Executing scenario: Set vertical color
+09:39:37.807 [DEBUG] Executing Step: * create a "10" by "10" image
+09:39:37.809 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:39:38.165 [ERROR] Failed step: set pixel vertical colors
+09:39:38.165 [ERROR] Error Message: undefined local variable or method `rows' for main:Object
+09:39:38.165 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:28:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:39:38.274 [DEBUG] Plugin [Html Report] with pid [3076] has exited
+09:39:38.274 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:39:38.274 [INFO] Scenarios: 	4 executed, 3 passed, 1 failed, 0 skipped
+09:39:38.274 [INFO] Total time taken: 429ms
+09:41:02.000 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:41:03.197 [INFO] Executing specification: Image Specification
+09:41:03.198 [INFO] Executing scenario: Create Images
+09:41:03.199 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:41:03.239 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:41:03.242 [INFO] Executing scenario: check image bounds
+09:41:03.242 [DEBUG] Executing Step: * create a "3" by "3" image
+09:41:03.244 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:41:03.247 [INFO] Executing scenario: Set Color of Pixel
+09:41:03.248 [DEBUG] Executing Step: * create a "3" by "3" image
+09:41:03.249 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:41:03.253 [INFO] Executing scenario: Set vertical color
+09:41:03.253 [DEBUG] Executing Step: * create a "10" by "10" image
+09:41:03.255 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:41:03.256 [INFO] ["2", "3", "4", "W"]
+09:41:03.363 [DEBUG] Plugin [Html Report] with pid [3350] has exited
+09:41:03.364 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:41:03.364 [INFO] Scenarios: 	4 executed, 4 passed, 0 failed, 0 skipped
+09:41:03.364 [INFO] Total time taken: 61ms
+09:49:09.128 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:49:09.130 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:49:10.367 [INFO] Executing specification: Image Specification
+09:49:10.368 [INFO] Executing scenario: Create Images
+09:49:10.368 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:49:10.409 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:49:10.412 [INFO] Executing scenario: check image bounds
+09:49:10.413 [DEBUG] Executing Step: * create a "3" by "3" image
+09:49:10.415 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:49:10.417 [INFO] Executing scenario: Set Color of Pixel
+09:49:10.418 [DEBUG] Executing Step: * create a "3" by "3" image
+09:49:10.420 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:49:10.422 [INFO] Executing scenario: Set vertical color
+09:49:10.423 [DEBUG] Executing Step: * create a "10" by "10" image
+09:49:10.424 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:49:10.531 [DEBUG] Plugin [Html Report] with pid [4376] has exited
+09:49:10.531 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:49:10.531 [INFO] Scenarios: 	4 executed, 4 passed, 0 failed, 0 skipped
+09:49:10.531 [INFO] Total time taken: 61ms
+09:49:27.580 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:49:28.774 [INFO] Executing specification: Image Specification
+09:49:28.774 [INFO] Executing scenario: Create Images
+09:49:28.775 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:49:28.816 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:49:28.819 [INFO] Executing scenario: check image bounds
+09:49:28.820 [DEBUG] Executing Step: * create a "3" by "3" image
+09:49:28.822 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:49:28.824 [INFO] Executing scenario: Set Color of Pixel
+09:49:28.825 [DEBUG] Executing Step: * create a "3" by "3" image
+09:49:28.826 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:49:28.829 [INFO] Executing scenario: Set vertical color
+09:49:28.829 [DEBUG] Executing Step: * create a "10" by "10" image
+09:49:28.831 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:49:28.832 [INFO] 1
+2
+09:49:28.938 [DEBUG] Plugin [Html Report] with pid [4425] has exited
+09:49:28.938 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:49:28.938 [INFO] Scenarios: 	4 executed, 4 passed, 0 failed, 0 skipped
+09:49:28.938 [INFO] Total time taken: 62ms
+09:49:59.659 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:50:00.814 [INFO] Executing specification: Image Specification
+09:50:00.815 [INFO] Executing scenario: Create Images
+09:50:00.815 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:50:00.859 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:50:00.861 [INFO] Executing scenario: check image bounds
+09:50:00.862 [DEBUG] Executing Step: * create a "3" by "3" image
+09:50:00.864 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:50:00.866 [INFO] Executing scenario: Set Color of Pixel
+09:50:00.867 [DEBUG] Executing Step: * create a "3" by "3" image
+09:50:00.869 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:50:00.871 [INFO] Executing scenario: Set vertical color
+09:50:00.872 [DEBUG] Executing Step: * create a "10" by "10" image
+09:50:00.874 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:50:00.875 [INFO] 3
+4
+09:50:00.982 [DEBUG] Plugin [Html Report] with pid [4495] has exited
+09:50:00.982 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:50:00.982 [INFO] Scenarios: 	4 executed, 4 passed, 0 failed, 0 skipped
+09:50:00.982 [INFO] Total time taken: 63ms
+09:54:14.004 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:54:15.189 [INFO] Executing specification: Image Specification
+09:54:15.190 [INFO] Executing scenario: Create Images
+09:54:15.191 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:54:15.231 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:54:15.234 [INFO] Executing scenario: check image bounds
+09:54:15.235 [DEBUG] Executing Step: * create a "3" by "3" image
+09:54:15.236 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:54:15.239 [INFO] Executing scenario: Set Color of Pixel
+09:54:15.240 [DEBUG] Executing Step: * create a "3" by "3" image
+09:54:15.242 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:54:15.245 [INFO] Executing scenario: Set vertical color
+09:54:15.245 [DEBUG] Executing Step: * create a "10" by "10" image
+09:54:15.248 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:54:15.674 [ERROR] Failed step: set pixel vertical colors
+09:54:15.674 [ERROR] Error Message: Expected (pixel.color == row[2]), but
+Strings differ at position 0:
+ first: "W"
+second: "4"
+    pixel.color is "W"
+    pixel is #<Pixel:0x007fe5ab8a4970
+       @color="W",
+       @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4948 @pixel=#<Pixel:0x007fe5ab8a4970 ...>, @x=2, @y=3>,
+       @image=
+        #<Image:0x007fe5ab8a4f38
+         @height=10,
+         @pixels=
+          [#<Pixel:0x007fe5ab8a4e20
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4dd0 @pixel=#<Pixel:0x007fe5ab8a4e20 ...>, @x=1, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4da8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4d80 @pixel=#<Pixel:0x007fe5ab8a4da8 ...>, @x=1, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4d58
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4d30 @pixel=#<Pixel:0x007fe5ab8a4d58 ...>, @x=1, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4d08
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4cb8 @pixel=#<Pixel:0x007fe5ab8a4d08 ...>, @x=1, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4c90
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4c68 @pixel=#<Pixel:0x007fe5ab8a4c90 ...>, @x=1, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4c40
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4c18 @pixel=#<Pixel:0x007fe5ab8a4c40 ...>, @x=1, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4bf0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4bc8 @pixel=#<Pixel:0x007fe5ab8a4bf0 ...>, @x=1, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4ba0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4b50 @pixel=#<Pixel:0x007fe5ab8a4ba0 ...>, @x=1, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4b28
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4ad8 @pixel=#<Pixel:0x007fe5ab8a4b28 ...>, @x=1, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4ab0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4a60 @pixel=#<Pixel:0x007fe5ab8a4ab0 ...>, @x=1, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4a10
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a49e8 @pixel=#<Pixel:0x007fe5ab8a4a10 ...>, @x=2, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a49c0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4998 @pixel=#<Pixel:0x007fe5ab8a49c0 ...>, @x=2, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4970 ...>,
+           #<Pixel:0x007fe5ab8a48d0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a48a8 @pixel=#<Pixel:0x007fe5ab8a48d0 ...>, @x=2, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4880
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4858 @pixel=#<Pixel:0x007fe5ab8a4880 ...>, @x=2, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4808
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a47e0 @pixel=#<Pixel:0x007fe5ab8a4808 ...>, @x=2, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a47b8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4790 @pixel=#<Pixel:0x007fe5ab8a47b8 ...>, @x=2, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4768
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4740 @pixel=#<Pixel:0x007fe5ab8a4768 ...>, @x=2, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a46f0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a46a0 @pixel=#<Pixel:0x007fe5ab8a46f0 ...>, @x=2, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4678
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4628 @pixel=#<Pixel:0x007fe5ab8a4678 ...>, @x=2, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4560
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4538 @pixel=#<Pixel:0x007fe5ab8a4560 ...>, @x=3, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a44e8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a44c0 @pixel=#<Pixel:0x007fe5ab8a44e8 ...>, @x=3, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4498
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4448 @pixel=#<Pixel:0x007fe5ab8a4498 ...>, @x=3, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4420
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a43f8 @pixel=#<Pixel:0x007fe5ab8a4420 ...>, @x=3, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a43a8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4380 @pixel=#<Pixel:0x007fe5ab8a43a8 ...>, @x=3, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4358
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4330 @pixel=#<Pixel:0x007fe5ab8a4358 ...>, @x=3, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4308
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a42b8 @pixel=#<Pixel:0x007fe5ab8a4308 ...>, @x=3, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4268
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4240 @pixel=#<Pixel:0x007fe5ab8a4268 ...>, @x=3, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4218
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a41a0 @pixel=#<Pixel:0x007fe5ab8a4218 ...>, @x=3, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4178
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4150 @pixel=#<Pixel:0x007fe5ab8a4178 ...>, @x=3, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a40d8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a40b0 @pixel=#<Pixel:0x007fe5ab8a40d8 ...>, @x=4, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4060
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4038 @pixel=#<Pixel:0x007fe5ab8a4060 ...>, @x=4, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4010
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a7e90 @pixel=#<Pixel:0x007fe5ab8a4010 ...>, @x=4, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a75a8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a6950 @pixel=#<Pixel:0x007fe5ab8a75a8 ...>, @x=4, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a5870
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4df8 @pixel=#<Pixel:0x007fe5ab8a5870 ...>, @x=4, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4088
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4128 @pixel=#<Pixel:0x007fe5ab8a4088 ...>, @x=4, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a41f0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4290 @pixel=#<Pixel:0x007fe5ab8a41f0 ...>, @x=4, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4470
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4510 @pixel=#<Pixel:0x007fe5ab8a4470 ...>, @x=4, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a45d8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a46c8 @pixel=#<Pixel:0x007fe5ab8a45d8 ...>, @x=4, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4920
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a4b00 @pixel=#<Pixel:0x007fe5ab8a4920 ...>, @x=4, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a4ee8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a50c8 @pixel=#<Pixel:0x007fe5ab8a4ee8 ...>, @x=5, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a5410
+            @coordinate=#<Pixel::Coordinate:0x007fe5ab8a56b8 @pixel=#<Pixel:0x007fe5ab8a5410 ...>, @x=5, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ab8a5820
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10bf90 @pixel=#<Pixel:0x007fe5ab8a5820 ...>, @x=5, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10bf68
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10bf40 @pixel=#<Pixel:0x007fe5ad10bf68 ...>, @x=5, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10bec8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10bea0 @pixel=#<Pixel:0x007fe5ad10bec8 ...>, @x=5, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10bdd8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10bdb0 @pixel=#<Pixel:0x007fe5ad10bdd8 ...>, @x=5, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10bd88
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10bd38 @pixel=#<Pixel:0x007fe5ad10bd88 ...>, @x=5, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10bc98
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10bc70 @pixel=#<Pixel:0x007fe5ad10bc98 ...>, @x=5, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10bbf8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10bb80 @pixel=#<Pixel:0x007fe5ad10bbf8 ...>, @x=5, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10bb30
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10bab8 @pixel=#<Pixel:0x007fe5ad10bb30 ...>, @x=5, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10ba40
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b9f0 @pixel=#<Pixel:0x007fe5ad10ba40 ...>, @x=6, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b9c8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b978 @pixel=#<Pixel:0x007fe5ad10b9c8 ...>, @x=6, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b950
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b900 @pixel=#<Pixel:0x007fe5ad10b950 ...>, @x=6, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b8b0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b860 @pixel=#<Pixel:0x007fe5ad10b8b0 ...>, @x=6, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b838
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b810 @pixel=#<Pixel:0x007fe5ad10b838 ...>, @x=6, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b7e8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b7c0 @pixel=#<Pixel:0x007fe5ad10b7e8 ...>, @x=6, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b748
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b720 @pixel=#<Pixel:0x007fe5ad10b748 ...>, @x=6, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b6a8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b680 @pixel=#<Pixel:0x007fe5ad10b6a8 ...>, @x=6, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b630
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b590 @pixel=#<Pixel:0x007fe5ad10b630 ...>, @x=6, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b518
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b4f0 @pixel=#<Pixel:0x007fe5ad10b518 ...>, @x=6, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b4a0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b478 @pixel=#<Pixel:0x007fe5ad10b4a0 ...>, @x=7, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b450
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b400 @pixel=#<Pixel:0x007fe5ad10b450 ...>, @x=7, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b3b0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b388 @pixel=#<Pixel:0x007fe5ad10b3b0 ...>, @x=7, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b360
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b338 @pixel=#<Pixel:0x007fe5ad10b360 ...>, @x=7, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b310
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b2c0 @pixel=#<Pixel:0x007fe5ad10b310 ...>, @x=7, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b298
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b248 @pixel=#<Pixel:0x007fe5ad10b298 ...>, @x=7, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b220
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b1f8 @pixel=#<Pixel:0x007fe5ad10b220 ...>, @x=7, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b180
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b158 @pixel=#<Pixel:0x007fe5ad10b180 ...>, @x=7, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b108
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b0e0 @pixel=#<Pixel:0x007fe5ad10b108 ...>, @x=7, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10b0b8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10b068 @pixel=#<Pixel:0x007fe5ad10b0b8 ...>, @x=7, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10afa0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10af78 @pixel=#<Pixel:0x007fe5ad10afa0 ...>, @x=8, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10af50
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10af00 @pixel=#<Pixel:0x007fe5ad10af50 ...>, @x=8, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10aed8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10ae88 @pixel=#<Pixel:0x007fe5ad10aed8 ...>, @x=8, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10ad98
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10ad70 @pixel=#<Pixel:0x007fe5ad10ad98 ...>, @x=8, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10ad48
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10acf8 @pixel=#<Pixel:0x007fe5ad10ad48 ...>, @x=8, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10acd0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10aca8 @pixel=#<Pixel:0x007fe5ad10acd0 ...>, @x=8, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10ac58
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10ac30 @pixel=#<Pixel:0x007fe5ad10ac58 ...>, @x=8, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10ac08
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10ab40 @pixel=#<Pixel:0x007fe5ad10ac08 ...>, @x=8, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10ab18
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10aac8 @pixel=#<Pixel:0x007fe5ad10ab18 ...>, @x=8, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a640
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a618 @pixel=#<Pixel:0x007fe5ad10a640 ...>, @x=8, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a578
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a550 @pixel=#<Pixel:0x007fe5ad10a578 ...>, @x=9, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a488
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a460 @pixel=#<Pixel:0x007fe5ad10a488 ...>, @x=9, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a410
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a3c0 @pixel=#<Pixel:0x007fe5ad10a410 ...>, @x=9, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a398
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a370 @pixel=#<Pixel:0x007fe5ad10a398 ...>, @x=9, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a348
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a320 @pixel=#<Pixel:0x007fe5ad10a348 ...>, @x=9, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a2f8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a2a8 @pixel=#<Pixel:0x007fe5ad10a2f8 ...>, @x=9, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a280
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a208 @pixel=#<Pixel:0x007fe5ad10a280 ...>, @x=9, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a1e0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a190 @pixel=#<Pixel:0x007fe5ad10a1e0 ...>, @x=9, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a118
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a0f0 @pixel=#<Pixel:0x007fe5ad10a118 ...>, @x=9, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad10a0a0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad10a050 @pixel=#<Pixel:0x007fe5ad10a0a0 ...>, @x=9, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109f88
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109f60 @pixel=#<Pixel:0x007fe5ad109f88 ...>, @x=10, @y=1>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109ee8
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109e98 @pixel=#<Pixel:0x007fe5ad109ee8 ...>, @x=10, @y=2>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109e70
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109e48 @pixel=#<Pixel:0x007fe5ad109e70 ...>, @x=10, @y=3>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109dd0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109d58 @pixel=#<Pixel:0x007fe5ad109dd0 ...>, @x=10, @y=4>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109d30
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109cb8 @pixel=#<Pixel:0x007fe5ad109d30 ...>, @x=10, @y=5>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109c68
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109c18 @pixel=#<Pixel:0x007fe5ad109c68 ...>, @x=10, @y=6>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109bf0
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109bc8 @pixel=#<Pixel:0x007fe5ad109bf0 ...>, @x=10, @y=7>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109b50
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109ab0 @pixel=#<Pixel:0x007fe5ad109b50 ...>, @x=10, @y=8>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109a88
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad109a38 @pixel=#<Pixel:0x007fe5ad109a88 ...>, @x=10, @y=9>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>,
+           #<Pixel:0x007fe5ad109a10
+            @coordinate=#<Pixel::Coordinate:0x007fe5ad1099e8 @pixel=#<Pixel:0x007fe5ad109a10 ...>, @x=10, @y=10>,
+            @image=#<Image:0x007fe5ab8a4f38 ...>>],
+         @width=10>>
+    row[2] is "4"
+    row is ["2", "3", "4", "W"]
+09:54:15.676 [ERROR] Stacktrace: /Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:33:in `block (3 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:31:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:31:in `block (2 levels) in <top (required)>'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `each'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:27:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+09:54:15.783 [DEBUG] Plugin [Html Report] with pid [5054] has exited
+09:54:15.783 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+09:54:15.783 [INFO] Scenarios: 	4 executed, 3 passed, 1 failed, 0 skipped
+09:54:15.783 [INFO] Total time taken: 491ms
+09:54:48.354 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+09:54:48.356 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+09:54:49.567 [INFO] Executing specification: Image Specification
+09:54:49.567 [INFO] Executing scenario: Create Images
+09:54:49.568 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+09:54:49.617 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+09:54:49.620 [INFO] Executing scenario: check image bounds
+09:54:49.621 [DEBUG] Executing Step: * create a "3" by "3" image
+09:54:49.623 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+09:54:49.626 [INFO] Executing scenario: Set Color of Pixel
+09:54:49.628 [DEBUG] Executing Step: * create a "3" by "3" image
+09:54:49.630 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+09:54:49.633 [INFO] Executing scenario: Set vertical color
+09:54:49.635 [DEBUG] Executing Step: * create a "10" by "10" image
+09:54:49.637 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|3   |4 |W    |
+09:54:49.742 [DEBUG] Plugin [Html Report] with pid [5143] has exited
+09:54:49.742 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+09:54:49.742 [INFO] Scenarios: 	4 executed, 4 passed, 0 failed, 0 skipped
+09:54:49.742 [INFO] Total time taken: 75ms

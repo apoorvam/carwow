@@ -23,6 +23,17 @@ step "set invalid pixel colors <table>" do |table|
   end
 end
 
+step "set pixel vertical colors <table>" do |table|
+  table.rows.each do |row|
+    x = row[0].to_i
+    for y in (row[1].to_i..row[2].to_i) do
+      pixel = @image.set_color(x,y,row[3])
+      assert{pixel.color == row[3]}
+    end
+
+  end
+end
+
 
 
 step 'initialize valid images <table>' do |table|

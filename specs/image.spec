@@ -24,6 +24,17 @@ Create Images
   |0  |250|A width of 0 is less than the minimum width of 1           |
   |250|0  |A height of 0 is less than the minimum height of 1         |
 
+check image bounds
+------------------
+
+* create a "3" by "3" image
+* set invalid pixel colors
+  |x  |y  |Exception message                   |
+  |---|---|------------------------------------|
+  |4  |3  |4 is outside the width of the image |
+  |3  |4  |4 is outside the height of the image|
+  |0  |3  |0 is outside the width of the image |
+  |3  |0  |0 is outside the height of the image|
 
 Set Color of Pixel
 ------------------
@@ -40,14 +51,11 @@ the y value must be greater than 1 and less than the Image Height.
   |1  |1  |A       |
 
 
-check image bounds
+Set vertical color
 ------------------
 
-* create a "3" by "3" image
-* set invalid pixel colors
-  |x  |y  |Exception message                   |
-  |---|---|------------------------------------|
-  |4  |3  |4 is outside the width of the image |
-  |3  |4  |4 is outside the height of the image|
-  |0  |3  |0 is outside the width of the image |
-  |3  |0  |0 is outside the height of the image|
+* create a "10" by "10" image
+* set pixel vertical colors
+  |x  |from|to      |color   |
+  |---|----|--------|--------|
+  |2  |3   |4       |W       |
