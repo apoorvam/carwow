@@ -4,7 +4,7 @@ Image Specification
 An image can be a maximum of 250 pixels in width
 An image can be a maximum  of 250 pixels in height
 An image can not have width less than 1 pixels
-An image can not have Hieght less than 1 pixels
+An image can not have Height less than 1 pixels
 
 
 Create Images

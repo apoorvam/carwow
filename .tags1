@@ -4,3 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+InvalidWidthError	/Users/coocoder/desktop/carwow/lib/image.rb	/^class InvalidWidthError < StandardError;end$/;"	class	line:1
+InvalidHeightError	/Users/coocoder/desktop/carwow/lib/image.rb	/^class InvalidHeightError < StandardError;end$/;"	class	line:2	class:InvalidWidthError
+OutOfImageBoundsError	/Users/coocoder/desktop/carwow/lib/image.rb	/^class OutOfImageBoundsError < StandardError;end$/;"	class	line:3	class:InvalidWidthError.InvalidHeightError
+Image	/Users/coocoder/desktop/carwow/lib/image.rb	/^class Image$/;"	class	line:5	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError
+initialize	/Users/coocoder/desktop/carwow/lib/image.rb	/^  def initialize(width,height)$/;"	method	line:11	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image
+set_color	/Users/coocoder/desktop/carwow/lib/image.rb	/^  def set_color(x,y,color)$/;"	method	line:33	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize
+Pixel	/Users/coocoder/desktop/carwow/lib/image.rb	/^class Pixel$/;"	class	line:45	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize
+Coordinate	/Users/coocoder/desktop/carwow/lib/image.rb	/^  class Coordinate$/;"	class	line:48	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize.Pixel
+initialize	/Users/coocoder/desktop/carwow/lib/image.rb	/^    def initialize(pixel,x,y)$/;"	method	line:50	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize.Pixel.Coordinate
+initialize	/Users/coocoder/desktop/carwow/lib/image.rb	/^  def initialize(image,x,y)$/;"	method	line:56	class:InvalidWidthError.InvalidHeightError.OutOfImageBoundsError.Image.initialize.Pixel
