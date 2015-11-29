@@ -1,38 +1,44 @@
-  def fill(region,x,y,width,height)
-
-    puts "width: #{width}"
-    puts "height: #{height}"
-    puts "x: #{x}"
-    puts "Y: #{y}"
-
-    top = lambda{ |x,y,height|
-      return x,(y-1)
-    }
-
-    bottom = lambda{ |x,y,height|
-      return x,(y+1)
-    }
-
-    left = lambda{ |x,y,height|
-      return (x-1),y
-    }
-
-    right = lambda{ |x,y,height|
-      return (x+1),y
-    }
-
-    puts "top: #{top.call(x,y,height)}"
-    puts "right: #{right.call(x,y,height)}"
-    puts "bottom: #{bottom.call(x,y,height)}"
-    puts "left: #{left.call(x,y,height)}"
-
-    region.each do |p|
-      fill(region,p[0],p[1],width,height)
-    end
+class Image
+  attr_accessor :width,:height
+  def initialize(width,height)
+    @width = width
+    @height = height
   end
+end
 
-  region=[]
-  fill(region,2,2,3,3)
+
+def fill(image,x,y,color)
+
+  puts "width: #{image.width}"
+  puts "height: #{image.height}"
+  puts "x: #{x}"
+  puts "Y: #{y}"
+
+  top = lambda{ |x,y,image|
+    return x,(y-1)
+  }
+
+  bottom = lambda{ |x,y,image|
+    return x,(y+1)
+  }
+
+  left = lambda{ |x,y,image|
+    return (x-1),y
+  }
+
+  right = lambda{ |x,y,image|
+    return (x+1),y
+  }
+
+  puts "top: #{top.call(x,y,image)}"
+  puts "right: #{right.call(x,y,image)}"
+  puts "bottom: #{bottom.call(x,y,image)}"
+  puts "left: #{left.call(x,y,image)}"
+
+
+end
+
+fill(Image.new(3,3),2,2,"A")
 
 # bitmap = BitMap.new
 #

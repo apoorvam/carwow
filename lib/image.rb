@@ -53,6 +53,38 @@ class Image
     end
   end
 
+  def fill(image,x,y,color)
+
+    puts "width: #{image.width}"
+    puts "height: #{image.height}"
+    puts "x: #{x}"
+    puts "Y: #{y}"
+
+    top = lambda{ |x,y,image|
+      return x,(y-1)
+    }
+
+    bottom = lambda{ |x,y,image|
+      return x,(y+1)
+    }
+
+    left = lambda{ |x,y,image|
+      return (x-1),y
+    }
+
+    right = lambda{ |x,y,image|
+      return (x+1),y
+    }
+
+    puts "top: #{top.call(x,y,image)}"
+    puts "right: #{right.call(x,y,image)}"
+    puts "bottom: #{bottom.call(x,y,image)}"
+    puts "left: #{left.call(x,y,image)}"
+
+
+  end
+
+
   def clear
     @pixels.each do |pixel|
       set_color(pixel.coordinate.x,pixel.coordinate.y,"O")

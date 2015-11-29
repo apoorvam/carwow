@@ -56,7 +56,7 @@ Set column color
 
 * create a "10" by "10" image
 * set pixel vertical colors
-  |x  |from|to      |color   |
+  |x  |y1  |y2      |color   |
   |---|----|--------|--------|
   |2  |3   |4       |W       |
 
@@ -66,19 +66,19 @@ Set row color
 
 * create a "10" by "10" image
 * set pixel horizontal colors
-  |y  |from|to      |color   |
+  |x1 |x2  |y       |color   |
   |---|----|--------|--------|
-  |2  |4   |2       |Z       |
+  |3  |4   |2       |Z       |
 
 Clear image
 ------------------
 * create a "10" by "10" image
 * set pixel horizontal colors
-  |y  |from|to      |color   |
+  |x1 |x2  |y       |color   |
   |---|----|--------|--------|
-  |2  |4   |2       |Z       |
+  |3  |4   |2       |Z       |
 * set pixel vertical colors
-  |x  |from|to      |color   |
+  |x  |y1  |y2      |color   |
   |---|----|--------|--------|
   |2  |3   |4       |W       |
 * clear image
