@@ -21325,3 +21325,153 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 08:30:16.750 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 08:30:16.750 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
 08:30:16.750 [INFO] Total time taken: 113ms
+08:35:11.752 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:35:11.930 [INFO] /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+08:35:11.930 [INFO] : /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:41: syntax error, unexpected '}', expecting ')' (SyntaxError)
+/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:75: syntax error, unexpected end-of-input, expecting '}'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `block in load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `each'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:75:in `<module:Runtime>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	from -e:1:in `<main>'
+08:35:11.937 [ERROR] Validation failed. The following steps have errors
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:13: write tcp [::1]:54491->[::1]:54494: use of closed network connection. initialize valid images
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:19: write tcp [::1]:54491->[::1]:54494: use of closed network connection. initialize invalid images
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:30: write tcp [::1]:54491->[::1]:54494: use of closed network connection. create a "3" by "3" image
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:31: write tcp [::1]:54491->[::1]:54494: use of closed network connection. set invalid pixel colors
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:45: write tcp [::1]:54491->[::1]:54494: use of closed network connection. create a "3" by "3" image
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:46: write tcp [::1]:54491->[::1]:54494: use of closed network connection. set pixel colors
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:57: write tcp [::1]:54491->[::1]:54494: use of closed network connection. create a "10" by "10" image
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:58: write tcp [::1]:54491->[::1]:54494: use of closed network connection. set pixel vertical colors
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:67: write tcp [::1]:54491->[::1]:54494: use of closed network connection. create a "10" by "10" image
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:68: write tcp [::1]:54491->[::1]:54494: use of closed network connection. set pixel horizontal colors
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:75: write tcp [::1]:54491->[::1]:54494: use of closed network connection. create a "10" by "10" image
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:76: write tcp [::1]:54491->[::1]:54494: use of closed network connection. set pixel horizontal colors
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:80: write tcp [::1]:54491->[::1]:54494: use of closed network connection. set pixel vertical colors
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:84: write tcp [::1]:54491->[::1]:54494: use of closed network connection. clear image
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:90: write tcp [::1]:54491->[::1]:54494: use of closed network connection. create a "10" by "10" image
+08:35:11.937 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:91: write tcp [::1]:54491->[::1]:54494: use of closed network connection. define regions
+08:35:11.942 [INFO] Failed to start Gauge Ruby runner. exit status 1
+08:35:11.943 [DEBUG] Runner exited with error: exit status 1
+08:35:11.988 [ERROR] Failed to initialize suite datastore. Error: write tcp [::1]:54491->[::1]:54494: use of closed network connection
+08:35:12.093 [DEBUG] Plugin [Html Report] with pid [67018] has exited
+08:35:12.093 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 0 skipped
+08:35:12.093 [INFO] Scenarios: 	-7 executed, -7 passed, 0 failed, 7 skipped
+08:35:12.093 [INFO] Total time taken: 0
+08:35:42.575 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+08:35:42.576 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:35:42.758 [INFO] /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+08:35:42.758 [INFO] : /Users/coocoder/Desktop/carwow/step_implementations/steps.rb:30: syntax error, unexpected '}', expecting ')' (SyntaxError)
+/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:41: syntax error, unexpected '}', expecting ')'
+/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:75: syntax error, unexpected end-of-input, expecting '}'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `block in load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `each'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `load_steps'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:75:in `<module:Runtime>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	from /Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	from /Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	from -e:1:in `<main>'
+08:35:42.768 [ERROR] Validation failed. The following steps have errors
+08:35:42.768 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:13: write tcp [::1]:54511->[::1]:54514: use of closed network connection. initialize valid images
+08:35:42.768 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:19: write tcp [::1]:54511->[::1]:54514: use of closed network connection. initialize invalid images
+08:35:42.768 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:30: write tcp [::1]:54511->[::1]:54514: use of closed network connection. create a "3" by "3" image
+08:35:42.768 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:31: write tcp [::1]:54511->[::1]:54514: use of closed network connection. set invalid pixel colors
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:45: write tcp [::1]:54511->[::1]:54514: use of closed network connection. create a "3" by "3" image
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:46: write tcp [::1]:54511->[::1]:54514: use of closed network connection. set pixel colors
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:57: write tcp [::1]:54511->[::1]:54514: use of closed network connection. create a "10" by "10" image
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:58: write tcp [::1]:54511->[::1]:54514: use of closed network connection. set pixel vertical colors
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:67: write tcp [::1]:54511->[::1]:54514: use of closed network connection. create a "10" by "10" image
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:68: write tcp [::1]:54511->[::1]:54514: use of closed network connection. set pixel horizontal colors
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:75: write tcp [::1]:54511->[::1]:54514: use of closed network connection. create a "10" by "10" image
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:76: write tcp [::1]:54511->[::1]:54514: use of closed network connection. set pixel horizontal colors
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:80: write tcp [::1]:54511->[::1]:54514: use of closed network connection. set pixel vertical colors
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:84: write tcp [::1]:54511->[::1]:54514: use of closed network connection. clear image
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:90: write tcp [::1]:54511->[::1]:54514: use of closed network connection. create a "10" by "10" image
+08:35:42.769 [ERROR] /Users/coocoder/desktop/carwow/specs/image.spec:91: write tcp [::1]:54511->[::1]:54514: use of closed network connection. define regions
+08:35:42.773 [INFO] Failed to start Gauge Ruby runner. exit status 1
+08:35:42.773 [DEBUG] Runner exited with error: exit status 1
+08:35:42.819 [ERROR] Failed to initialize suite datastore. Error: write tcp [::1]:54511->[::1]:54514: use of closed network connection
+08:35:42.925 [DEBUG] Plugin [Html Report] with pid [67096] has exited
+08:35:42.925 [INFO] Specifications: 	0 executed, 0 passed, 0 failed, 0 skipped
+08:35:42.925 [INFO] Scenarios: 	-7 executed, -7 passed, 0 failed, 7 skipped
+08:35:42.925 [INFO] Total time taken: 0
+08:36:56.031 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+08:36:56.044 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:36:57.231 [INFO] Executing specification: Image Specification
+08:36:57.232 [INFO] Executing scenario: Create Images
+08:36:57.233 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:36:57.298 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:36:57.301 [INFO] Executing scenario: check image bounds
+08:36:57.302 [DEBUG] Executing Step: * create a "3" by "3" image
+08:36:57.304 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:36:57.307 [INFO] Executing scenario: Set Color of Pixel
+08:36:57.307 [DEBUG] Executing Step: * create a "3" by "3" image
+08:36:57.309 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:36:57.311 [INFO] Executing scenario: Set column color
+08:36:57.312 [DEBUG] Executing Step: * create a "10" by "10" image
+08:36:57.314 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:36:57.316 [INFO] Executing scenario: Set row color
+08:36:57.316 [DEBUG] Executing Step: * create a "10" by "10" image
+08:36:57.318 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:36:57.320 [INFO] Executing scenario: Clear image
+08:36:57.321 [DEBUG] Executing Step: * create a "10" by "10" image
+08:36:57.322 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:36:57.324 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:36:57.325 [DEBUG] Executing Step: * clear image
+08:36:57.328 [INFO] Executing scenario: Fill Region
+08:36:57.328 [DEBUG] Executing Step: * create a "10" by "10" image
+08:36:57.330 [DEBUG] Executing Step: * define regions 
+     |x|y|color|region size|
+     |-|-|-----|-----------|
+     |3|3|J    |1          |
+08:36:57.438 [DEBUG] Plugin [Html Report] with pid [67262] has exited
+08:36:57.438 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+08:36:57.438 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:36:57.438 [INFO] Total time taken: 102ms

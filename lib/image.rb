@@ -34,24 +34,24 @@ class Image
     pixels.find{|pixel| pixel.coordinate.x == coordinate.x && pixel.coordinate.y == coordinate.y}
   end
 
-  def set_color(x,y,color)
+  def set_color(coordinate,color)
 
-    raise OutOfImageBoundsError.new("#{x} is outside the width of the image") unless (1..self.width).include? x.to_i
-    raise OutOfImageBoundsError.new("#{y} is outside the height of the image") unless (1..self.height).include? y.to_i
+    raise OutOfImageBoundsError.new("#{coordinate.x} is outside the width of the image") unless (1..self.width).include? coordinate.x
+    raise OutOfImageBoundsError.new("#{coordinate.y} is outside the height of the image") unless (1..self.height).include? coordinate.y
 
-    pixel = get_pixel_at(Pixel::Coordinate.new(x,y))
+    pixel = get_pixel_at(coordinate)
     pixel.color = color
     pixel
   end
   def set_column_color(x,from,to,color)
     for y in (from..to) do
-      set_color(x,y,color)
+      set_color(Pixel::Coordinate.new(x,y),color)
     end
   end
 
   def set_row_color(y,from,to,color)
     for x in (from..to) do
-      set_color(x,y,color)
+      set_color(Pixel::Coordinate.new(x,y),color)
     end
   end
 
@@ -75,8 +75,8 @@ class Image
       return Pixel::Coordinate.new((x+1),y)
     }
 
-    set_color(x,y,color)
-    region <<  get_pixel_at(Pixel::Coordinate.new(x,y))
+    set_color(Pixel::Coordinate.new(x,y),color)
+    region << get_pixel_at(Pixel::Coordinate.new(x,y))
 
     region
   end
@@ -85,7 +85,7 @@ class Image
 
   def clear
     @pixels.each do |pixel|
-      set_color(pixel.coordinate.x,pixel.coordinate.y,"O")
+      set_color(pixel.coordinate,"O")
     end
   end
 

@@ -12,14 +12,14 @@ end
 
 step "set pixel colors <table>" do |table|
   table.rows.each do |row|
-    pixel =@image.set_color(row[0],row[1],row[2])
+    pixel =@image.set_color(Pixel::Coordinate.new(row[0],row[1]),row[2])
     assert{pixel.color == row[2]}
   end
 end
 
 step "set invalid pixel colors <table>" do |table|
   table.rows.each do |row|
-    assert{rescuing{@image.set_color(row[0],row[1],"A")}.message == row[2]}
+    assert{rescuing{@image.set_color(Pixel::Coordinate.new(row[0],row[1]),"A")}.message == row[2]}
   end
 end
 
@@ -38,7 +38,7 @@ step "set pixel horizontal colors <table>" do |table|
     @image.set_row_color(row[0].to_i,row[1].to_i,row[2].to_i,row[3])
 
     for x in (row[1].to_i..row[2].to_i) do
-      assert{@image.get_pixel_at(x,row[0]).color == row[3]}
+      assert{@image.get_pixel_at(Pixel::Coordinate.new(x,row[0])).color == row[3]}
     end
   end
 end
