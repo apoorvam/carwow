@@ -60,19 +60,19 @@ class Image
     region = []
 
     top = lambda{ |x,y|
-      return x,(y-1)
+      return Pixel::Coordinate.new(x,(y-1))
     }
 
     bottom = lambda{ |x,y|
-      return x,(y+1)
+      return Pixel::Coordinate.new(x,(y+1))
     }
 
     left = lambda{ |x,y|
-      return (x-1),y
+      return Pixel::Coordinate.new((x-1),y)
     }
 
     right = lambda{ |x,y|
-      return (x+1),y
+      return Pixel::Coordinate.new((x+1),y)
     }
 
     set_color(x,y,color)
