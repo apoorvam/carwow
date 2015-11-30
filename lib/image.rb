@@ -95,9 +95,8 @@ class Pixel
   attr_reader :coordinate,:image
   attr_accessor :color
   class Coordinate
-    attr_reader :x,:y,:pixel
-    def initialize(pixel,x,y)
-      @pixel = pixel
+    attr_reader :x,:y
+    def initialize(x,y)
       @x = x
       @y = y
       @color="O"
@@ -105,7 +104,7 @@ class Pixel
   end
   def initialize(image,x,y)
     @image = image
-    @coordinate =Pixel::Coordinate.new(self,x,y)
+    @coordinate =Pixel::Coordinate.new(x,y)
   end
 
 end
