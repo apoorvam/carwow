@@ -53,35 +53,38 @@ class Image
     end
   end
 
-  def fill(image,x,y,color)
+  def fill(x,y,color)
 
-    puts "width: #{image.width}"
-    puts "height: #{image.height}"
+    region = []
+
+    puts "width: #{self.width}"
+    puts "height: #{self.height}"
     puts "x: #{x}"
     puts "Y: #{y}"
 
-    top = lambda{ |x,y,image|
+    top = lambda{ |x,y|
       return x,(y-1)
     }
 
-    bottom = lambda{ |x,y,image|
+    bottom = lambda{ |x,y|
       return x,(y+1)
     }
 
-    left = lambda{ |x,y,image|
+    left = lambda{ |x,y|
       return (x-1),y
     }
 
-    right = lambda{ |x,y,image|
+    right = lambda{ |x,y|
       return (x+1),y
     }
 
-    puts "top: #{top.call(x,y,image)}"
-    puts "right: #{right.call(x,y,image)}"
-    puts "bottom: #{bottom.call(x,y,image)}"
-    puts "left: #{left.call(x,y,image)}"
+    puts "top: #{top.call(x,y)}"
+    puts "right: #{right.call(x,y)}"
+    puts "bottom: #{bottom.call(x,y)}"
+    puts "left: #{left.call(x,y)}"
 
-
+    region
+    
   end
 
 

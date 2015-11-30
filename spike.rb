@@ -7,7 +7,7 @@ class Image
 end
 
 
-def fill(image,x,y,color)
+def fill(image,region,x,y,color)
 
   puts "width: #{image.width}"
   puts "height: #{image.height}"
@@ -35,10 +35,15 @@ def fill(image,x,y,color)
   puts "bottom: #{bottom.call(x,y,image)}"
   puts "left: #{left.call(x,y,image)}"
 
+  region.each do |p|
+    fill(image,region,p[0],p[1],"A")
+  end
+
 
 end
 
-fill(Image.new(3,3),2,2,"A")
+region = []
+fill(Image.new(3,3),region,2,2,"A")
 
 # bitmap = BitMap.new
 #

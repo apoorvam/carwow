@@ -53,6 +53,12 @@ step 'clear image' do
 
 end
 
+step "define regions <table>" do |table|
+  table.rows.each do |row|
+    region = @image.fill(row[0].to_i,row[1].to_i,row[2])
+    assert{region.count == 1}
+  end
+end
 
 
 step 'initialize valid images <table>' do |table|

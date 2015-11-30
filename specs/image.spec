@@ -82,3 +82,13 @@ Clear image
   |---|----|--------|--------|
   |2  |3   |4       |W       |
 * clear image
+
+F 3 3 J
+
+Fill Region
+-----------
+* create a "10" by "10" image
+* define regions
+  |x  |y   |color   |region size|
+  |---|----|--------|-----------|
+  |3  |3   |J       |1          |
