@@ -29,6 +29,8 @@ class Image
 
 
   def get_pixel_at(x,y)
+    raise OutOfImageBoundsError.new("#{x} is outside the width of the image") unless (1..self.width).include? x.to_i
+    raise OutOfImageBoundsError.new("#{y} is outside the height of the image") unless (1..self.height).include? y.to_i
     pixels.find{|pixel| pixel.coordinate.x == x.to_i && pixel.coordinate.y == y.to_i}
   end
 
@@ -57,11 +59,6 @@ class Image
 
     region = []
 
-    puts "width: #{self.width}"
-    puts "height: #{self.height}"
-    puts "x: #{x}"
-    puts "Y: #{y}"
-
     top = lambda{ |x,y|
       return x,(y-1)
     }
@@ -78,14 +75,12 @@ class Image
       return (x+1),y
     }
 
-    puts "top: #{top.call(x,y)}"
-    puts "right: #{right.call(x,y)}"
-    puts "bottom: #{bottom.call(x,y)}"
-    puts "left: #{left.call(x,y)}"
+    set_color(x,y,color)
+    region <<  get_pixel_at(x,y)
 
     region
-    
   end
+
 
 
   def clear
