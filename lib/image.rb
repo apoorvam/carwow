@@ -76,7 +76,18 @@ class Image
     }
 
     set_color(Pixel::Coordinate.new(x,y),color)
+
+    bottom_pixel = self.get_pixel_at(bottom.call(x,y))
+
+    if bottom_pixel
+      region << bottom_pixel if bottom_pixel.color == color
+    end
+
+
+
     region << get_pixel_at(Pixel::Coordinate.new(x,y))
+
+
 
     region
   end

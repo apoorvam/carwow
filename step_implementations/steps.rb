@@ -56,7 +56,7 @@ end
 step "define regions <table>" do |table|
   table.rows.each do |row|
     region = @image.fill(row[0].to_i,row[1].to_i,row[2])
-    assert{region.count == 1}
+    assert{region.count == row[3].to_i}
   end
 end
 
@@ -66,6 +66,9 @@ step 'initialize valid images <table>' do |table|
     image = Image.new(row[0].to_i,row[1].to_i)
     assert{image.pixels.count == row[2].to_i}
   end
+end
+step 'set x <x> y <y> to <color>' do |x,y,color|
+  pixel =@image.set_color(Pixel::Coordinate.new(x,y),color)
 end
 
 step 'initialize invalid images <table>' do |table|
