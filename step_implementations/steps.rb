@@ -27,7 +27,7 @@ step "set pixel vertical colors <table>" do |table|
   table.rows.each do |row|
     @image.set_column_color(row[0].to_i,row[1].to_i,row[2].to_i,row[3])
     for y in (row[1].to_i..row[2].to_i) do
-      assert{@image.get_pixel_at(row[0],y).color == row[3]}
+      assert{@image.get_pixel_at(Pixel::Coordinate.new(row[0],y)).color == row[3]}
     end
   end
 end

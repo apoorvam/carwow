@@ -28,10 +28,10 @@ class Image
   end
 
 
-  def get_pixel_at(x,y)
-    raise OutOfImageBoundsError.new("#{x} is outside the width of the image") unless (1..self.width).include? x.to_i
-    raise OutOfImageBoundsError.new("#{y} is outside the height of the image") unless (1..self.height).include? y.to_i
-    pixels.find{|pixel| pixel.coordinate.x == x.to_i && pixel.coordinate.y == y.to_i}
+  def get_pixel_at(coordinate)
+    raise OutOfImageBoundsError.new("#{coordinate.x} is outside the width of the image") unless (1..self.width).include? coordinate.x
+    raise OutOfImageBoundsError.new("#{coordinate.y} is outside the height of the image") unless (1..self.height).include? coordinate.y
+    pixels.find{|pixel| pixel.coordinate.x == coordinate.x && pixel.coordinate.y == coordinate.y}
   end
 
   def set_color(x,y,color)
@@ -39,7 +39,7 @@ class Image
     raise OutOfImageBoundsError.new("#{x} is outside the width of the image") unless (1..self.width).include? x.to_i
     raise OutOfImageBoundsError.new("#{y} is outside the height of the image") unless (1..self.height).include? y.to_i
 
-    pixel = get_pixel_at(x,y)
+    pixel = get_pixel_at(Pixel::Coordinate.new(x,y))
     pixel.color = color
     pixel
   end
@@ -76,7 +76,7 @@ class Image
     }
 
     set_color(x,y,color)
-    region <<  get_pixel_at(x,y)
+    region <<  get_pixel_at(Pixel::Coordinate.new(x,y))
 
     region
   end
@@ -97,8 +97,8 @@ class Pixel
   class Coordinate
     attr_reader :x,:y
     def initialize(x,y)
-      @x = x
-      @y = y
+      @x = x.to_i
+      @y = y.to_i
       @color="O"
     end
   end
