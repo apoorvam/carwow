@@ -64,10 +64,24 @@ class Image
 
     loop do
       context = cache.pop
-      pixel = get_pixel_at(context.coordinate)
 
-      region << pixel unless region.include? pixel
+      if context
+
+        pixel = get_pixel_at(context.coordinate)
+
+         if pixel.top and get_pixel_at(pixel.top).color == color
+           cache << pixel.top
+           region << pixel.top
+         end
+
+
+
+
+        region << pixel unless region.include? pixel
+      end
+
       break if cache.empty?
+
     end
 
     region
@@ -93,6 +107,9 @@ class Pixel
       @x = x.to_i
       @y = y.to_i
       @color="O"
+    end
+    def top
+      Pixel::Coordinate.new(self.x,self.y-1)
     end
   end
   def initialize(image,x,y)

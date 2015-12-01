@@ -1004,3 +1004,122 @@
 19:35:00.328 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
 19:35:00.332 [INFO] Initializing specs cache with 2 specs
 19:35:01.292 [INFO] Initializing steps cache with 27 steps
+19:38:05.591 [INFO] Initializing concepts cache with 0 concepts
+19:38:05.592 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+19:38:05.595 [INFO] Initializing specs cache with 2 specs
+19:38:06.554 [INFO] Initializing steps cache with 28 steps
+20:03:18.611 [INFO] Initializing concepts cache with 0 concepts
+20:03:18.612 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:03:18.618 [INFO] Initializing specs cache with 2 specs
+20:03:19.591 [INFO] Initializing steps cache with 28 steps
+20:13:14.624 [INFO] Initializing concepts cache with 0 concepts
+20:13:14.625 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:13:14.630 [INFO] Initializing specs cache with 2 specs
+20:13:15.623 [ERROR] Error response from runner on getStepNamesRequest: Connection closed [[::1]:65483] cause: EOF
+20:13:15.623 [INFO] Initializing steps cache with 18 steps
+20:13:29.902 [INFO] Initializing concepts cache with 0 concepts
+20:13:29.903 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:13:29.907 [INFO] Initializing specs cache with 2 specs
+20:13:30.823 [INFO] Initializing steps cache with 28 steps
+20:14:48.415 [INFO] Initializing concepts cache with 0 concepts
+20:14:48.415 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:14:48.420 [INFO] Initializing specs cache with 2 specs
+20:14:49.335 [INFO] Initializing steps cache with 28 steps
+20:16:56.176 [INFO] Initializing concepts cache with 0 concepts
+20:16:56.177 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:16:56.181 [INFO] Initializing specs cache with 2 specs
+20:16:57.296 [INFO] Initializing steps cache with 28 steps
+20:18:58.933 [INFO] Initializing concepts cache with 0 concepts
+20:18:58.934 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:18:58.937 [INFO] Initializing specs cache with 2 specs
+20:18:59.900 [INFO] Initializing steps cache with 27 steps
+20:19:55.211 [INFO] Initializing concepts cache with 0 concepts
+20:19:55.212 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:19:55.215 [INFO] Initializing specs cache with 2 specs
+20:19:56.196 [INFO] Initializing steps cache with 27 steps
+20:21:30.166 [INFO] Initializing concepts cache with 0 concepts
+20:21:30.168 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:21:30.171 [INFO] Initializing specs cache with 2 specs
+20:21:31.150 [INFO] Initializing steps cache with 27 steps
+20:26:45.682 [INFO] Initializing concepts cache with 0 concepts
+20:26:45.683 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:26:45.686 [INFO] Initializing specs cache with 2 specs
+20:26:46.648 [INFO] Initializing steps cache with 27 steps
+20:27:39.982 [INFO] Initializing concepts cache with 0 concepts
+20:27:39.984 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:27:39.987 [INFO] Initializing specs cache with 2 specs
+20:27:40.940 [INFO] Initializing steps cache with 27 steps
+20:28:23.817 [INFO] Initializing concepts cache with 0 concepts
+20:28:23.818 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:28:23.822 [INFO] Initializing specs cache with 2 specs
+20:28:24.775 [INFO] Initializing steps cache with 27 steps
+20:38:08.249 [INFO] Initializing concepts cache with 0 concepts
+20:38:08.250 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:38:08.253 [INFO] Initializing specs cache with 2 specs
+20:38:09.239 [INFO] Initializing steps cache with 27 steps
+20:39:25.364 [INFO] Initializing concepts cache with 0 concepts
+20:39:25.366 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:39:25.369 [INFO] Initializing specs cache with 2 specs
+20:39:26.325 [INFO] Initializing steps cache with 27 steps
+20:39:46.183 [INFO] Initializing concepts cache with 0 concepts
+20:39:46.184 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:39:46.187 [INFO] Initializing specs cache with 2 specs
+20:39:47.126 [INFO] Initializing steps cache with 27 steps
+20:41:28.418 [INFO] Initializing concepts cache with 0 concepts
+20:41:28.420 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:41:28.424 [INFO] Initializing specs cache with 2 specs
+20:41:29.417 [INFO] Initializing steps cache with 27 steps
+20:41:48.076 [INFO] Initializing concepts cache with 0 concepts
+20:41:48.078 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:41:48.081 [INFO] Initializing specs cache with 2 specs
+20:41:49.035 [INFO] Initializing steps cache with 27 steps
+20:42:10.690 [INFO] Initializing concepts cache with 0 concepts
+20:42:10.691 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:42:10.696 [INFO] Initializing specs cache with 2 specs
+20:42:11.644 [INFO] Initializing steps cache with 27 steps
+20:43:26.708 [INFO] Initializing concepts cache with 0 concepts
+20:43:26.710 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:43:26.712 [INFO] Initializing specs cache with 2 specs
+20:43:27.662 [INFO] Initializing steps cache with 27 steps
+20:43:39.635 [INFO] Initializing concepts cache with 0 concepts
+20:43:39.636 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:43:39.640 [INFO] Initializing specs cache with 2 specs
+20:43:40.569 [INFO] Initializing steps cache with 27 steps
+20:45:01.083 [INFO] Initializing concepts cache with 0 concepts
+20:45:01.084 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:45:01.087 [INFO] Initializing specs cache with 2 specs
+20:45:02.036 [INFO] Initializing steps cache with 27 steps
+20:46:25.377 [INFO] Initializing concepts cache with 0 concepts
+20:46:25.378 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:46:25.381 [INFO] Initializing specs cache with 2 specs
+20:46:26.270 [INFO] Initializing steps cache with 27 steps
+20:47:31.807 [INFO] Initializing concepts cache with 0 concepts
+20:47:31.809 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:47:31.812 [INFO] Initializing specs cache with 2 specs
+20:47:32.702 [INFO] Initializing steps cache with 27 steps
+20:47:57.340 [INFO] Initializing concepts cache with 0 concepts
+20:47:57.341 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:47:57.347 [INFO] Initializing specs cache with 2 specs
+20:47:58.226 [INFO] Initializing steps cache with 27 steps
+20:48:38.422 [INFO] Initializing concepts cache with 0 concepts
+20:48:38.424 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:48:38.427 [INFO] Initializing specs cache with 2 specs
+20:48:39.375 [INFO] Initializing steps cache with 27 steps
+20:49:35.848 [INFO] Initializing concepts cache with 0 concepts
+20:49:35.851 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:49:35.854 [INFO] Initializing specs cache with 2 specs
+20:49:36.798 [INFO] Initializing steps cache with 27 steps
+20:51:41.068 [INFO] Initializing concepts cache with 0 concepts
+20:51:41.069 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:51:41.074 [INFO] Initializing specs cache with 2 specs
+20:51:42.085 [ERROR] Error response from runner on getStepNamesRequest: Connection closed [[::1]:50813] cause: EOF
+20:51:42.086 [INFO] Initializing steps cache with 17 steps
+20:52:23.162 [INFO] Initializing concepts cache with 0 concepts
+20:52:23.163 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:52:23.166 [INFO] Initializing specs cache with 2 specs
+20:52:24.101 [ERROR] Error response from runner on getStepNamesRequest: Connection closed [[::1]:50843] cause: EOF
+20:52:24.102 [INFO] Initializing steps cache with 17 steps
+20:52:32.972 [INFO] Initializing concepts cache with 0 concepts
+20:52:32.974 [INFO] Watching directory: /Users/coocoder/desktop/carwow/specs
+20:52:32.977 [INFO] Initializing specs cache with 2 specs
+20:52:33.882 [INFO] Initializing steps cache with 27 steps
