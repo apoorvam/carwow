@@ -56,40 +56,22 @@ class Image
   end
 
   def fill(x,y,color)
-
+    cache = []
     region = []
 
-    top = lambda{ |x,y|
-      return Pixel::Coordinate.new(x,(y-1))
-    }
-
-    bottom = lambda{ |x,y|
-      return Pixel::Coordinate.new(x,(y+1))
-    }
-
-    left = lambda{ |x,y|
-      return Pixel::Coordinate.new((x-1),y)
-    }
-
-    right = lambda{ |x,y|
-      return Pixel::Coordinate.new((x+1),y)
-    }
-
     set_color(Pixel::Coordinate.new(x,y),color)
+    cache << get_pixel_at(Pixel::Coordinate.new(x,y))
 
-    bottom_pixel = self.get_pixel_at(bottom.call(x,y))
+    loop do
+      context = cache.pop
+      pixel = get_pixel_at(context.coordinate)
 
-    if bottom_pixel
-      region << bottom_pixel if bottom_pixel.color == color
+      region << pixel unless region.include? pixel
+      break if cache.empty?
     end
 
-
-
-    region << get_pixel_at(Pixel::Coordinate.new(x,y))
-
-
-
     region
+
   end
 
 
