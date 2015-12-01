@@ -59,25 +59,38 @@ class Image
     cache = []
     region = []
 
-    set_color(Pixel::Coordinate.new(x,y),color)
-    cache << get_pixel_at(Pixel::Coordinate.new(x,y))
+    pixel = get_pixel_at(Pixel::Coordinate.new(x,y))
+    set_color(pixel.coordinate,color)
+    cache << pixel
+    region << pixel
 
     loop do
+
       context = cache.pop
 
       if context
 
-        pixel = get_pixel_at(context.coordinate)
+        if get_pixel_at(context.top.coordinate).color == color
+           cache << context.top unless cache.include? context.top
+           region << context.top unless region.include? context.top
+        end
 
-         if pixel.top and get_pixel_at(pixel.top).color == color
-           cache << pixel.top
-           region << pixel.top
-         end
+        if get_pixel_at(context.left.coordinate).color == color
+           cache << context.left unless cache.include? context.left
+           region << context.left unless region.include? context.left
+        end
+
+        if get_pixel_at(context.right.coordinate).color == color
+           cache << context.right unless cache.include? context.right
+           region << context.right unless region.include? context.right
+        end
+
+        if get_pixel_at(context.bottom.coordinate).color == color
+           cache << context.bottom unless cache.include? context.bottom
+           region << context.bottom unless region.include? context.bottom
+        end
 
 
-
-
-        region << pixel unless region.include? pixel
       end
 
       break if cache.empty?
@@ -101,15 +114,24 @@ end
 class Pixel
   attr_reader :coordinate,:image
   attr_accessor :color
+  def top
+    Pixel.new(self.image,self.coordinate.x,self.coordinate.y-1)
+  end
+  def bottom
+    Pixel.new(self.image,self.coordinate.x,self.coordinate.y+1)
+  end
+  def left
+    Pixel.new(self.image,self.coordinate.x-1,self.coordinate.y)
+  end
+  def right
+    Pixel.new(self.image,self.coordinate.x+1,self.coordinate.y)
+  end
   class Coordinate
     attr_reader :x,:y
     def initialize(x,y)
       @x = x.to_i
       @y = y.to_i
       @color="O"
-    end
-    def top
-      Pixel::Coordinate.new(self.x,self.y-1)
     end
   end
   def initialize(image,x,y)

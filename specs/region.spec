@@ -10,16 +10,3 @@ OOOOO
 OOJOO
 OOOOO
 OOOOO
-
-
-
-## add bottom to region
-
-* set x "3" y "2" to "J"
-* define region x "3" y "3" color "J" size "2"
-
-OOOOO
-OOOOO
-OOJOO
-OOJOO
-OOOOO

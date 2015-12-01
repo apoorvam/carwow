@@ -27025,3 +27025,567 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 20:52:34.103 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
 20:52:34.103 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
 20:52:34.103 [INFO] Total time taken: 104ms
+20:52:52.848 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+20:52:53.895 [INFO] Executing specification: Image Specification
+20:52:53.895 [INFO] Executing scenario: Create Images
+20:52:53.896 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+20:52:53.975 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+20:52:53.978 [INFO] Executing scenario: check image bounds
+20:52:53.979 [DEBUG] Executing Step: * create a "3" by "3" image
+20:52:53.980 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+20:52:53.983 [INFO] Executing scenario: Set Color of Pixel
+20:52:53.984 [DEBUG] Executing Step: * create a "3" by "3" image
+20:52:53.985 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+20:52:53.988 [INFO] Executing scenario: Set column color
+20:52:53.988 [DEBUG] Executing Step: * create a "10" by "10" image
+20:52:53.990 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+20:52:53.992 [INFO] Executing scenario: Set row color
+20:52:53.993 [DEBUG] Executing Step: * create a "10" by "10" image
+20:52:53.994 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+20:52:53.996 [INFO] Executing scenario: Clear image
+20:52:53.997 [DEBUG] Executing Step: * create a "10" by "10" image
+20:52:53.999 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+20:52:54.000 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+20:52:54.002 [DEBUG] Executing Step: * clear image
+20:52:54.106 [DEBUG] Plugin [Html Report] with pid [64721] has exited
+20:52:54.107 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+20:52:54.107 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+20:52:54.107 [INFO] Total time taken: 111ms
+21:22:13.400 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:22:14.619 [INFO] Executing specification: Image Specification
+21:22:14.620 [INFO] Executing scenario: Create Images
+21:22:14.621 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+21:22:14.700 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+21:22:14.702 [INFO] Executing scenario: check image bounds
+21:22:14.703 [DEBUG] Executing Step: * create a "3" by "3" image
+21:22:14.705 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+21:22:14.708 [INFO] Executing scenario: Set Color of Pixel
+21:22:14.708 [DEBUG] Executing Step: * create a "3" by "3" image
+21:22:14.710 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+21:22:14.712 [INFO] Executing scenario: Set column color
+21:22:14.713 [DEBUG] Executing Step: * create a "10" by "10" image
+21:22:14.715 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+21:22:14.717 [INFO] Executing scenario: Set row color
+21:22:14.718 [DEBUG] Executing Step: * create a "10" by "10" image
+21:22:14.719 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+21:22:14.721 [INFO] Executing scenario: Clear image
+21:22:14.722 [DEBUG] Executing Step: * create a "10" by "10" image
+21:22:14.724 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+21:22:14.725 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+21:22:14.727 [DEBUG] Executing Step: * clear image
+21:22:14.834 [DEBUG] Plugin [Html Report] with pid [69880] has exited
+21:22:14.834 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+21:22:14.834 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+21:22:14.834 [INFO] Total time taken: 112ms
+21:22:37.443 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+21:22:37.443 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:22:38.603 [INFO] Executing specification: Region Specification
+21:22:38.604 [INFO] Executing scenario: Fill
+21:22:38.604 [DEBUG] Executing Step: * create a "5" by "5" image
+21:22:38.606 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:22:38.992 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+21:22:38.992 [ERROR] Error Message: undefined method `top' for #<Pixel:0x007f998bf14650>
+21:22:38.992 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:22:38.994 [INFO] Executing scenario: add bottom to region
+21:22:38.995 [DEBUG] Executing Step: * create a "5" by "5" image
+21:22:38.996 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:22:38.998 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:22:39.316 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+21:22:39.316 [ERROR] Error Message: undefined method `top' for #<Pixel:0x007f998becc760>
+21:22:39.316 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:22:39.427 [DEBUG] Plugin [Html Report] with pid [69934] has exited
+21:22:39.427 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+21:22:39.427 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+21:22:39.427 [INFO] Total time taken: 716ms
+21:22:46.992 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+21:22:46.992 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:22:48.051 [INFO] Executing specification: Region Specification
+21:22:48.051 [INFO] Executing scenario: Fill
+21:22:48.052 [DEBUG] Executing Step: * create a "5" by "5" image
+21:22:48.053 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:22:48.375 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+21:22:48.375 [ERROR] Error Message: undefined method `top' for #<Pixel:0x007f8b51f48920>
+21:22:48.375 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:22:48.377 [INFO] Executing scenario: add bottom to region
+21:22:48.378 [DEBUG] Executing Step: * create a "5" by "5" image
+21:22:48.380 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:22:48.382 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:22:48.699 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+21:22:48.699 [ERROR] Error Message: undefined method `top' for #<Pixel:0x007f8b51eead70>
+21:22:48.699 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:22:48.807 [DEBUG] Plugin [Html Report] with pid [69980] has exited
+21:22:48.807 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+21:22:48.807 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+21:22:48.807 [INFO] Total time taken: 652ms
+21:23:19.741 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:23:20.926 [INFO] Executing specification: Region Specification
+21:23:20.927 [INFO] Executing scenario: Fill
+21:23:20.928 [DEBUG] Executing Step: * create a "5" by "5" image
+21:23:20.929 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:23:21.294 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+21:23:21.294 [ERROR] Error Message: undefined method `x' for #<Pixel:0x007fb29d2c3150>
+21:23:21.294 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:118:in `top'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:23:21.296 [INFO] Executing scenario: add bottom to region
+21:23:21.296 [DEBUG] Executing Step: * create a "5" by "5" image
+21:23:21.298 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:23:21.300 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:23:21.634 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+21:23:21.634 [ERROR] Error Message: undefined method `x' for #<Pixel:0x007fb29d1d0388>
+21:23:21.634 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:118:in `top'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:23:21.746 [DEBUG] Plugin [Html Report] with pid [70056] has exited
+21:23:21.747 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+21:23:21.747 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+21:23:21.747 [INFO] Total time taken: 711ms
+21:24:26.687 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+21:24:26.688 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:24:27.856 [INFO] Executing specification: Region Specification
+21:24:27.857 [INFO] Executing scenario: Fill
+21:24:27.857 [DEBUG] Executing Step: * create a "5" by "5" image
+21:24:27.859 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:24:28.233 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+21:24:28.233 [ERROR] Error Message: wrong number of arguments (2 for 3)
+21:24:28.233 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:137:in `initialize'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:118:in `new'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:118:in `top'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:24:28.235 [INFO] Executing scenario: add bottom to region
+21:24:28.236 [DEBUG] Executing Step: * create a "5" by "5" image
+21:24:28.237 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:24:28.239 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:24:28.575 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+21:24:28.576 [ERROR] Error Message: wrong number of arguments (2 for 3)
+21:24:28.576 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:137:in `initialize'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:118:in `new'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:118:in `top'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:24:28.687 [DEBUG] Plugin [Html Report] with pid [70234] has exited
+21:24:28.687 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+21:24:28.687 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+21:24:28.687 [INFO] Total time taken: 723ms
+21:25:20.498 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:25:21.673 [INFO] Executing specification: Region Specification
+21:25:21.674 [INFO] Executing scenario: Fill
+21:25:21.674 [DEBUG] Executing Step: * create a "5" by "5" image
+21:25:21.676 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:25:22.032 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+21:25:22.032 [ERROR] Error Message: undefined method `x' for #<Pixel:0x007fd974d14278>
+21:25:22.032 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:32:in `get_pixel_at'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:25:22.034 [INFO] Executing scenario: add bottom to region
+21:25:22.035 [DEBUG] Executing Step: * create a "5" by "5" image
+21:25:22.036 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:25:22.038 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:25:22.370 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+21:25:22.370 [ERROR] Error Message: undefined method `x' for #<Pixel:0x007fd974bffc70>
+21:25:22.370 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:32:in `get_pixel_at'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:25:22.481 [DEBUG] Plugin [Html Report] with pid [70351] has exited
+21:25:22.481 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+21:25:22.481 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+21:25:22.481 [INFO] Total time taken: 700ms
+21:27:09.871 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+21:27:09.873 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:27:11.030 [INFO] Executing specification: Region Specification
+21:27:11.031 [INFO] Executing scenario: Fill
+21:27:11.031 [DEBUG] Executing Step: * create a "5" by "5" image
+21:27:11.033 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:27:11.410 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+21:27:11.410 [ERROR] Error Message: undefined method `cordinate' for #<Pixel:0x007fa74ae08208>
+21:27:11.410 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:27:11.412 [INFO] Executing scenario: add bottom to region
+21:27:11.413 [DEBUG] Executing Step: * create a "5" by "5" image
+21:27:11.414 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:27:11.416 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:27:11.750 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+21:27:11.750 [ERROR] Error Message: undefined method `cordinate' for #<Pixel:0x007fa74b5406b0>
+21:27:11.750 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:73:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:27:11.861 [DEBUG] Plugin [Html Report] with pid [70563] has exited
+21:27:11.861 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+21:27:11.861 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+21:27:11.861 [INFO] Total time taken: 724ms
+21:27:31.151 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:27:32.338 [INFO] Executing specification: Region Specification
+21:27:32.339 [INFO] Executing scenario: Fill
+21:27:32.339 [DEBUG] Executing Step: * create a "5" by "5" image
+21:27:32.341 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:27:32.694 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+21:27:32.694 [ERROR] Error Message: undefined method `right' for #<Pixel:0x007ff485943190>
+21:27:32.694 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:83:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:27:32.696 [INFO] Executing scenario: add bottom to region
+21:27:32.697 [DEBUG] Executing Step: * create a "5" by "5" image
+21:27:32.699 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:27:32.700 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:27:33.032 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+21:27:33.032 [ERROR] Error Message: undefined method `right' for #<Pixel:0x007ff485853b18>
+21:27:33.032 [ERROR] Stacktrace: /Users/coocoder/Desktop/carwow/lib/image.rb:83:in `block in fill'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/coocoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/coocoder/Desktop/carwow/step_implementations/steps.rb:47:in `block in <top (required)>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/coocoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/coocoder/.rubies/ruby-2.2.2/lib/ruby/site_ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+21:27:33.145 [DEBUG] Plugin [Html Report] with pid [70622] has exited
+21:27:33.145 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+21:27:33.145 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+21:27:33.145 [INFO] Total time taken: 697ms
+21:27:59.144 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+21:27:59.145 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:28:00.312 [INFO] Executing specification: Region Specification
+21:28:00.313 [INFO] Executing scenario: Fill
+21:28:00.314 [DEBUG] Executing Step: * create a "5" by "5" image
+21:28:00.315 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:28:00.318 [INFO] Executing scenario: add bottom to region
+21:28:00.318 [DEBUG] Executing Step: * create a "5" by "5" image
+21:28:00.320 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:28:00.321 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:28:21.340 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:28:22.391 [INFO] Executing specification: Region Specification
+21:28:22.391 [INFO] Executing scenario: Fill
+21:28:22.392 [DEBUG] Executing Step: * create a "5" by "5" image
+21:28:22.393 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:28:22.396 [INFO] Executing scenario: add bottom to region
+21:28:22.397 [DEBUG] Executing Step: * create a "5" by "5" image
+21:28:22.398 [DEBUG] Executing Step: * set x "3" y "2" to "J"
+21:28:22.399 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+21:28:36.710 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+21:28:36.711 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+21:28:37.855 [INFO] Executing specification: Region Specification
+21:28:37.855 [INFO] Executing scenario: Fill
+21:28:37.856 [DEBUG] Executing Step: * create a "5" by "5" image
+21:28:37.857 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+21:28:37.966 [DEBUG] Plugin [Html Report] with pid [70784] has exited
+21:28:37.966 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+21:28:37.966 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+21:28:37.966 [INFO] Total time taken: 7ms
