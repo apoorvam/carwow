@@ -1,4 +1,5 @@
 queue = []
+
 queue << 1
 queue << 2
 queue << 3

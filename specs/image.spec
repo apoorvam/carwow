@@ -82,12 +82,3 @@ Clear image
   |---|----|--------|--------|
   |2  |3   |4       |W       |
 * clear image
-
-Fill Region
------------
-* create a "5" by "5" image
-* set x "3" y "4" to "J"
-* define regions
-  |x  |y   |color   |region size|
-  |---|----|--------|-----------|
-  |3  |3   |J       |1          |

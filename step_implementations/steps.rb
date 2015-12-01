@@ -43,6 +43,11 @@ step "set pixel horizontal colors <table>" do |table|
   end
 end
 
+step "define region x <x> y <y> color <color> size <size>" do |x,y,color,size|
+  region = @image.fill(x.to_i,y.to_i,color)
+  assert{region.count == size.to_i}
+end
+
 step 'clear image' do
 
   @image.clear
@@ -53,12 +58,6 @@ step 'clear image' do
 
 end
 
-step "define regions <table>" do |table|
-  table.rows.each do |row|
-    region = @image.fill(row[0].to_i,row[1].to_i,row[2])
-    assert{region.count == row[3].to_i}
-  end
-end
 
 
 step 'initialize valid images <table>' do |table|

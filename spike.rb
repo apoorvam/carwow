@@ -6,6 +6,43 @@ class Image
   end
 end
 
+region = []
+cache = []
+
+set_color(Pixel::Coordinate.new(x,y),color)
+pixel get_pixel_at(Pixel::Coordinate.new(x,y))
+cache << pixel
+
+top = lambda{ |x,y|
+  return Pixel::Coordinate.new(x,(y-1))
+}
+
+bottom = lambda{ |x,y|
+  return Pixel::Coordinate.new(x,(y+1))
+}
+
+left = lambda{ |x,y|
+  return Pixel::Coordinate.new((x-1),y)
+}
+
+right = lambda{ |x,y|
+  return Pixel::Coordinate.new((x+1),y)
+}
+
+loop do
+
+  begin
+    top_pixel = self.get_pixel_at(top.call(x,y))
+    if bottom_pixel.color == color
+      region << bottom_pixel unless region.include? bottom_pixel
+    end
+  rescue InvalidHeightError
+
+  end
+
+end
+
+region
 
 def fill(image,region,x,y,color)
 
