@@ -73,7 +73,7 @@ class Image
       if context
 
         if get_pixel_at(context.top.coordinate).color == color
-           cache << context.top.to_s unless cache.include? context.top
+           cache << context.top unless cache.include? context.top
            region << context.top unless region.include? context.top
         end
 
