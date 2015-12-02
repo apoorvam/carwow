@@ -68,10 +68,12 @@ class Image
 
       context = cache.pop
 
+      puts "checking #{context.to_s}"
+
       if context
 
         if get_pixel_at(context.top.coordinate).color == color
-           cache << context.top unless cache.include? context.top
+           cache << context.top.to_s unless cache.include? context.top
            region << context.top unless region.include? context.top
         end
 
@@ -126,12 +128,25 @@ class Pixel
   def right
     Pixel.new(self.image,self.coordinate.x+1,self.coordinate.y)
   end
+
+  def to_s
+    puts "#{self.coordinate}"
+  end
+  def ==(pixel)
+    self.coordinate == pixel.coordinate
+  end
   class Coordinate
     attr_reader :x,:y
     def initialize(x,y)
       @x = x.to_i
       @y = y.to_i
       @color="O"
+    end
+    def to_s
+      "#{x}:#{y}"
+    end
+    def ==(coordinate)
+      self.x == coordinate.x && self.y == coordinate.y
     end
   end
   def initialize(image,x,y)
