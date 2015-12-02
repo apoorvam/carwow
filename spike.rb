@@ -1,3 +1,61 @@
+## bottom
+
+OOOOO
+OOOOO
+OOJOO
+OOJOO
+OOOOO
+
+*set x "3" y "4" to "J"
+* define region x "3" y "3" color "J" size "2"
+
+## top
+
+OOOOO
+OOJOO
+OOJOO
+OOOOO
+OOOOO
+
+*set x "3" y "2" to "J"
+* define region x "3" y "3" color "J" size "2"
+
+
+## left
+
+OOOOO
+OOOOO
+OJJOO
+OOOOO
+OOOOO
+
+*set x "2" y "3" to "J"
+* define region x "3" y "3" color "J" size "2"
+
+## right
+
+OOOOO
+OOOOO
+OOJJO
+OOOOO
+OOOOO
+
+*set x "4" y "3" to "J"
+* define region x "3" y "3" color "J" size "2"
+
+## T shape
+
+OOOOO
+OOOJO
+OOJJO
+OOOJO
+OOOOO
+
+*set x "4" y "3" to "J"
+*set x "4" y "2" to "J"
+*set x "4" y "4" to "J"
+* define region x "3" y "3" color "J" size "4"
+
 class Image
   attr_accessor :width,:height
   def initialize(width,height)

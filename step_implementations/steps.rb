@@ -1,5 +1,6 @@
 require "wrong"
 require "pry"
+require "awesome_print"
 require_relative "../lib/image"
 
 

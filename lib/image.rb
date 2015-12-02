@@ -61,37 +61,35 @@ class Image
 
     pixel = get_pixel_at(Pixel::Coordinate.new(x,y))
     set_color(pixel.coordinate,color)
-    cache << pixel
+    cache << pixel.coordinate
     region << pixel
 
     loop do
 
       context = cache.pop
 
-      puts "checking #{context.to_s}"
-
       if context
 
-        if get_pixel_at(context.top.coordinate).color == color
-           cache << context.top unless cache.include? context.top
-           region << context.top unless region.include? context.top
-        end
+        # if get_pixel_at(context.top.coordinate).color == color
+        #    cache << context.top unless cache.find{|p|p.coordinate.to_s == context.top.coordinate.to_s}
+        #    region << context.top unless region.find{|p|p.coordinate.to_s == context.top.coordinate.to_s}
+        # end
+        #
+        # if get_pixel_at(context.left.coordinate).color == color
+        #   cache << context.left unless cache.find{|p|p.coordinate.to_s == context.left.coordinate.to_s}
+        #   region << context.left unless region.find{|p|p.coordinate.to_s == context.left.coordinate.to_s}
+        # end
+        #
+        # if get_pixel_at(context.right.coordinate).color == color
+        #   cache << context.right unless cache.find{|p|p.coordinate.to_s == context.top.coordinate.to_s}
+        #   region << context.right unless region.find{|p|p.coordinate.to_s == context.top.coordinate.to_s}
+        # end
 
-        if get_pixel_at(context.left.coordinate).color == color
-           cache << context.left unless cache.include? context.left
-           region << context.left unless region.include? context.left
+        bottom = get_pixel_at(context)
+        if bottom.color == color
+          cache << context.bottom unless cache.find{|c|c.to_s == context.bottom.to_s}
+          region << bottom unless region.find{|p|p.coordinate.to_s == bottom.coordinate.to_s}
         end
-
-        if get_pixel_at(context.right.coordinate).color == color
-           cache << context.right unless cache.include? context.right
-           region << context.right unless region.include? context.right
-        end
-
-        if get_pixel_at(context.bottom.coordinate).color == color
-           cache << context.bottom unless cache.include? context.bottom
-           region << context.bottom unless region.include? context.bottom
-        end
-
 
       end
 
@@ -117,23 +115,20 @@ class Pixel
   attr_reader :coordinate,:image
   attr_accessor :color
   def top
-    Pixel.new(self.image,self.coordinate.x,self.coordinate.y-1)
+    Pixel::Coordinate.new(self.coordinate.x,self.coordinate.y-1)
   end
   def bottom
-    Pixel.new(self.image,self.coordinate.x,self.coordinate.y+1)
+    Pixel::Coordinate.new(self.coordinate.x,self.coordinate.y+1)
   end
   def left
-    Pixel.new(self.image,self.coordinate.x-1,self.coordinate.y)
+    Pixel::Coordinate.new(self.coordinate.x-1,self.coordinate.y)
   end
   def right
-    Pixel.new(self.image,self.coordinate.x+1,self.coordinate.y)
+    Pixel::Coordinate.new(self.coordinate.x+1,self.coordinate.y)
   end
 
-  def to_s
-    puts "#{self.coordinate}"
-  end
   def ==(pixel)
-    self.coordinate == pixel.coordinate
+    self.coordinate.to_s == pixel.coordinate.to_s
   end
   class Coordinate
     attr_reader :x,:y
@@ -143,6 +138,7 @@ class Pixel
       @color="O"
     end
     def to_s
+      puts "#{x}:#{y}"
       "#{x}:#{y}"
     end
     def ==(coordinate)
