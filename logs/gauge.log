@@ -22519,3 +22519,2837 @@ warning: please see https://github.com/whitequark/parser#compatibility-with-ruby
 08:33:42.576 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
 08:33:42.576 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
 08:33:42.576 [INFO] Total time taken: 668ms
+14:28:20.981 [INFO] Installing Plugin => ruby 0.1.0
+14:28:20.982 [INFO] Downloading Plugin... => https://github.com/getgauge/gauge-ruby/releases/download/v0.1.0/gauge-ruby-0.1.0-darwin.x86_64.zip
+14:28:43.602 [INFO] Plugin unzipped to => /var/folders/gm/c4j3qc7n67v1d019wpv55x6c0000gn/T/gauge_temp/1449930523574860186
+14:28:43.623 [INFO] Successfully installed plugin => ruby
+14:29:42.719 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:29:43.372 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:29:43.374 [INFO] Executing specification: Image Specification
+14:29:43.376 [INFO] Executing scenario: Create Images
+14:29:43.377 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+14:29:43.442 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+14:29:43.446 [INFO] Executing scenario: check image bounds
+14:29:43.447 [DEBUG] Executing Step: * create a "3" by "3" image
+14:29:43.450 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+14:29:43.453 [INFO] Executing scenario: Set Color of Pixel
+14:29:43.453 [DEBUG] Executing Step: * create a "3" by "3" image
+14:29:43.455 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+14:29:43.457 [INFO] Executing scenario: Set column color
+14:29:43.458 [DEBUG] Executing Step: * create a "10" by "10" image
+14:29:43.459 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+14:29:43.461 [INFO] Executing scenario: Set row color
+14:29:43.462 [DEBUG] Executing Step: * create a "10" by "10" image
+14:29:43.464 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+14:29:43.467 [INFO] Executing scenario: Clear image
+14:29:43.467 [DEBUG] Executing Step: * create a "10" by "10" image
+14:29:43.469 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+14:29:43.471 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+14:29:43.473 [DEBUG] Executing Step: * clear image
+14:29:43.475 [INFO] Executing specification: Region Specification
+14:29:43.476 [INFO] Executing scenario: Fill
+14:29:43.477 [DEBUG] Executing Step: * create a "5" by "5" image
+14:29:43.478 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:29:43.667 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:29:43.667 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007feda7833af0 @x=3, @y=3, @color="O">
+14:29:43.667 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:90:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:29:43.669 [INFO] Executing scenario: bottom
+14:29:43.670 [DEBUG] Executing Step: * create a "5" by "5" image
+14:29:43.672 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:29:43.674 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:29:43.829 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:29:43.829 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007feda7842a50 @x=3, @y=3, @color="O">
+14:29:43.829 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:90:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:29:43.933 [INFO] Specifications: 	2 executed, 1 passed, 1 failed, 0 skipped
+14:29:43.934 [INFO] Scenarios: 	8 executed, 6 passed, 2 failed, 0 skipped
+14:29:43.934 [INFO] Total time taken: 459ms
+14:30:02.369 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:30:02.810 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:30:02.811 [INFO] Executing specification: Image Specification
+14:30:02.811 [INFO] Executing scenario: Create Images
+14:30:02.812 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+14:30:02.871 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+14:30:02.873 [INFO] Executing scenario: check image bounds
+14:30:02.874 [DEBUG] Executing Step: * create a "3" by "3" image
+14:30:02.876 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+14:30:02.880 [INFO] Executing scenario: Set Color of Pixel
+14:30:02.881 [DEBUG] Executing Step: * create a "3" by "3" image
+14:30:02.883 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+14:30:02.885 [INFO] Executing scenario: Set column color
+14:30:02.886 [DEBUG] Executing Step: * create a "10" by "10" image
+14:30:02.887 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+14:30:02.889 [INFO] Executing scenario: Set row color
+14:30:02.890 [DEBUG] Executing Step: * create a "10" by "10" image
+14:30:02.891 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+14:30:02.893 [INFO] Executing scenario: Clear image
+14:30:02.894 [DEBUG] Executing Step: * create a "10" by "10" image
+14:30:02.895 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+14:30:02.897 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+14:30:02.899 [DEBUG] Executing Step: * clear image
+14:30:03.005 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:30:03.005 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+14:30:03.005 [INFO] Total time taken: 93ms
+14:30:11.528 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:30:11.958 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:30:11.958 [INFO] Executing specification: Region Specification
+14:30:11.959 [INFO] Executing scenario: Fill
+14:30:11.959 [DEBUG] Executing Step: * create a "5" by "5" image
+14:30:11.961 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:30:12.108 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:30:12.108 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007fd62e529cf0 @x=3, @y=3, @color="O">
+14:30:12.108 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:90:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:30:12.110 [INFO] Executing scenario: bottom
+14:30:12.110 [DEBUG] Executing Step: * create a "5" by "5" image
+14:30:12.112 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:30:12.113 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:30:12.262 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:30:12.262 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007fd62e2222f0 @x=3, @y=3, @color="O">
+14:30:12.262 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:90:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:67:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:67:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:30:12.370 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:30:12.370 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:30:12.370 [INFO] Total time taken: 306ms
+14:37:58.872 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:37:59.547 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:37:59.548 [INFO] Executing specification: Region Specification
+14:37:59.549 [INFO] Executing scenario: Fill
+14:37:59.549 [DEBUG] Executing Step: * create a "5" by "5" image
+14:37:59.551 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:37:59.744 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:37:59.744 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007fabc40029c8 @x=3, @y=3, @color="O">
+14:37:59.744 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:95:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:37:59.746 [INFO] Executing scenario: bottom
+14:37:59.747 [DEBUG] Executing Step: * create a "5" by "5" image
+14:37:59.749 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:37:59.751 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:37:59.892 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:37:59.892 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007fabc414b320 @x=3, @y=3, @color="O">
+14:37:59.892 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:95:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:37:59.997 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:37:59.998 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:37:59.998 [INFO] Total time taken: 347ms
+14:40:44.948 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:40:45.394 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:40:45.395 [INFO] Executing specification: Region Specification
+14:40:45.395 [INFO] Executing scenario: Fill
+14:40:45.396 [DEBUG] Executing Step: * create a "5" by "5" image
+14:40:45.397 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:40:45.548 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:40:45.548 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007fede6d19850 @x=3, @y=3, @color="O">
+14:40:45.548 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:95:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:40:45.550 [INFO] Executing scenario: bottom
+14:40:45.551 [DEBUG] Executing Step: * create a "5" by "5" image
+14:40:45.553 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:40:45.554 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:40:45.710 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:40:45.711 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007fede6a11d60 @x=3, @y=3, @color="O">
+14:40:45.711 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:95:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:40:45.820 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:40:45.820 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:40:45.820 [INFO] Total time taken: 320ms
+14:41:15.174 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:41:15.605 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:41:15.606 [INFO] Executing specification: Region Specification
+14:41:15.606 [INFO] Executing scenario: Fill
+14:41:15.607 [DEBUG] Executing Step: * create a "5" by "5" image
+14:41:15.609 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:41:15.753 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:41:15.753 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007f83a3394620 @x=3, @y=3, @color="O">
+14:41:15.754 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:95:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:41:15.755 [INFO] Executing scenario: bottom
+14:41:15.756 [DEBUG] Executing Step: * create a "5" by "5" image
+14:41:15.758 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:41:15.760 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:41:15.905 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:41:15.905 [ERROR] Error Message: undefined method `bottom' for #<Pixel::Coordinate:0x007f83a35745d0 @x=3, @y=3, @color="O">
+14:41:15.905 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:95:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:41:16.008 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:41:16.009 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:41:16.009 [INFO] Total time taken: 302ms
+14:42:57.747 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:42:58.180 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:42:58.181 [INFO] Executing specification: Region Specification
+14:42:58.181 [INFO] Executing scenario: Fill
+14:42:58.182 [DEBUG] Executing Step: * create a "5" by "5" image
+14:42:58.184 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:42:58.328 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:42:58.328 [ERROR] Error Message: undefined method `coordinate' for #<Pixel::Coordinate:0x007fd7466092b0 @x=3, @y=3, @color="O">
+14:42:58.328 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:95:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:42:58.330 [INFO] Executing scenario: bottom
+14:42:58.331 [DEBUG] Executing Step: * create a "5" by "5" image
+14:42:58.332 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:42:58.334 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:42:58.489 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:42:58.489 [ERROR] Error Message: undefined method `coordinate' for #<Pixel::Coordinate:0x007fd74636b058 @x=3, @y=3, @color="O">
+14:42:58.489 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:95:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:42:58.597 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:42:58.597 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:42:58.597 [INFO] Total time taken: 311ms
+14:44:09.864 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+14:44:09.864 [INFO] warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:44:10.296 [INFO] /Users/cococoder/Desktop/carwow/step_implementations/steps.rb:4:in `require_relative'
+14:44:10.296 [INFO] : /Users/cococoder/Desktop/carwow/lib/image.rb:82: syntax error, unexpected keyword_end, expecting '}' (SyntaxError)
+/Users/cococoder/Desktop/carwow/lib/image.rb:88: syntax error, unexpected keyword_end, expecting '}'
+/Users/cococoder/Desktop/carwow/lib/image.rb:102: syntax error, unexpected keyword_end, expecting '}'
+/Users/cococoder/Desktop/carwow/lib/image.rb:104: class definition in method body
+/Users/cococoder/Desktop/carwow/lib/image.rb:123: class definition in method body
+/Users/cococoder/Desktop/carwow/lib/image.rb:143: syntax error, unexpected end-of-input, expecting '}'
+	from /Users/cococoder/Desktop/carwow/step_implementations/steps.rb:4:in `<top (required)>'
+	from /Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `block in load_steps'
+	from /Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `each'
+	from /Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:24:in `load_steps'
+	from /Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:75:in `<module:Runtime>'
+	from /Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	from /Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	from /Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	from /Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	from /Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	from -e:1:in `<main>'
+14:44:10.315 [ERROR] Validation failed. The following steps have errors
+14:44:10.316 [ERROR] /Users/cococoder/Desktop/carwow/specs/region.spec:3: write tcp [::1]:49290->[::1]:49293: use of closed network connection. create a "5" by "5" image
+14:44:10.316 [ERROR] /Users/cococoder/Desktop/carwow/specs/region.spec:13: write tcp [::1]:49290->[::1]:49293: use of closed network connection. define region x "3" y "3" color "J" size "1"
+14:44:10.316 [ERROR] /Users/cococoder/Desktop/carwow/specs/region.spec:23: write tcp [::1]:49290->[::1]:49293: use of closed network connection. set x "3" y "4" to "J"
+14:44:10.316 [ERROR] /Users/cococoder/Desktop/carwow/specs/region.spec:24: write tcp [::1]:49290->[::1]:49293: use of closed network connection. define region x "3" y "3" color "J" size "2"
+14:44:10.316 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:44:10.317 [ERROR] Failed to initialize suite datastore. Error: write tcp [::1]:49290->[::1]:49293: use of closed network connection
+14:44:10.321 [INFO] Failed to start Gauge Ruby runner. exit status 1
+14:44:10.322 [DEBUG] Runner exited with error: exit status 1
+14:44:10.420 [INFO] Specifications: 	-1 executed, -1 passed, 0 failed, 1 skipped
+14:44:10.420 [INFO] Scenarios: 	-2 executed, -2 passed, 0 failed, 2 skipped
+14:44:10.420 [INFO] Total time taken: 0
+14:44:23.102 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:44:23.537 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:44:23.538 [INFO] Executing specification: Region Specification
+14:44:23.539 [INFO] Executing scenario: Fill
+14:44:23.539 [DEBUG] Executing Step: * create a "5" by "5" image
+14:44:23.541 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:44:23.697 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:44:23.697 [ERROR] Error Message: undefined method `x' for #<Pixel:0x007ff8361d2870>
+14:44:23.697 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:37:in `get_pixel_at'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:78:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:44:23.699 [INFO] Executing scenario: bottom
+14:44:23.699 [DEBUG] Executing Step: * create a "5" by "5" image
+14:44:23.701 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:44:23.702 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:44:23.857 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:44:23.857 [ERROR] Error Message: undefined method `x' for #<Pixel:0x007ff836149d40>
+14:44:23.857 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:37:in `get_pixel_at'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:78:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:44:23.963 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:44:23.963 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:44:23.964 [INFO] Total time taken: 321ms
+14:45:27.158 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:45:27.600 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:45:27.601 [INFO] Executing specification: Region Specification
+14:45:27.601 [INFO] Executing scenario: Fill
+14:45:27.602 [DEBUG] Executing Step: * create a "5" by "5" image
+14:45:27.603 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:45:27.751 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:45:27.752 [ERROR] Error Message: undefined method `x' for #<Pixel:0x007f853db016d8>
+14:45:27.752 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:37:in `get_pixel_at'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:78:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:45:27.753 [INFO] Executing scenario: bottom
+14:45:27.754 [DEBUG] Executing Step: * create a "5" by "5" image
+14:45:27.755 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:45:27.757 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:45:27.905 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:45:27.905 [ERROR] Error Message: undefined method `x' for #<Pixel:0x007f853dbd1220>
+14:45:27.905 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:37:in `get_pixel_at'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:78:in `block in fill'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `loop'
+	/Users/cococoder/Desktop/carwow/lib/image.rb:72:in `fill'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:48:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:45:28.012 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:45:28.012 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:45:28.012 [INFO] Total time taken: 307ms
+14:45:41.544 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:45:41.986 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:45:41.987 [INFO] Executing specification: Region Specification
+14:45:41.988 [INFO] Executing scenario: Fill
+14:45:41.989 [DEBUG] Executing Step: * create a "5" by "5" image
+14:45:41.990 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:45:42.134 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:45:42.134 [ERROR] Error Message: oooops! no render method
+14:45:42.134 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:7:in `render'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:49:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:45:42.136 [INFO] Executing scenario: bottom
+14:45:42.137 [DEBUG] Executing Step: * create a "5" by "5" image
+14:45:42.139 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:45:42.141 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:45:42.284 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:45:42.284 [ERROR] Error Message: oooops! no render method
+14:45:42.284 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:7:in `render'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:49:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:45:42.392 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:45:42.392 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:45:42.392 [INFO] Total time taken: 300ms
+14:45:53.985 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:45:54.423 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:45:54.424 [INFO] Executing specification: Region Specification
+14:45:54.425 [INFO] Executing scenario: Fill
+14:45:54.425 [DEBUG] Executing Step: * create a "5" by "5" image
+14:45:54.427 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:45:54.577 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:45:54.577 [ERROR] Error Message: oooops! no render method
+14:45:54.577 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:7:in `render'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:49:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:45:54.579 [INFO] Executing scenario: bottom
+14:45:54.579 [DEBUG] Executing Step: * create a "5" by "5" image
+14:45:54.581 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:45:54.583 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:45:54.734 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:45:54.734 [ERROR] Error Message: oooops! no render method
+14:45:54.734 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:7:in `render'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:49:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:45:54.840 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:45:54.840 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:45:54.840 [INFO] Total time taken: 313ms
+14:46:30.099 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:46:30.521 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:46:30.522 [INFO] Executing specification: Region Specification
+14:46:30.523 [INFO] Executing scenario: Fill
+14:46:30.523 [DEBUG] Executing Step: * create a "5" by "5" image
+14:46:30.525 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:46:30.680 [ERROR] Failed step: define region x "3" y "3" color "J" size "1"
+14:46:30.680 [ERROR] Error Message: oooops! no render method
+14:46:30.680 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:7:in `render'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:49:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:46:30.682 [INFO] Executing scenario: bottom
+14:46:30.682 [DEBUG] Executing Step: * create a "5" by "5" image
+14:46:30.684 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:46:30.686 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:46:30.829 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:46:30.830 [ERROR] Error Message: oooops! no render method
+14:46:30.830 [ERROR] Stacktrace: /Users/cococoder/Desktop/carwow/lib/image.rb:7:in `render'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:49:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:46:30.937 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:46:30.937 [INFO] Scenarios: 	2 executed, 0 passed, 2 failed, 0 skipped
+14:46:30.937 [INFO] Total time taken: 310ms
+14:46:56.012 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:46:56.456 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:46:56.457 [INFO] Executing specification: Region Specification
+14:46:56.457 [INFO] Executing scenario: Fill
+14:46:56.458 [DEBUG] Executing Step: * create a "5" by "5" image
+14:46:56.460 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:46:56.463 [INFO] Executing scenario: bottom
+14:46:56.464 [DEBUG] Executing Step: * create a "5" by "5" image
+14:46:56.466 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:46:56.469 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:46:56.640 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:46:56.640 [ERROR] Error Message: Expected (region.count == size.to_i), but
+    region.count is 1
+    region is [#<Pixel:0x007f9474810eb0
+        @color="J",
+        @coordinate=#<Pixel::Coordinate:0x007f9474810e88 @color="O", @x=3, @y=3>,
+        @image=
+         #<Image:0x007f94748115b8
+          @height=5,
+          @pixels=
+           [#<Pixel:0x007f9474811518 @coordinate=#<Pixel::Coordinate:0x007f94748114f0 @color="O", @x=1, @y=1>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f94748114a0 @coordinate=#<Pixel::Coordinate:0x007f9474811478 @color="O", @x=1, @y=2>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474811428 @coordinate=#<Pixel::Coordinate:0x007f9474811400 @color="O", @x=1, @y=3>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f94748113b0 @coordinate=#<Pixel::Coordinate:0x007f9474811388 @color="O", @x=1, @y=4>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474811338 @coordinate=#<Pixel::Coordinate:0x007f9474811310 @color="O", @x=1, @y=5>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474811270 @coordinate=#<Pixel::Coordinate:0x007f9474811248 @color="O", @x=2, @y=1>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f94748111d0 @coordinate=#<Pixel::Coordinate:0x007f94748111a8 @color="O", @x=2, @y=2>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474811130 @coordinate=#<Pixel::Coordinate:0x007f9474811108 @color="O", @x=2, @y=3>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f94748110b8 @coordinate=#<Pixel::Coordinate:0x007f9474811090 @color="O", @x=2, @y=4>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474811040 @coordinate=#<Pixel::Coordinate:0x007f9474811018 @color="O", @x=2, @y=5>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810fa0 @coordinate=#<Pixel::Coordinate:0x007f9474810f78 @color="O", @x=3, @y=1>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810f28 @coordinate=#<Pixel::Coordinate:0x007f9474810f00 @color="O", @x=3, @y=2>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810eb0 ...>,
+            #<Pixel:0x007f9474810e38 @color="J", @coordinate=#<Pixel::Coordinate:0x007f9474810e10 @color="O", @x=3, @y=4>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810dc0 @coordinate=#<Pixel::Coordinate:0x007f9474810d98 @color="O", @x=3, @y=5>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810d20 @coordinate=#<Pixel::Coordinate:0x007f9474810cf8 @color="O", @x=4, @y=1>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810ca8 @coordinate=#<Pixel::Coordinate:0x007f9474810c80 @color="O", @x=4, @y=2>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810c30 @coordinate=#<Pixel::Coordinate:0x007f9474810c08 @color="O", @x=4, @y=3>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810bb8 @coordinate=#<Pixel::Coordinate:0x007f9474810b90 @color="O", @x=4, @y=4>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810b40 @coordinate=#<Pixel::Coordinate:0x007f9474810b18 @color="O", @x=4, @y=5>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810aa0 @coordinate=#<Pixel::Coordinate:0x007f9474810a78 @color="O", @x=5, @y=1>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810a28 @coordinate=#<Pixel::Coordinate:0x007f9474810a00 @color="O", @x=5, @y=2>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f94748109b0 @coordinate=#<Pixel::Coordinate:0x007f9474810988 @color="O", @x=5, @y=3>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f9474810938 @coordinate=#<Pixel::Coordinate:0x007f9474810910 @color="O", @x=5, @y=4>, @image=#<Image:0x007f94748115b8 ...>>,
+            #<Pixel:0x007f94748108c0 @coordinate=#<Pixel::Coordinate:0x007f9474810898 @color="O", @x=5, @y=5>, @image=#<Image:0x007f94748115b8 ...>>],
+          @width=5>>]
+    size.to_i is 2
+    size is "2"
+14:46:56.641 [ERROR] Stacktrace: /Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:50:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:46:56.749 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:46:56.749 [INFO] Scenarios: 	2 executed, 1 passed, 1 failed, 0 skipped
+14:46:56.749 [INFO] Total time taken: 187ms
+14:48:26.554 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:48:26.982 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:48:26.983 [INFO] Executing specification: Region Specification
+14:48:26.984 [INFO] Executing scenario: Fill
+14:48:26.984 [DEBUG] Executing Step: * create a "5" by "5" image
+14:48:26.986 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:48:26.988 [INFO] Executing scenario: bottom
+14:48:26.989 [DEBUG] Executing Step: * create a "5" by "5" image
+14:48:26.991 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:48:26.993 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:48:27.165 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:48:27.165 [ERROR] Error Message: Expected (region.count == size.to_i), but
+    region.count is 1
+    region is [#<Pixel:0x007f99ddd63958
+        @color="J",
+        @coordinate=#<Pixel::Coordinate:0x007f99ddd63930 @color="O", @x=3, @y=3>,
+        @image=
+         #<Image:0x007f99ddd70130
+          @height=5,
+          @pixels=
+           [#<Pixel:0x007f99ddd70090 @coordinate=#<Pixel::Coordinate:0x007f99ddd70068 @color="O", @x=1, @y=1>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd70018 @coordinate=#<Pixel::Coordinate:0x007f99ddd63f98 @color="O", @x=1, @y=2>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63ef8 @coordinate=#<Pixel::Coordinate:0x007f99ddd63ed0 @color="O", @x=1, @y=3>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63e80 @coordinate=#<Pixel::Coordinate:0x007f99ddd63e58 @color="O", @x=1, @y=4>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63de0 @coordinate=#<Pixel::Coordinate:0x007f99ddd63db8 @color="O", @x=1, @y=5>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63d40 @coordinate=#<Pixel::Coordinate:0x007f99ddd63d18 @color="O", @x=2, @y=1>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63cc8 @coordinate=#<Pixel::Coordinate:0x007f99ddd63ca0 @color="O", @x=2, @y=2>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63c50 @coordinate=#<Pixel::Coordinate:0x007f99ddd63c28 @color="O", @x=2, @y=3>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63bd8 @coordinate=#<Pixel::Coordinate:0x007f99ddd63bb0 @color="O", @x=2, @y=4>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63b10 @coordinate=#<Pixel::Coordinate:0x007f99ddd63ae8 @color="O", @x=2, @y=5>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63a48 @coordinate=#<Pixel::Coordinate:0x007f99ddd63a20 @color="O", @x=3, @y=1>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd639d0 @coordinate=#<Pixel::Coordinate:0x007f99ddd639a8 @color="O", @x=3, @y=2>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63958 ...>,
+            #<Pixel:0x007f99ddd638e0 @color="J", @coordinate=#<Pixel::Coordinate:0x007f99ddd638b8 @color="O", @x=3, @y=4>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63868 @coordinate=#<Pixel::Coordinate:0x007f99ddd63840 @color="O", @x=3, @y=5>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd637a0 @coordinate=#<Pixel::Coordinate:0x007f99ddd63778 @color="O", @x=4, @y=1>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63728 @coordinate=#<Pixel::Coordinate:0x007f99ddd636b0 @color="O", @x=4, @y=2>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63660 @coordinate=#<Pixel::Coordinate:0x007f99ddd63638 @color="O", @x=4, @y=3>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd635e8 @coordinate=#<Pixel::Coordinate:0x007f99ddd635c0 @color="O", @x=4, @y=4>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63570 @coordinate=#<Pixel::Coordinate:0x007f99ddd63548 @color="O", @x=4, @y=5>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd634d0 @coordinate=#<Pixel::Coordinate:0x007f99ddd63480 @color="O", @x=5, @y=1>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63408 @coordinate=#<Pixel::Coordinate:0x007f99ddd633e0 @color="O", @x=5, @y=2>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63390 @coordinate=#<Pixel::Coordinate:0x007f99ddd63368 @color="O", @x=5, @y=3>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd63318 @coordinate=#<Pixel::Coordinate:0x007f99ddd632f0 @color="O", @x=5, @y=4>, @image=#<Image:0x007f99ddd70130 ...>>,
+            #<Pixel:0x007f99ddd632a0 @coordinate=#<Pixel::Coordinate:0x007f99ddd63278 @color="O", @x=5, @y=5>, @image=#<Image:0x007f99ddd70130 ...>>],
+          @width=5>>]
+    size.to_i is 2
+    size is "2"
+14:48:27.166 [ERROR] Stacktrace: /Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:50:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:48:27.272 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:48:27.272 [INFO] Scenarios: 	2 executed, 1 passed, 1 failed, 0 skipped
+14:48:27.272 [INFO] Total time taken: 186ms
+14:48:46.035 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:48:46.488 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:48:46.488 [INFO] Executing specification: Region Specification
+14:48:46.489 [INFO] Executing scenario: Fill
+14:48:46.489 [DEBUG] Executing Step: * create a "5" by "5" image
+14:48:46.491 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:48:46.493 [INFO] Executing scenario: bottom
+14:48:46.494 [DEBUG] Executing Step: * create a "5" by "5" image
+14:48:46.495 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:48:46.497 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:48:46.671 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:48:46.671 [ERROR] Error Message: Expected (region.count == size.to_i), but
+    region.count is 1
+    region is [#<Pixel:0x007fd7dbc5c5f0
+        @color="J",
+        @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c5c8 @color="O", @x=3, @y=3>,
+        @image=
+         #<Image:0x007fd7dbc5cd48
+          @height=5,
+          @pixels=
+           [#<Pixel:0x007fd7dbc5cca8 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5cc30 @color="O", @x=1, @y=1>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5cbe0 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5cbb8 @color="O", @x=1, @y=2>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5cb68 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5cb40 @color="O", @x=1, @y=3>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5caf0 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5cac8 @color="O", @x=1, @y=4>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5ca78 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5ca50 @color="O", @x=1, @y=5>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c9b0 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c988 @color="O", @x=2, @y=1>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c938 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c910 @color="O", @x=2, @y=2>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c8c0 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c898 @color="O", @x=2, @y=3>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c848 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c820 @color="O", @x=2, @y=4>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c7d0 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c7a8 @color="O", @x=2, @y=5>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c730 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c708 @color="O", @x=3, @y=1>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c668 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c640 @color="O", @x=3, @y=2>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c5f0 ...>,
+            #<Pixel:0x007fd7dbc5c578 @color="J", @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c550 @color="O", @x=3, @y=4>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c500 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c4d8 @color="O", @x=3, @y=5>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c460 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c438 @color="O", @x=4, @y=1>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c3e8 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c3c0 @color="O", @x=4, @y=2>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c370 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c348 @color="O", @x=4, @y=3>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c2f8 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c2d0 @color="O", @x=4, @y=4>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c280 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c258 @color="O", @x=4, @y=5>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c1e0 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c1b8 @color="O", @x=5, @y=1>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c168 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c140 @color="O", @x=5, @y=2>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c0f0 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5c078 @color="O", @x=5, @y=3>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5c028 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5bfb0 @color="O", @x=5, @y=4>, @image=#<Image:0x007fd7dbc5cd48 ...>>,
+            #<Pixel:0x007fd7dbc5bf60 @coordinate=#<Pixel::Coordinate:0x007fd7dbc5bf38 @color="O", @x=5, @y=5>, @image=#<Image:0x007fd7dbc5cd48 ...>>],
+          @width=5>>]
+    size.to_i is 2
+    size is "2"
+14:48:46.672 [ERROR] Stacktrace: /Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:50:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:48:46.780 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:48:46.780 [INFO] Scenarios: 	2 executed, 1 passed, 1 failed, 0 skipped
+14:48:46.780 [INFO] Total time taken: 186ms
+14:49:00.430 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:49:00.876 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:49:00.877 [INFO] Executing specification: Region Specification
+14:49:00.878 [INFO] Executing scenario: Fill
+14:49:00.878 [DEBUG] Executing Step: * create a "5" by "5" image
+14:49:00.880 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:49:00.882 [INFO] Executing scenario: bottom
+14:49:00.883 [DEBUG] Executing Step: * create a "5" by "5" image
+14:49:00.884 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:49:00.886 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:49:01.059 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:49:01.059 [ERROR] Error Message: Expected (region.count == size.to_i), but
+    region.count is 1
+    region is [#<Pixel:0x007ffc5dc5aa10
+        @color="J",
+        @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a9e8 @color="O", @x=3, @y=3>,
+        @image=
+         #<Image:0x007ffc5dc5b140
+          @height=5,
+          @pixels=
+           [#<Pixel:0x007ffc5dc5b0a0 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5b078 @color="O", @x=1, @y=1>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5afd8 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5afb0 @color="O", @x=1, @y=2>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5af60 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5af38 @color="O", @x=1, @y=3>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5aee8 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5aec0 @color="O", @x=1, @y=4>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5ae70 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5ae48 @color="O", @x=1, @y=5>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5add0 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5ada8 @color="O", @x=2, @y=1>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5ad58 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5ad30 @color="O", @x=2, @y=2>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5ace0 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5acb8 @color="O", @x=2, @y=3>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5ac68 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5ac40 @color="O", @x=2, @y=4>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5abf0 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5ab78 @color="O", @x=2, @y=5>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5ab00 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5aad8 @color="O", @x=3, @y=1>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5aa88 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5aa60 @color="O", @x=3, @y=2>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5aa10 ...>,
+            #<Pixel:0x007ffc5dc5a998 @color="J", @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a970 @color="O", @x=3, @y=4>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a920 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a8f8 @color="O", @x=3, @y=5>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a880 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a858 @color="O", @x=4, @y=1>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a808 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a7e0 @color="O", @x=4, @y=2>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a790 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a768 @color="O", @x=4, @y=3>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a718 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a6f0 @color="O", @x=4, @y=4>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a650 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a628 @color="O", @x=4, @y=5>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a5b0 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a588 @color="O", @x=5, @y=1>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a538 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a510 @color="O", @x=5, @y=2>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a4c0 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a498 @color="O", @x=5, @y=3>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a448 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a420 @color="O", @x=5, @y=4>, @image=#<Image:0x007ffc5dc5b140 ...>>,
+            #<Pixel:0x007ffc5dc5a3d0 @coordinate=#<Pixel::Coordinate:0x007ffc5dc5a3a8 @color="O", @x=5, @y=5>, @image=#<Image:0x007ffc5dc5b140 ...>>],
+          @width=5>>]
+    size.to_i is 2
+    size is "2"
+14:49:01.060 [ERROR] Stacktrace: /Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:50:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:49:01.166 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:49:01.166 [INFO] Scenarios: 	2 executed, 1 passed, 1 failed, 0 skipped
+14:49:01.166 [INFO] Total time taken: 186ms
+14:49:27.729 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:49:28.179 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:49:28.180 [INFO] Executing specification: Region Specification
+14:49:28.180 [INFO] Executing scenario: Fill
+14:49:28.181 [DEBUG] Executing Step: * create a "5" by "5" image
+14:49:28.182 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:49:28.185 [INFO] Executing scenario: bottom
+14:49:28.186 [DEBUG] Executing Step: * create a "5" by "5" image
+14:49:28.187 [DEBUG] Executing Step: * set x "3" y "4" to "J"
+14:49:28.189 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "2"
+14:49:28.357 [ERROR] Failed step: define region x "3" y "3" color "J" size "2"
+14:49:28.357 [ERROR] Error Message: Expected (region.count == size.to_i), but
+    region.count is 1
+    region is [#<Pixel:0x007fc58d112b50
+        @color="J",
+        @coordinate=#<Pixel::Coordinate:0x007fc58d112b28 @color="O", @x=3, @y=3>,
+        @image=
+         #<Image:0x007fc58d113280
+          @height=5,
+          @pixels=
+           [#<Pixel:0x007fc58d1131e0 @coordinate=#<Pixel::Coordinate:0x007fc58d1131b8 @color="O", @x=1, @y=1>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d113168 @coordinate=#<Pixel::Coordinate:0x007fc58d113140 @color="O", @x=1, @y=2>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d1130f0 @coordinate=#<Pixel::Coordinate:0x007fc58d1130c8 @color="O", @x=1, @y=3>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d113078 @coordinate=#<Pixel::Coordinate:0x007fc58d113000 @color="O", @x=1, @y=4>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112fb0 @coordinate=#<Pixel::Coordinate:0x007fc58d112f88 @color="O", @x=1, @y=5>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112f10 @coordinate=#<Pixel::Coordinate:0x007fc58d112ee8 @color="O", @x=2, @y=1>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112e98 @coordinate=#<Pixel::Coordinate:0x007fc58d112e70 @color="O", @x=2, @y=2>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112e20 @coordinate=#<Pixel::Coordinate:0x007fc58d112df8 @color="O", @x=2, @y=3>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112da8 @coordinate=#<Pixel::Coordinate:0x007fc58d112d80 @color="O", @x=2, @y=4>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112d30 @coordinate=#<Pixel::Coordinate:0x007fc58d112d08 @color="O", @x=2, @y=5>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112c90 @coordinate=#<Pixel::Coordinate:0x007fc58d112c68 @color="O", @x=3, @y=1>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112c18 @coordinate=#<Pixel::Coordinate:0x007fc58d112bf0 @color="O", @x=3, @y=2>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112b50 ...>,
+            #<Pixel:0x007fc58d112ad8 @color="J", @coordinate=#<Pixel::Coordinate:0x007fc58d112ab0 @color="O", @x=3, @y=4>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112a60 @coordinate=#<Pixel::Coordinate:0x007fc58d112a38 @color="O", @x=3, @y=5>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d1129c0 @coordinate=#<Pixel::Coordinate:0x007fc58d112998 @color="O", @x=4, @y=1>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112948 @coordinate=#<Pixel::Coordinate:0x007fc58d112920 @color="O", @x=4, @y=2>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d1128d0 @coordinate=#<Pixel::Coordinate:0x007fc58d1128a8 @color="O", @x=4, @y=3>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112858 @coordinate=#<Pixel::Coordinate:0x007fc58d112830 @color="O", @x=4, @y=4>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d1127e0 @coordinate=#<Pixel::Coordinate:0x007fc58d1127b8 @color="O", @x=4, @y=5>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112740 @coordinate=#<Pixel::Coordinate:0x007fc58d112718 @color="O", @x=5, @y=1>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d1126c8 @coordinate=#<Pixel::Coordinate:0x007fc58d112650 @color="O", @x=5, @y=2>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112600 @coordinate=#<Pixel::Coordinate:0x007fc58d1125d8 @color="O", @x=5, @y=3>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112588 @coordinate=#<Pixel::Coordinate:0x007fc58d112560 @color="O", @x=5, @y=4>, @image=#<Image:0x007fc58d113280 ...>>,
+            #<Pixel:0x007fc58d112510 @coordinate=#<Pixel::Coordinate:0x007fc58d1124e8 @color="O", @x=5, @y=5>, @image=#<Image:0x007fc58d113280 ...>>],
+          @width=5>>]
+    size.to_i is 2
+    size is "2"
+14:49:28.357 [ERROR] Stacktrace: /Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:50:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:32:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+14:49:28.464 [INFO] Specifications: 	1 executed, 0 passed, 1 failed, 0 skipped
+14:49:28.464 [INFO] Scenarios: 	2 executed, 1 passed, 1 failed, 0 skipped
+14:49:28.464 [INFO] Total time taken: 180ms
+14:50:04.163 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:50:04.602 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:50:04.603 [INFO] Executing specification: Region Specification
+14:50:04.603 [INFO] Executing scenario: Fill
+14:50:04.604 [DEBUG] Executing Step: * create a "5" by "5" image
+14:50:04.605 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:50:04.713 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:50:04.713 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:50:04.713 [INFO] Total time taken: 7ms
+14:50:08.421 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:50:08.867 [WARNING] Error starting plugin html-report. Failed to get plugin.json. Plugin html-report  is not installed. To install, run `gauge --install html-report`.
+14:50:08.868 [INFO] Executing specification: Region Specification
+14:50:08.869 [INFO] Executing scenario: Fill
+14:50:08.869 [DEBUG] Executing Step: * create a "5" by "5" image
+14:50:08.871 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:50:08.979 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:50:08.979 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:50:08.979 [INFO] Total time taken: 6ms
+14:50:25.899 [INFO] Installing Plugin => html-report 1.1.0
+14:50:25.899 [INFO] Downloading Plugin... => https://github.com/getgauge/html-report/releases/download/v1.1.0/html-report-1.1.0-darwin.x86_64.zip
+14:50:32.292 [INFO] Plugin unzipped to => /var/folders/gm/c4j3qc7n67v1d019wpv55x6c0000gn/T/gauge_temp/1449931832190192252
+14:50:32.309 [INFO] Successfully installed plugin => html-report
+14:51:14.998 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:51:15.444 [INFO] Executing specification: Region Specification
+14:51:15.445 [INFO] Executing scenario: Fill
+14:51:15.446 [DEBUG] Executing Step: * create a "5" by "5" image
+14:51:15.448 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:51:15.558 [DEBUG] Plugin [Html Report] with pid [15308] has exited
+14:51:15.558 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:51:15.558 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:51:15.558 [INFO] Total time taken: 9ms
+14:52:16.366 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:52:16.814 [ERROR] Validation failed. The following steps have errors
+14:52:16.815 [ERROR] /Users/cococoder/Desktop/carwow/specs/region.spec:14: Step implementation not found. render image
+14:52:16.826 [INFO] Executing specification: Region Specification
+14:52:16.933 [DEBUG] Plugin [Html Report] with pid [15398] has exited
+14:52:16.933 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:52:16.933 [INFO] Scenarios: 	0 executed, 0 passed, 0 failed, 1 skipped
+14:52:16.933 [INFO] Total time taken: 2ms
+14:52:45.019 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:52:45.459 [INFO] Executing specification: Region Specification
+14:52:45.460 [INFO] Executing scenario: Fill
+14:52:45.460 [DEBUG] Executing Step: * create a "5" by "5" image
+14:52:45.462 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:52:45.464 [DEBUG] Executing Step: * render image
+14:52:45.570 [DEBUG] Plugin [Html Report] with pid [15463] has exited
+14:52:45.570 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:52:45.570 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:52:45.570 [INFO] Total time taken: 8ms
+14:53:48.749 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+14:53:49.185 [INFO] Executing specification: Region Specification
+14:53:49.186 [INFO] Executing scenario: Fill
+14:53:49.187 [DEBUG] Executing Step: * create a "5" by "5" image
+14:53:49.188 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+14:53:49.189 [INFO] 11
+14:53:49.189 [INFO] 2
+3
+4
+5
+21
+2
+14:53:49.189 [INFO] 3
+14:53:49.190 [INFO] 4
+5
+31
+2
+3
+4
+5
+41
+14:53:49.190 [INFO] 
+2
+3
+4
+5
+14:53:49.190 [INFO] 
+51
+14:53:49.190 [INFO] 2
+3
+4
+14:53:49.190 [INFO] 
+5
+14:53:49.191 [DEBUG] Executing Step: * render image
+14:53:49.191 [INFO] 11
+2
+3
+4
+14:53:49.192 [INFO] 5
+21
+2
+3
+4
+5
+31
+2
+14:53:49.192 [INFO] 3
+4
+5
+14:53:49.192 [INFO] 
+41
+14:53:49.192 [INFO] 2
+3
+4
+5
+5
+14:53:49.192 [INFO] 1
+2
+3
+4
+5
+14:53:49.294 [DEBUG] Plugin [Html Report] with pid [15521] has exited
+14:53:49.294 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:53:49.294 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+14:53:49.294 [INFO] Total time taken: 9ms
+15:03:53.916 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+15:03:54.661 [INFO] Executing specification: Region Specification
+15:03:54.662 [INFO] Executing scenario: Fill
+15:03:54.663 [DEBUG] Executing Step: * create a "5" by "5" image
+15:03:54.665 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+15:03:54.666 [INFO] J
+15:03:54.667 [DEBUG] Executing Step: * render image
+15:03:54.668 [INFO] J
+15:03:54.775 [DEBUG] Plugin [Html Report] with pid [15818] has exited
+15:03:54.775 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+15:03:54.775 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+15:03:54.775 [INFO] Total time taken: 9ms
+15:04:25.632 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+15:04:26.073 [INFO] Executing specification: Region Specification
+15:04:26.074 [INFO] Executing scenario: Fill
+15:04:26.074 [DEBUG] Executing Step: * create a "5" by "5" image
+15:04:26.076 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+15:04:26.077 [INFO] J
+15:04:26.079 [DEBUG] Executing Step: * render image
+15:04:26.080 [INFO] J
+15:04:26.187 [DEBUG] Plugin [Html Report] with pid [15832] has exited
+15:04:26.187 [INFO] Specifications: 	1 executed, 1 passed, 0 failed, 0 skipped
+15:04:26.187 [INFO] Scenarios: 	1 executed, 1 passed, 0 failed, 0 skipped
+15:04:26.187 [INFO] Total time taken: 10ms
+08:24:30.045 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+08:24:30.046 [INFO] 
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:24:30.900 [INFO] Executing specification: Image Specification
+08:24:30.901 [INFO] Executing scenario: Create Images
+08:24:30.901 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:24:30.974 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:24:30.977 [INFO] Executing scenario: check image bounds
+08:24:30.978 [DEBUG] Executing Step: * create a "3" by "3" image
+08:24:30.980 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:24:30.982 [INFO] Executing scenario: Set Color of Pixel
+08:24:30.983 [DEBUG] Executing Step: * create a "3" by "3" image
+08:24:30.984 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:24:30.987 [INFO] Executing scenario: Set column color
+08:24:30.988 [DEBUG] Executing Step: * create a "10" by "10" image
+08:24:30.989 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:24:30.991 [INFO] Executing scenario: Set row color
+08:24:30.992 [DEBUG] Executing Step: * create a "10" by "10" image
+08:24:30.994 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:24:30.996 [INFO] Executing scenario: Clear image
+08:24:30.996 [DEBUG] Executing Step: * create a "10" by "10" image
+08:24:30.998 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:24:31.000 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:24:31.001 [DEBUG] Executing Step: * clear image
+08:24:31.004 [INFO] Executing specification: Region Specification
+08:24:31.005 [INFO] Executing scenario: Fill
+08:24:31.005 [DEBUG] Executing Step: * create a "5" by "5" image
+08:24:31.006 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+08:24:31.007 [INFO] J
+08:24:31.008 [DEBUG] Executing Step: * render image
+08:24:31.009 [INFO] J
+08:24:31.112 [DEBUG] Plugin [Html Report] with pid [5345] has exited
+08:24:31.112 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:24:31.112 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:24:31.112 [INFO] Total time taken: 112ms
+08:29:41.063 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:29:41.531 [INFO] Executing specification: Image Specification
+08:29:41.532 [INFO] Executing scenario: Create Images
+08:29:41.533 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:29:41.594 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:29:41.598 [INFO] Executing scenario: check image bounds
+08:29:41.599 [DEBUG] Executing Step: * create a "3" by "3" image
+08:29:41.600 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:29:41.603 [INFO] Executing scenario: Set Color of Pixel
+08:29:41.604 [DEBUG] Executing Step: * create a "3" by "3" image
+08:29:41.605 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:29:41.608 [INFO] Executing scenario: Set column color
+08:29:41.608 [DEBUG] Executing Step: * create a "10" by "10" image
+08:29:41.610 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:29:41.612 [INFO] Executing scenario: Set row color
+08:29:41.613 [DEBUG] Executing Step: * create a "10" by "10" image
+08:29:41.615 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:29:41.618 [INFO] Executing scenario: Clear image
+08:29:41.619 [DEBUG] Executing Step: * create a "10" by "10" image
+08:29:41.621 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:29:41.624 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:29:41.626 [DEBUG] Executing Step: * clear image
+08:29:41.630 [INFO] Executing specification: Region Specification
+08:29:41.736 [DEBUG] Plugin [Html Report] with pid [5483] has exited
+08:29:41.737 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:29:41.737 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+08:29:41.737 [INFO] Total time taken: 100ms
+08:30:19.723 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:30:20.155 [INFO] Executing specification: Image Specification
+08:30:20.156 [INFO] Executing scenario: Create Images
+08:30:20.156 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:30:20.215 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:30:20.219 [INFO] Executing scenario: check image bounds
+08:30:20.220 [DEBUG] Executing Step: * create a "3" by "3" image
+08:30:20.222 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:30:20.226 [INFO] Executing scenario: Set Color of Pixel
+08:30:20.227 [DEBUG] Executing Step: * create a "3" by "3" image
+08:30:20.229 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:30:20.231 [INFO] Executing scenario: Set column color
+08:30:20.232 [DEBUG] Executing Step: * create a "10" by "10" image
+08:30:20.233 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:30:20.236 [INFO] Executing scenario: Set row color
+08:30:20.237 [DEBUG] Executing Step: * create a "10" by "10" image
+08:30:20.239 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:30:20.241 [INFO] Executing scenario: Clear image
+08:30:20.242 [DEBUG] Executing Step: * create a "10" by "10" image
+08:30:20.243 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:30:20.245 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:30:20.246 [DEBUG] Executing Step: * clear image
+08:30:20.249 [INFO] Executing specification: Region Specification
+08:30:20.356 [DEBUG] Plugin [Html Report] with pid [5499] has exited
+08:30:20.356 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:30:20.356 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+08:30:20.356 [INFO] Total time taken: 95ms
+08:32:15.745 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:32:16.334 [INFO] Executing specification: Image Specification
+08:32:16.335 [INFO] Executing scenario: Create Images
+08:32:16.335 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:32:16.396 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:32:16.399 [INFO] Executing scenario: check image bounds
+08:32:16.400 [DEBUG] Executing Step: * create a "3" by "3" image
+08:32:16.402 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:32:16.405 [INFO] Executing scenario: Set Color of Pixel
+08:32:16.406 [DEBUG] Executing Step: * create a "3" by "3" image
+08:32:16.407 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:32:16.410 [INFO] Executing scenario: Set column color
+08:32:16.411 [DEBUG] Executing Step: * create a "10" by "10" image
+08:32:16.413 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:32:16.416 [INFO] Executing scenario: Set row color
+08:32:16.417 [DEBUG] Executing Step: * create a "10" by "10" image
+08:32:16.419 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:32:16.423 [INFO] Executing scenario: Clear image
+08:32:16.424 [DEBUG] Executing Step: * create a "10" by "10" image
+08:32:16.426 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:32:16.428 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:32:16.430 [DEBUG] Executing Step: * clear image
+08:32:16.433 [INFO] Executing specification: Region Specification
+08:32:16.540 [DEBUG] Plugin [Html Report] with pid [5515] has exited
+08:32:16.540 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:32:16.540 [INFO] Scenarios: 	6 executed, 6 passed, 0 failed, 0 skipped
+08:32:16.540 [INFO] Total time taken: 101ms
+08:33:41.978 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:33:42.416 [INFO] Executing specification: Image Specification
+08:33:42.416 [INFO] Executing scenario: Create Images
+08:33:42.417 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:33:42.475 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:33:42.478 [INFO] Executing scenario: check image bounds
+08:33:42.479 [DEBUG] Executing Step: * create a "3" by "3" image
+08:33:42.481 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:33:42.484 [INFO] Executing scenario: Set Color of Pixel
+08:33:42.484 [DEBUG] Executing Step: * create a "3" by "3" image
+08:33:42.487 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:33:42.491 [INFO] Executing scenario: Set column color
+08:33:42.492 [DEBUG] Executing Step: * create a "10" by "10" image
+08:33:42.493 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:33:42.496 [INFO] Executing scenario: Set row color
+08:33:42.497 [DEBUG] Executing Step: * create a "10" by "10" image
+08:33:42.499 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:33:42.501 [INFO] Executing scenario: Clear image
+08:33:42.502 [DEBUG] Executing Step: * create a "10" by "10" image
+08:33:42.504 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:33:42.505 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:33:42.507 [DEBUG] Executing Step: * clear image
+08:33:42.510 [INFO] Executing specification: Region Specification
+08:33:42.510 [INFO] Executing scenario: Render image
+08:33:42.511 [DEBUG] Executing Step: * create a "5" by "5" image
+08:33:42.512 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+08:33:42.513 [INFO] J
+08:33:42.514 [DEBUG] Executing Step: * render image
+08:33:42.514 [INFO] J
+08:33:42.622 [DEBUG] Plugin [Html Report] with pid [5531] has exited
+08:33:42.622 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:33:42.622 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:33:42.622 [INFO] Total time taken: 101ms
+08:33:51.306 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:33:51.747 [INFO] Executing specification: Image Specification
+08:33:51.748 [INFO] Executing scenario: Create Images
+08:33:51.749 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:33:51.812 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:33:51.814 [INFO] Executing scenario: check image bounds
+08:33:51.815 [DEBUG] Executing Step: * create a "3" by "3" image
+08:33:51.817 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:33:51.820 [INFO] Executing scenario: Set Color of Pixel
+08:33:51.821 [DEBUG] Executing Step: * create a "3" by "3" image
+08:33:51.822 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:33:51.825 [INFO] Executing scenario: Set column color
+08:33:51.825 [DEBUG] Executing Step: * create a "10" by "10" image
+08:33:51.827 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:33:51.830 [INFO] Executing scenario: Set row color
+08:33:51.830 [DEBUG] Executing Step: * create a "10" by "10" image
+08:33:51.832 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:33:51.834 [INFO] Executing scenario: Clear image
+08:33:51.834 [DEBUG] Executing Step: * create a "10" by "10" image
+08:33:51.836 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:33:51.839 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:33:51.841 [DEBUG] Executing Step: * clear image
+08:33:51.845 [INFO] Executing specification: Region Specification
+08:33:51.846 [INFO] Executing scenario: Render image
+08:33:51.847 [DEBUG] Executing Step: * create a "5" by "5" image
+08:33:51.848 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+08:33:51.849 [INFO] J
+08:33:51.850 [DEBUG] Executing Step: * render image
+08:33:51.851 [INFO] J
+08:33:51.953 [DEBUG] Plugin [Html Report] with pid [5546] has exited
+08:33:51.953 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:33:51.954 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:33:51.954 [INFO] Total time taken: 106ms
+08:33:59.967 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:34:00.391 [INFO] Executing specification: Image Specification
+08:34:00.392 [INFO] Executing scenario: Create Images
+08:34:00.393 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:34:00.453 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:34:00.456 [INFO] Executing scenario: check image bounds
+08:34:00.458 [DEBUG] Executing Step: * create a "3" by "3" image
+08:34:00.459 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:34:00.462 [INFO] Executing scenario: Set Color of Pixel
+08:34:00.463 [DEBUG] Executing Step: * create a "3" by "3" image
+08:34:00.465 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:34:00.468 [INFO] Executing scenario: Set column color
+08:34:00.469 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:00.471 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:34:00.474 [INFO] Executing scenario: Set row color
+08:34:00.474 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:00.476 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:34:00.479 [INFO] Executing scenario: Clear image
+08:34:00.479 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:00.481 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:34:00.483 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:34:00.484 [DEBUG] Executing Step: * clear image
+08:34:00.487 [INFO] Executing specification: Region Specification
+08:34:00.487 [INFO] Executing scenario: Render image
+08:34:00.488 [DEBUG] Executing Step: * create a "5" by "5" image
+08:34:00.490 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+08:34:00.491 [INFO] J
+08:34:00.492 [DEBUG] Executing Step: * render image
+08:34:00.492 [INFO] J
+08:34:00.600 [DEBUG] Plugin [Html Report] with pid [5563] has exited
+08:34:00.600 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:34:00.600 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:34:00.600 [INFO] Total time taken: 104ms
+08:34:38.617 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:34:39.060 [INFO] Executing specification: Image Specification
+08:34:39.060 [INFO] Executing scenario: Create Images
+08:34:39.061 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:34:39.129 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:34:39.132 [INFO] Executing scenario: check image bounds
+08:34:39.132 [DEBUG] Executing Step: * create a "3" by "3" image
+08:34:39.134 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:34:39.138 [INFO] Executing scenario: Set Color of Pixel
+08:34:39.138 [DEBUG] Executing Step: * create a "3" by "3" image
+08:34:39.140 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:34:39.142 [INFO] Executing scenario: Set column color
+08:34:39.143 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:39.145 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:34:39.148 [INFO] Executing scenario: Set row color
+08:34:39.149 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:39.151 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:34:39.154 [INFO] Executing scenario: Clear image
+08:34:39.155 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:39.157 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:34:39.159 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:34:39.162 [DEBUG] Executing Step: * clear image
+08:34:39.165 [INFO] Executing specification: Region Specification
+08:34:39.166 [INFO] Executing scenario: Render image
+08:34:39.167 [DEBUG] Executing Step: * create a "5" by "5" image
+08:34:39.168 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+08:34:39.170 [DEBUG] Executing Step: * render image
+08:34:39.276 [DEBUG] Plugin [Html Report] with pid [5610] has exited
+08:34:39.276 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:34:39.276 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:34:39.276 [INFO] Total time taken: 113ms
+08:34:44.600 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+08:34:44.600 [INFO] warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:34:45.036 [INFO] Executing specification: Image Specification
+08:34:45.036 [INFO] Executing scenario: Create Images
+08:34:45.037 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:34:45.100 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:34:45.102 [INFO] Executing scenario: check image bounds
+08:34:45.103 [DEBUG] Executing Step: * create a "3" by "3" image
+08:34:45.106 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:34:45.110 [INFO] Executing scenario: Set Color of Pixel
+08:34:45.111 [DEBUG] Executing Step: * create a "3" by "3" image
+08:34:45.112 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:34:45.115 [INFO] Executing scenario: Set column color
+08:34:45.116 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:45.118 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:34:45.121 [INFO] Executing scenario: Set row color
+08:34:45.122 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:45.124 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:34:45.127 [INFO] Executing scenario: Clear image
+08:34:45.127 [DEBUG] Executing Step: * create a "10" by "10" image
+08:34:45.129 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:34:45.131 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:34:45.133 [DEBUG] Executing Step: * clear image
+08:34:45.136 [INFO] Executing specification: Region Specification
+08:34:45.137 [INFO] Executing scenario: Render image
+08:34:45.137 [DEBUG] Executing Step: * create a "5" by "5" image
+08:34:45.139 [DEBUG] Executing Step: * define region x "3" y "3" color "J" size "1"
+08:34:45.140 [INFO] J
+08:34:45.140 [DEBUG] Executing Step: * render image
+08:34:45.141 [INFO] J
+08:34:45.249 [DEBUG] Plugin [Html Report] with pid [5625] has exited
+08:34:45.249 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:34:45.249 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:34:45.249 [INFO] Total time taken: 108ms
+08:35:30.498 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:35:30.939 [INFO] Executing specification: Image Specification
+08:35:30.939 [INFO] Executing scenario: Create Images
+08:35:30.940 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:35:31.003 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:35:31.007 [INFO] Executing scenario: check image bounds
+08:35:31.008 [DEBUG] Executing Step: * create a "3" by "3" image
+08:35:31.011 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:35:31.013 [INFO] Executing scenario: Set Color of Pixel
+08:35:31.015 [DEBUG] Executing Step: * create a "3" by "3" image
+08:35:31.016 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:35:31.019 [INFO] Executing scenario: Set column color
+08:35:31.020 [DEBUG] Executing Step: * create a "10" by "10" image
+08:35:31.021 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:35:31.024 [INFO] Executing scenario: Set row color
+08:35:31.025 [DEBUG] Executing Step: * create a "10" by "10" image
+08:35:31.026 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:35:31.028 [INFO] Executing scenario: Clear image
+08:35:31.029 [DEBUG] Executing Step: * create a "10" by "10" image
+08:35:31.031 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:35:31.034 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:35:31.036 [DEBUG] Executing Step: * clear image
+08:35:31.039 [INFO] Executing specification: Region Specification
+08:35:31.039 [INFO] Executing scenario: Render image
+08:35:31.040 [DEBUG] Executing Step: * create a "5" by "5" image
+08:35:31.041 [DEBUG] Executing Step: * render image
+08:35:31.042 [INFO] 
+08:35:31.149 [DEBUG] Plugin [Html Report] with pid [5641] has exited
+08:35:31.150 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:35:31.150 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:35:31.150 [INFO] Total time taken: 106ms
+08:37:13.610 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:37:14.047 [INFO] Executing specification: Image Specification
+08:37:14.048 [INFO] Executing scenario: Create Images
+08:37:14.049 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:37:14.114 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:37:14.117 [INFO] Executing scenario: check image bounds
+08:37:14.118 [DEBUG] Executing Step: * create a "3" by "3" image
+08:37:14.119 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:37:14.122 [INFO] Executing scenario: Set Color of Pixel
+08:37:14.123 [DEBUG] Executing Step: * create a "3" by "3" image
+08:37:14.124 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:37:14.127 [INFO] Executing scenario: Set column color
+08:37:14.128 [DEBUG] Executing Step: * create a "10" by "10" image
+08:37:14.129 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:37:14.132 [INFO] Executing scenario: Set row color
+08:37:14.132 [DEBUG] Executing Step: * create a "10" by "10" image
+08:37:14.134 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:37:14.137 [INFO] Executing scenario: Clear image
+08:37:14.137 [DEBUG] Executing Step: * create a "10" by "10" image
+08:37:14.139 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:37:14.141 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:37:14.143 [DEBUG] Executing Step: * clear image
+08:37:14.146 [INFO] Executing specification: Region Specification
+08:37:14.146 [INFO] Executing scenario: Render image
+08:37:14.147 [DEBUG] Executing Step: * create a "5" by "5" image
+08:37:14.148 [DEBUG] Executing Step: * render image
+08:37:14.149 [INFO] 
+08:37:14.253 [DEBUG] Plugin [Html Report] with pid [5656] has exited
+08:37:14.253 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:37:14.253 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:37:14.253 [INFO] Total time taken: 104ms
+08:37:27.121 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:37:27.563 [INFO] Executing specification: Image Specification
+08:37:27.564 [INFO] Executing scenario: Create Images
+08:37:27.565 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:37:27.622 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:37:27.626 [INFO] Executing scenario: check image bounds
+08:37:27.627 [DEBUG] Executing Step: * create a "3" by "3" image
+08:37:27.630 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:37:27.633 [INFO] Executing scenario: Set Color of Pixel
+08:37:27.634 [DEBUG] Executing Step: * create a "3" by "3" image
+08:37:27.635 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:37:27.638 [INFO] Executing scenario: Set column color
+08:37:27.640 [DEBUG] Executing Step: * create a "10" by "10" image
+08:37:27.641 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:37:27.644 [INFO] Executing scenario: Set row color
+08:37:27.645 [DEBUG] Executing Step: * create a "10" by "10" image
+08:37:27.646 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:37:27.649 [INFO] Executing scenario: Clear image
+08:37:27.649 [DEBUG] Executing Step: * create a "10" by "10" image
+08:37:27.651 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:37:27.654 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:37:27.656 [DEBUG] Executing Step: * clear image
+08:37:27.659 [INFO] Executing specification: Region Specification
+08:37:27.659 [INFO] Executing scenario: Render image
+08:37:27.659 [DEBUG] Executing Step: * create a "5" by "5" image
+08:37:27.661 [DEBUG] Executing Step: * render image
+08:37:27.661 [INFO] 
+08:37:27.769 [DEBUG] Plugin [Html Report] with pid [5671] has exited
+08:37:27.769 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:37:27.769 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:37:27.769 [INFO] Total time taken: 100ms
+08:38:46.208 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:38:46.637 [INFO] Executing specification: Image Specification
+08:38:46.638 [INFO] Executing scenario: Create Images
+08:38:46.639 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:38:46.702 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:38:46.705 [INFO] Executing scenario: check image bounds
+08:38:46.706 [DEBUG] Executing Step: * create a "3" by "3" image
+08:38:46.708 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:38:46.711 [INFO] Executing scenario: Set Color of Pixel
+08:38:46.712 [DEBUG] Executing Step: * create a "3" by "3" image
+08:38:46.714 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:38:46.717 [INFO] Executing scenario: Set column color
+08:38:46.717 [DEBUG] Executing Step: * create a "10" by "10" image
+08:38:46.719 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:38:46.722 [INFO] Executing scenario: Set row color
+08:38:46.723 [DEBUG] Executing Step: * create a "10" by "10" image
+08:38:46.725 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:38:46.728 [INFO] Executing scenario: Clear image
+08:38:46.729 [DEBUG] Executing Step: * create a "10" by "10" image
+08:38:46.730 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:38:46.732 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:38:46.734 [DEBUG] Executing Step: * clear image
+08:38:46.738 [INFO] Executing specification: Region Specification
+08:38:46.738 [INFO] Executing scenario: Render image
+08:38:46.739 [DEBUG] Executing Step: * create a "5" by "5" image
+08:38:46.741 [DEBUG] Executing Step: * render image
+08:38:46.784 [INFO] 
+[1mFrom:[0m /Users/cococoder/Desktop/carwow/lib/image.rb @ line 43 Image#render:
+
+    [1;34m36[0m: [32mdef[0m [1;34mrender[0m()
+    [1;34m37[0m: 
+    [1;34m38[0m:   output=[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m39[0m: 
+    [1;34m40[0m:   [32mfor[0m x [32min[0m  [1;34;4mMINIMUM_WIDTH[0m..width [32mdo[0m
+    [1;34m41[0m:     [32mfor[0m y [32min[0m [1;34;4mMINIMUM_HEIGHT[0m..height [32mdo[0m
+    [1;34m42[0m:       color = get_pixel_at([1;34;4mPixel[0m::[1;34;4mCoordinate[0m.new(x,y)).color
+ => [1;34m43[0m:       binding.pry
+    [1;34m44[0m:       output +=[31m[1;31m"[0m[31m#{}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m45[0m:     [32mend[0m
+    [1;34m46[0m:   [32mend[0m
+    [1;34m47[0m: 
+    [1;34m48[0m:   puts output
+    [1;34m49[0m: 
+    [1;34m50[0m: [32mend[0m
+
+08:38:46.784 [INFO] [0G
+08:38:46.787 [INFO] [1] pry(#<Image>)> 
+08:38:49.474 [INFO] c
+08:38:49.665 [INFO] o
+08:38:49.826 [INFO] l
+08:38:49.997 [INFO] o
+08:38:50.127 [INFO] r
+08:38:50.930 [INFO] 
+08:38:50.937 [INFO] => [1;36mnil[0m
+08:38:50.937 [INFO] [2] pry(#<Image>)> 
+08:38:59.152 [INFO] g
+08:38:59.254 [INFO] e
+08:38:59.353 [INFO] t
+08:38:59.687 [INFO] _
+08:39:00.478 [INFO] p
+08:39:00.850 [INFO] i
+08:39:01.104 [INFO] x
+08:39:01.654 [INFO] l
+08:39:01.780 [INFO] e
+08:39:03.474 [INFO] 
+08:39:03.477 [INFO] NameError: undefined local variable or method `get_pixle' for #<Image:0x007f8f9e799458>
+from (pry):2:in `block (2 levels) in render'
+08:39:03.477 [INFO] [3] pry(#<Image>)> 
+08:39:04.468 [INFO] [H[2J[3] pry(#<Image>)> 
+08:39:09.726 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:39:10.159 [INFO] Executing specification: Image Specification
+08:39:10.160 [INFO] Executing scenario: Create Images
+08:39:10.161 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:39:10.218 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:39:10.221 [INFO] Executing scenario: check image bounds
+08:39:10.222 [DEBUG] Executing Step: * create a "3" by "3" image
+08:39:10.224 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:39:10.227 [INFO] Executing scenario: Set Color of Pixel
+08:39:10.228 [DEBUG] Executing Step: * create a "3" by "3" image
+08:39:10.230 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:39:10.233 [INFO] Executing scenario: Set column color
+08:39:10.234 [DEBUG] Executing Step: * create a "10" by "10" image
+08:39:10.236 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:39:10.239 [INFO] Executing scenario: Set row color
+08:39:10.240 [DEBUG] Executing Step: * create a "10" by "10" image
+08:39:10.242 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:39:10.245 [INFO] Executing scenario: Clear image
+08:39:10.246 [DEBUG] Executing Step: * create a "10" by "10" image
+08:39:10.248 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:39:10.251 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:39:10.253 [DEBUG] Executing Step: * clear image
+08:39:10.257 [INFO] Executing specification: Region Specification
+08:39:10.257 [INFO] Executing scenario: Render image
+08:39:10.258 [DEBUG] Executing Step: * create a "5" by "5" image
+08:39:10.259 [DEBUG] Executing Step: * render image
+08:39:10.279 [INFO] 
+[1mFrom:[0m /Users/cococoder/Desktop/carwow/lib/image.rb @ line 43 Image#render:
+
+    [1;34m36[0m: [32mdef[0m [1;34mrender[0m()
+    [1;34m37[0m: 
+    [1;34m38[0m:   output=[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m39[0m: 
+    [1;34m40[0m:   [32mfor[0m x [32min[0m  [1;34;4mMINIMUM_WIDTH[0m..width [32mdo[0m
+    [1;34m41[0m:     [32mfor[0m y [32min[0m [1;34;4mMINIMUM_HEIGHT[0m..height [32mdo[0m
+    [1;34m42[0m:       color = get_pixel_at([1;34;4mPixel[0m::[1;34;4mCoordinate[0m.new(x,y)).color
+ => [1;34m43[0m:       binding.pry
+    [1;34m44[0m:       output +=[31m[1;31m"[0m[31m#{}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m45[0m:     [32mend[0m
+    [1;34m46[0m:   [32mend[0m
+    [1;34m47[0m: 
+    [1;34m48[0m:   puts output
+    [1;34m49[0m: 
+    [1;34m50[0m: [32mend[0m
+
+08:39:10.279 [INFO] [0G
+08:39:10.280 [INFO] [1] pry(#<Image>)> 
+08:39:21.247 [INFO] g
+08:39:21.247 [INFO] et_pixel
+08:39:21.247 [INFO] _a
+08:39:21.247 [INFO] t(
+08:39:21.247 [INFO] Pix
+08:39:21.247 [INFO] e
+08:39:21.247 [INFO] l:
+08:39:21.247 [INFO] :
+08:39:21.247 [INFO] C
+08:39:21.247 [INFO] o
+08:39:21.247 [INFO] or
+08:39:21.247 [INFO] d
+08:39:21.247 [INFO] i
+08:39:21.248 [INFO] na
+08:39:21.248 [INFO] t
+08:39:21.248 [INFO] e.
+08:39:21.248 [INFO] n
+08:39:21.248 [INFO] e
+08:39:21.248 [INFO] w
+08:39:21.248 [INFO] (
+08:39:21.248 [INFO] x
+08:39:21.248 [INFO] ,
+08:39:21.248 [INFO] y
+08:39:21.248 [INFO] ))
+08:39:22.035 [INFO] 
+08:39:22.068 [INFO] => [32m#<Pixel:0x007f7f569b1270[0m
+ @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b1248[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m1[0m, @y[32m=[0m[1;34m1[0m[32m>[0m,
+ @image[32m=[0m
+  [32m#<Image:0x007f7f569b1310[0m
+   @height[32m=[0m[1;34m5[0m,
+   @pixels[32m=[0m
+    [[32m#<Pixel:0x007f7f569b1270[0m ...[32m>[0m,
+     [32m#<Pixel:0x007f7f569b11f8[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b11d0[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m1[0m, @y[32m=[0m[1;34m2[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b1180[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b1158[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m1[0m, @y[32m=[0m[1;34m3[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b1108[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b10e0[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m1[0m, @y[32m=[0m[1;34m4[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b1090[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b1068[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m1[0m, @y[32m=[0m[1;34m5[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0ff0[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0fc8[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m2[0m, @y[32m=[0m[1;34m1[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0f78[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0f50[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m2[0m, @y[32m=[0m[1;34m2[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0f00[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0ed8[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m2[0m, @y[32m=[0m[1;34m3[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0e88[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0e60[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m2[0m, @y[32m=[0m[1;34m4[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0e10[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0de8[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m2[0m, @y[32m=[0m[1;34m5[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0d70[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0d48[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m3[0m, @y[32m=[0m[1;34m1[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0cf8[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0cd0[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m3[0m, @y[32m=[0m[1;34m2[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0c80[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0c58[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m3[0m, @y[32m=[0m[1;34m3[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0c08[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0be0[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m3[0m, @y[32m=[0m[1;34m4[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0b90[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0b68[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m3[0m, @y[32m=[0m[1;34m5[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0af0[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0ac8[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m4[0m, @y[32m=[0m[1;34m1[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0a78[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0a50[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m4[0m, @y[32m=[0m[1;34m2[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0a00[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b09d8[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m4[0m, @y[32m=[0m[1;34m3[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0988[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0960[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m4[0m, @y[32m=[0m[1;34m4[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0910[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b08e8[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m4[0m, @y[32m=[0m[1;34m5[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0870[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0848[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m5[0m, @y[32m=[0m[1;34m1[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b07f8[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b07d0[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m5[0m, @y[32m=[0m[1;34m2[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0780[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0758[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m5[0m, @y[32m=[0m[1;34m3[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0708[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b06e0[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m5[0m, @y[32m=[0m[1;34m4[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m,
+     [32m#<Pixel:0x007f7f569b0690[0m @coordinate[32m=[0m[32m#<Pixel::Coordinate:0x007f7f569b0668[0m @color[32m=[0m[31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m, @x[32m=[0m[1;34m5[0m, @y[32m=[0m[1;34m5[0m[32m>[0m, @image[32m=[0m[32m#<Image:0x007f7f569b1310[0m ...[32m>[0m[32m>[0m],
+   @width[32m=[0m[1;34m5[0m[32m>[0m[32m>[0m
+08:39:22.085 [INFO] [2] pry(#<Image>)> 
+08:41:14.147 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:41:14.587 [INFO] Executing specification: Image Specification
+08:41:14.588 [INFO] Executing scenario: Create Images
+08:41:14.588 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:41:14.650 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:41:14.654 [INFO] Executing scenario: check image bounds
+08:41:14.655 [DEBUG] Executing Step: * create a "3" by "3" image
+08:41:14.657 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:41:14.660 [INFO] Executing scenario: Set Color of Pixel
+08:41:14.661 [DEBUG] Executing Step: * create a "3" by "3" image
+08:41:14.663 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:41:14.666 [INFO] Executing scenario: Set column color
+08:41:14.666 [DEBUG] Executing Step: * create a "10" by "10" image
+08:41:14.668 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:41:14.671 [INFO] Executing scenario: Set row color
+08:41:14.671 [DEBUG] Executing Step: * create a "10" by "10" image
+08:41:14.673 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:41:14.675 [INFO] Executing scenario: Clear image
+08:41:14.676 [DEBUG] Executing Step: * create a "10" by "10" image
+08:41:14.677 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:41:14.679 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:41:14.680 [DEBUG] Executing Step: * clear image
+08:41:14.683 [INFO] Executing specification: Region Specification
+08:41:14.684 [INFO] Executing scenario: Render image
+08:41:14.684 [DEBUG] Executing Step: * create a "5" by "5" image
+08:41:14.686 [DEBUG] Executing Step: * render image
+08:41:14.706 [INFO] 
+[1mFrom:[0m /Users/cococoder/Desktop/carwow/lib/image.rb @ line 43 Image#render:
+
+    [1;34m36[0m: [32mdef[0m [1;34mrender[0m()
+    [1;34m37[0m: 
+    [1;34m38[0m:   output=[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m39[0m: 
+    [1;34m40[0m:   [32mfor[0m x [32min[0m  [1;34;4mMINIMUM_WIDTH[0m..width [32mdo[0m
+    [1;34m41[0m:     [32mfor[0m y [32min[0m [1;34;4mMINIMUM_HEIGHT[0m..height [32mdo[0m
+    [1;34m42[0m:       color = get_pixel_at([1;34;4mPixel[0m::[1;34;4mCoordinate[0m.new(x,y)).color
+ => [1;34m43[0m:       binding.pry
+    [1;34m44[0m:       output +=[31m[1;31m"[0m[31m#{}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m45[0m:     [32mend[0m
+    [1;34m46[0m:   [32mend[0m
+    [1;34m47[0m: 
+    [1;34m48[0m:   puts output
+    [1;34m49[0m: 
+    [1;34m50[0m: [32mend[0m
+
+08:41:14.707 [INFO] [0G
+08:41:14.707 [INFO] [1] pry(#<Image>)> 
+08:41:16.110 [INFO] c
+08:41:16.286 [INFO] o
+08:41:16.439 [INFO] l
+08:41:16.584 [INFO] o
+08:41:16.681 [INFO] r
+08:41:16.832 [INFO]  
+08:41:17.261 [INFO] [K
+08:41:17.536 [INFO] 
+08:41:17.542 [INFO] => [31m[1;31m"[0m[31mO[1;31m"[0m[31m[0m
+08:41:17.543 [INFO] [2] pry(#<Image>)> 
+08:41:18.676 [INFO] e
+08:41:18.827 [INFO] x
+08:41:18.939 [INFO] i
+08:41:19.062 [INFO] t
+08:41:19.158 [INFO]  
+08:41:19.289 [INFO] [K
+08:42:29.911 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:42:30.341 [INFO] Executing specification: Image Specification
+08:42:30.342 [INFO] Executing scenario: Create Images
+08:42:30.343 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:42:30.400 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:42:30.403 [INFO] Executing scenario: check image bounds
+08:42:30.405 [DEBUG] Executing Step: * create a "3" by "3" image
+08:42:30.407 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:42:30.411 [INFO] Executing scenario: Set Color of Pixel
+08:42:30.412 [DEBUG] Executing Step: * create a "3" by "3" image
+08:42:30.414 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:42:30.418 [INFO] Executing scenario: Set column color
+08:42:30.419 [DEBUG] Executing Step: * create a "10" by "10" image
+08:42:30.421 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:42:30.425 [INFO] Executing scenario: Set row color
+08:42:30.426 [DEBUG] Executing Step: * create a "10" by "10" image
+08:42:30.428 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:42:30.430 [INFO] Executing scenario: Clear image
+08:42:30.431 [DEBUG] Executing Step: * create a "10" by "10" image
+08:42:30.433 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:42:30.434 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:42:30.436 [DEBUG] Executing Step: * clear image
+08:42:30.439 [INFO] Executing specification: Region Specification
+08:42:30.440 [INFO] Executing scenario: Render image
+08:42:30.440 [DEBUG] Executing Step: * create a "5" by "5" image
+08:42:30.441 [DEBUG] Executing Step: * render image
+08:42:30.442 [INFO] OOOOOOOOOOOOOOOOOOOOOOOOO
+08:42:30.549 [DEBUG] Plugin [Html Report] with pid [5921] has exited
+08:42:30.550 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:42:30.550 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:42:30.550 [INFO] Total time taken: 103ms
+08:43:28.299 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:43:28.740 [INFO] Executing specification: Image Specification
+08:43:28.740 [INFO] Executing scenario: Create Images
+08:43:28.741 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:43:28.798 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:43:28.801 [INFO] Executing scenario: check image bounds
+08:43:28.802 [DEBUG] Executing Step: * create a "3" by "3" image
+08:43:28.803 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:43:28.806 [INFO] Executing scenario: Set Color of Pixel
+08:43:28.807 [DEBUG] Executing Step: * create a "3" by "3" image
+08:43:28.809 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:43:28.812 [INFO] Executing scenario: Set column color
+08:43:28.813 [DEBUG] Executing Step: * create a "10" by "10" image
+08:43:28.815 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:43:28.819 [INFO] Executing scenario: Set row color
+08:43:28.819 [DEBUG] Executing Step: * create a "10" by "10" image
+08:43:28.821 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:43:28.824 [INFO] Executing scenario: Clear image
+08:43:28.824 [DEBUG] Executing Step: * create a "10" by "10" image
+08:43:28.826 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:43:28.827 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:43:28.829 [DEBUG] Executing Step: * clear image
+08:43:28.832 [INFO] Executing specification: Region Specification
+08:43:28.832 [INFO] Executing scenario: Render image
+08:43:28.833 [DEBUG] Executing Step: * create a "5" by "5" image
+08:43:28.834 [DEBUG] Executing Step: * render image
+08:43:28.835 [INFO] OOOOOOOOOOOOOOOOOOOOO
+O
+O
+O
+O
+08:43:28.938 [DEBUG] Plugin [Html Report] with pid [5936] has exited
+08:43:28.938 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:43:28.938 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:43:28.938 [INFO] Total time taken: 98ms
+08:43:45.305 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:43:45.765 [INFO] Executing specification: Image Specification
+08:43:45.765 [INFO] Executing scenario: Create Images
+08:43:45.766 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:43:45.833 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:43:45.836 [INFO] Executing scenario: check image bounds
+08:43:45.837 [DEBUG] Executing Step: * create a "3" by "3" image
+08:43:45.838 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:43:45.840 [INFO] Executing scenario: Set Color of Pixel
+08:43:45.841 [DEBUG] Executing Step: * create a "3" by "3" image
+08:43:45.842 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:43:45.846 [INFO] Executing scenario: Set column color
+08:43:45.846 [DEBUG] Executing Step: * create a "10" by "10" image
+08:43:45.848 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:43:45.851 [INFO] Executing scenario: Set row color
+08:43:45.852 [DEBUG] Executing Step: * create a "10" by "10" image
+08:43:45.854 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:43:45.857 [INFO] Executing scenario: Clear image
+08:43:45.858 [DEBUG] Executing Step: * create a "10" by "10" image
+08:43:45.860 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:43:45.862 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:43:45.865 [DEBUG] Executing Step: * clear image
+08:43:45.868 [INFO] Executing specification: Region Specification
+08:43:45.869 [INFO] Executing scenario: Render image
+08:43:45.869 [DEBUG] Executing Step: * create a "5" by "5" image
+08:43:45.871 [DEBUG] Executing Step: * render image
+08:43:45.872 [INFO] OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+08:43:45.979 [DEBUG] Plugin [Html Report] with pid [5951] has exited
+08:43:45.979 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:43:45.980 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:43:45.980 [INFO] Total time taken: 109ms
+08:44:07.267 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:44:07.702 [INFO] Executing specification: Image Specification
+08:44:07.702 [INFO] Executing scenario: Create Images
+08:44:07.703 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:44:07.763 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:44:07.766 [INFO] Executing scenario: check image bounds
+08:44:07.767 [DEBUG] Executing Step: * create a "3" by "3" image
+08:44:07.769 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:44:07.775 [INFO] Executing scenario: Set Color of Pixel
+08:44:07.775 [DEBUG] Executing Step: * create a "3" by "3" image
+08:44:07.777 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:44:07.780 [INFO] Executing scenario: Set column color
+08:44:07.781 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:07.782 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:44:07.785 [INFO] Executing scenario: Set row color
+08:44:07.785 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:07.787 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:44:07.790 [INFO] Executing scenario: Clear image
+08:44:07.790 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:07.792 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:44:07.794 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:44:07.797 [DEBUG] Executing Step: * clear image
+08:44:07.800 [INFO] Executing specification: Region Specification
+08:44:07.800 [INFO] Executing scenario: Render image
+08:44:07.801 [DEBUG] Executing Step: * create a "5" by "5" image
+08:44:07.802 [DEBUG] Executing Step: * render image
+08:44:07.803 [INFO] OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+08:44:07.910 [DEBUG] Plugin [Html Report] with pid [5966] has exited
+08:44:07.910 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:44:07.910 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:44:07.910 [INFO] Total time taken: 103ms
+08:44:16.387 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:44:16.830 [INFO] Executing specification: Image Specification
+08:44:16.830 [INFO] Executing scenario: Create Images
+08:44:16.831 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:44:16.891 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:44:16.894 [INFO] Executing scenario: check image bounds
+08:44:16.895 [DEBUG] Executing Step: * create a "3" by "3" image
+08:44:16.896 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:44:16.899 [INFO] Executing scenario: Set Color of Pixel
+08:44:16.900 [DEBUG] Executing Step: * create a "3" by "3" image
+08:44:16.902 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:44:16.905 [INFO] Executing scenario: Set column color
+08:44:16.906 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:16.908 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:44:16.911 [INFO] Executing scenario: Set row color
+08:44:16.912 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:16.913 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:44:16.916 [INFO] Executing scenario: Clear image
+08:44:16.917 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:16.918 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:44:16.920 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:44:16.922 [DEBUG] Executing Step: * clear image
+08:44:16.924 [INFO] Executing specification: Region Specification
+08:44:16.925 [INFO] Executing scenario: Render image
+08:44:16.925 [DEBUG] Executing Step: * create a "5" by "5" image
+08:44:16.927 [DEBUG] Executing Step: * render image
+08:44:16.927 [INFO] 
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+08:44:17.030 [DEBUG] Plugin [Html Report] with pid [5981] has exited
+08:44:17.030 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:44:17.030 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:44:17.030 [INFO] Total time taken: 100ms
+08:44:24.423 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:44:24.862 [INFO] Executing specification: Image Specification
+08:44:24.862 [INFO] Executing scenario: Create Images
+08:44:24.863 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:44:24.922 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:44:24.927 [INFO] Executing scenario: check image bounds
+08:44:24.928 [DEBUG] Executing Step: * create a "3" by "3" image
+08:44:24.930 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:44:24.933 [INFO] Executing scenario: Set Color of Pixel
+08:44:24.934 [DEBUG] Executing Step: * create a "3" by "3" image
+08:44:24.936 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:44:24.939 [INFO] Executing scenario: Set column color
+08:44:24.940 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:24.942 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:44:24.944 [INFO] Executing scenario: Set row color
+08:44:24.945 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:24.947 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:44:24.949 [INFO] Executing scenario: Clear image
+08:44:24.949 [DEBUG] Executing Step: * create a "10" by "10" image
+08:44:24.951 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:44:24.953 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:44:24.954 [DEBUG] Executing Step: * clear image
+08:44:24.957 [INFO] Executing specification: Region Specification
+08:44:24.957 [INFO] Executing scenario: Render image
+08:44:24.958 [DEBUG] Executing Step: * create a "5" by "5" image
+08:44:24.959 [DEBUG] Executing Step: * render image
+08:44:24.960 [INFO] 
+
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+08:44:25.068 [DEBUG] Plugin [Html Report] with pid [5996] has exited
+08:44:25.068 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:44:25.068 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:44:25.068 [INFO] Total time taken: 101ms

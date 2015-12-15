@@ -2,6 +2,12 @@ class InvalidWidthError < StandardError;end
 class InvalidHeightError < StandardError;end
 class OutOfImageBoundsError < StandardError;end
 
+class Display
+  def self.render(source)
+    raise "oooops! no render method" unless source.respond_to? :render
+    source.render()
+  end
+end
 class Image
   MAXIMUM_HEIGHT=250
   MAXIMUM_WIDTH=250
@@ -24,6 +30,22 @@ class Image
       end
     end
 
+
+  end
+
+  def render()
+
+    output="\n\n"
+
+    for x in  MINIMUM_WIDTH..width do
+      for y in MINIMUM_HEIGHT..height do
+        color = get_pixel_at(Pixel::Coordinate.new(x,y)).color
+        output +="#{color}"
+        output +="\n" if y == height
+      end
+    end
+
+    puts output
 
   end
 
@@ -61,7 +83,7 @@ class Image
 
     pixel = get_pixel_at(Pixel::Coordinate.new(x,y))
     set_color(pixel.coordinate,color)
-    cache << pixel.coordinate
+    cache << pixel
     region << pixel
 
     loop do
@@ -70,26 +92,6 @@ class Image
 
       if context
 
-        # if get_pixel_at(context.top.coordinate).color == color
-        #    cache << context.top unless cache.find{|p|p.coordinate.to_s == context.top.coordinate.to_s}
-        #    region << context.top unless region.find{|p|p.coordinate.to_s == context.top.coordinate.to_s}
-        # end
-        #
-        # if get_pixel_at(context.left.coordinate).color == color
-        #   cache << context.left unless cache.find{|p|p.coordinate.to_s == context.left.coordinate.to_s}
-        #   region << context.left unless region.find{|p|p.coordinate.to_s == context.left.coordinate.to_s}
-        # end
-        #
-        # if get_pixel_at(context.right.coordinate).color == color
-        #   cache << context.right unless cache.find{|p|p.coordinate.to_s == context.top.coordinate.to_s}
-        #   region << context.right unless region.find{|p|p.coordinate.to_s == context.top.coordinate.to_s}
-        # end
-
-        bottom = get_pixel_at(context)
-        if bottom.color == color
-          cache << context.bottom unless cache.find{|c|c.to_s == context.bottom.to_s}
-          region << bottom unless region.find{|p|p.coordinate.to_s == bottom.coordinate.to_s}
-        end
 
       end
 
@@ -135,18 +137,15 @@ class Pixel
     def initialize(x,y)
       @x = x.to_i
       @y = y.to_i
-      @color="O"
     end
-    def to_s
-      puts "#{x}:#{y}"
-      "#{x}:#{y}"
-    end
+
     def ==(coordinate)
       self.x == coordinate.x && self.y == coordinate.y
     end
   end
   def initialize(image,x,y)
     @image = image
+    @color="O"
     @coordinate =Pixel::Coordinate.new(x,y)
   end
 

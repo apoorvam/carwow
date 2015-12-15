@@ -46,6 +46,7 @@ end
 
 step "define region x <x> y <y> color <color> size <size>" do |x,y,color,size|
   region = @image.fill(x.to_i,y.to_i,color)
+  Display.render(@image)
   assert{region.count == size.to_i}
 end
 
@@ -69,6 +70,10 @@ step 'initialize valid images <table>' do |table|
 end
 step 'set x <x> y <y> to <color>' do |x,y,color|
   pixel =@image.set_color(Pixel::Coordinate.new(x,y),color)
+end
+
+step 'render image' do
+  Display.render(@image)
 end
 
 step 'initialize invalid images <table>' do |table|
