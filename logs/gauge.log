@@ -25353,3 +25353,293 @@ OOOOO
 08:44:25.068 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
 08:44:25.068 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
 08:44:25.068 [INFO] Total time taken: 101ms
+08:45:27.164 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:45:27.603 [INFO] Executing specification: Image Specification
+08:45:27.604 [INFO] Executing scenario: Create Images
+08:45:27.604 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:45:27.660 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:45:27.663 [INFO] Executing scenario: check image bounds
+08:45:27.663 [DEBUG] Executing Step: * create a "3" by "3" image
+08:45:27.665 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:45:27.668 [INFO] Executing scenario: Set Color of Pixel
+08:45:27.669 [DEBUG] Executing Step: * create a "3" by "3" image
+08:45:27.671 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:45:27.674 [INFO] Executing scenario: Set column color
+08:45:27.674 [DEBUG] Executing Step: * create a "10" by "10" image
+08:45:27.676 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:45:27.678 [INFO] Executing scenario: Set row color
+08:45:27.678 [DEBUG] Executing Step: * create a "10" by "10" image
+08:45:27.680 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:45:27.683 [INFO] Executing scenario: Clear image
+08:45:27.684 [DEBUG] Executing Step: * create a "10" by "10" image
+08:45:27.686 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:45:27.688 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:45:27.690 [DEBUG] Executing Step: * clear image
+08:45:27.693 [INFO] Executing specification: Region Specification
+08:45:27.694 [INFO] Executing scenario: Render image
+08:45:27.694 [DEBUG] Executing Step: * create a "5" by "5" image
+08:45:27.696 [DEBUG] Executing Step: * render image
+08:45:27.697 [INFO] 
+
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+08:45:27.804 [DEBUG] Plugin [Html Report] with pid [6172] has exited
+08:45:27.804 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:45:27.804 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:45:27.804 [INFO] Total time taken: 96ms
+08:45:56.173 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:45:56.604 [INFO] Executing specification: Image Specification
+08:45:56.604 [INFO] Executing scenario: Create Images
+08:45:56.605 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:45:56.661 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:45:56.663 [INFO] Executing scenario: check image bounds
+08:45:56.664 [DEBUG] Executing Step: * create a "3" by "3" image
+08:45:56.666 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:45:56.669 [INFO] Executing scenario: Set Color of Pixel
+08:45:56.670 [DEBUG] Executing Step: * create a "3" by "3" image
+08:45:56.672 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:45:56.674 [INFO] Executing scenario: Set column color
+08:45:56.675 [DEBUG] Executing Step: * create a "10" by "10" image
+08:45:56.676 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:45:56.679 [INFO] Executing scenario: Set row color
+08:45:56.680 [DEBUG] Executing Step: * create a "10" by "10" image
+08:45:56.682 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:45:56.684 [INFO] Executing scenario: Clear image
+08:45:56.685 [DEBUG] Executing Step: * create a "10" by "10" image
+08:45:56.687 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:45:56.689 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:45:56.692 [DEBUG] Executing Step: * clear image
+08:45:56.695 [INFO] Executing specification: Region Specification
+08:45:56.695 [INFO] Executing scenario: Render 5 x 5 image
+08:45:56.696 [DEBUG] Executing Step: * create a "5" by "5" image
+08:45:56.697 [DEBUG] Executing Step: * render image
+08:45:56.698 [INFO] 
+
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+08:45:56.803 [DEBUG] Plugin [Html Report] with pid [6187] has exited
+08:45:56.803 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:45:56.803 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:45:56.803 [INFO] Total time taken: 97ms
+08:46:16.217 [CRITICAL] [ParseError] /Users/cococoder/Desktop/carwow/specs/region.spec : line no: 5, String not terminated
+08:46:24.855 [CRITICAL] [ParseError] /Users/cococoder/Desktop/carwow/specs/region.spec : line no: 5, String not terminated
+08:46:44.732 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:46:45.170 [INFO] Executing specification: Image Specification
+08:46:45.170 [INFO] Executing scenario: Create Images
+08:46:45.171 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:46:45.228 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:46:45.231 [INFO] Executing scenario: check image bounds
+08:46:45.232 [DEBUG] Executing Step: * create a "3" by "3" image
+08:46:45.234 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:46:45.238 [INFO] Executing scenario: Set Color of Pixel
+08:46:45.239 [DEBUG] Executing Step: * create a "3" by "3" image
+08:46:45.241 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:46:45.245 [INFO] Executing scenario: Set column color
+08:46:45.246 [DEBUG] Executing Step: * create a "10" by "10" image
+08:46:45.247 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:46:45.249 [INFO] Executing scenario: Set row color
+08:46:45.250 [DEBUG] Executing Step: * create a "10" by "10" image
+08:46:45.251 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:46:45.254 [INFO] Executing scenario: Clear image
+08:46:45.255 [DEBUG] Executing Step: * create a "10" by "10" image
+08:46:45.257 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:46:45.259 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:46:45.261 [DEBUG] Executing Step: * clear image
+08:46:45.265 [INFO] Executing specification: Region Specification
+08:46:45.265 [INFO] Executing scenario: Render 5 x 5 image
+08:46:45.266 [DEBUG] Executing Step: * create a "5" by "5" image
+08:46:45.267 [DEBUG] Executing Step: * render image
+08:46:45.268 [INFO] 
+
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+08:46:45.370 [DEBUG] Plugin [Html Report] with pid [6226] has exited
+08:46:45.370 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:46:45.370 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:46:45.370 [INFO] Total time taken: 101ms
+08:50:32.097 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+08:50:32.530 [INFO] Executing specification: Image Specification
+08:50:32.531 [INFO] Executing scenario: Create Images
+08:50:32.531 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+08:50:32.589 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+08:50:32.593 [INFO] Executing scenario: check image bounds
+08:50:32.593 [DEBUG] Executing Step: * create a "3" by "3" image
+08:50:32.595 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+08:50:32.599 [INFO] Executing scenario: Set Color of Pixel
+08:50:32.600 [DEBUG] Executing Step: * create a "3" by "3" image
+08:50:32.602 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+08:50:32.604 [INFO] Executing scenario: Set column color
+08:50:32.605 [DEBUG] Executing Step: * create a "10" by "10" image
+08:50:32.607 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:50:32.610 [INFO] Executing scenario: Set row color
+08:50:32.612 [DEBUG] Executing Step: * create a "10" by "10" image
+08:50:32.614 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:50:32.616 [INFO] Executing scenario: Clear image
+08:50:32.616 [DEBUG] Executing Step: * create a "10" by "10" image
+08:50:32.618 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |x1|x2|y|color|
+     |--|--|-|-----|
+     |3 |4 |2|Z    |
+08:50:32.619 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|y1|y2|color|
+     |-|--|--|-----|
+     |2|3 |4 |W    |
+08:50:32.621 [DEBUG] Executing Step: * clear image
+08:50:32.624 [INFO] Executing specification: Region Specification
+08:50:32.624 [INFO] Executing scenario: Render 5 x 5 image
+08:50:32.624 [DEBUG] Executing Step: * create a "5" by "5" image
+08:50:32.626 [DEBUG] Executing Step: * render image
+08:50:32.627 [INFO] 
+
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+08:50:32.734 [DEBUG] Plugin [Html Report] with pid [6440] has exited
+08:50:32.734 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+08:50:32.734 [INFO] Scenarios: 	7 executed, 7 passed, 0 failed, 0 skipped
+08:50:32.734 [INFO] Total time taken: 99ms

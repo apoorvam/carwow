@@ -46,7 +46,6 @@ end
 
 step "define region x <x> y <y> color <color> size <size>" do |x,y,color,size|
   region = @image.fill(x.to_i,y.to_i,color)
-  Display.render(@image)
   assert{region.count == size.to_i}
 end
 
