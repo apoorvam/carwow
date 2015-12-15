@@ -45,7 +45,7 @@ class Image
       end
     end
 
-    puts output
+    output.strip!.reverse
 
   end
 

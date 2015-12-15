@@ -72,11 +72,25 @@ step 'set x <x> y <y> to <color>' do |x,y,color|
 end
 
 step 'render image' do
-  Display.render(@image)
+  @output = Display.render(@image)
+  puts @output
 end
 
 step 'initialize invalid images <table>' do |table|
   table.rows.each do |row|
     assert{rescuing{Image.new(row[0].to_i,row[1].to_i)}.message == row[2]}
+  end
+end
+
+
+step 'check color <table>' do |table|
+  table.rows.each do |row|
+    x = row[0].to_i
+    y = row[1].to_i
+    color = row[2]
+    assert {((x*y)+5) == @output.index(color)}
+
+
+
   end
 end
