@@ -88,9 +88,8 @@ step 'check color <table>' do |table|
     x = row[0].to_i
     y = row[1].to_i
     color = row[2]
-    assert {((x*y)+5) == @output.index(color)}
-
-
+    index = (x*y)-1
+    assert { @output.to_s[index] == color }
 
   end
 end

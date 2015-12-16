@@ -3,9 +3,28 @@ class InvalidHeightError < StandardError;end
 class OutOfImageBoundsError < StandardError;end
 
 class Display
-  def self.render(source)
-    raise "oooops! no render method" unless source.respond_to? :render
-    source.render()
+  class View
+    attr_accessor :source
+    def initialize(source)
+      @source = source
+    end
+    def to_s
+      @source.strip
+    end
+  end
+  def self.render(image)
+
+
+      output = ""
+
+        (Image::MINIMUM_HEIGHT..image.height).each do |y|
+        (Image::MINIMUM_WIDTH..image.width).each do |x|
+          color = image.get_pixel_at(Pixel::Coordinate.new(x,y)).color
+          output << "#{color}"
+        end
+      end
+
+    Display::View.new(output)
   end
 end
 class Image
@@ -24,28 +43,13 @@ class Image
     raise InvalidWidthError.new("A width of #{@width} is less than the minimum width of #{MINIMUM_WIDTH}") if self.width < MINIMUM_WIDTH
     raise InvalidHeightError.new("A height of #{@height} is less than the minimum height of #{MINIMUM_HEIGHT}") if self.height < MINIMUM_HEIGHT
 
-    for x in  MINIMUM_WIDTH..width do
-      for y in MINIMUM_HEIGHT..height do
+
+    for y in MINIMUM_HEIGHT..height do
+      for x in  MINIMUM_WIDTH..width do
         @pixels << Pixel.new(self,x,y)
       end
     end
 
-
-  end
-
-  def render()
-
-    output="\n\n"
-
-    for x in  MINIMUM_WIDTH..width do
-      for y in MINIMUM_HEIGHT..height do
-        color = get_pixel_at(Pixel::Coordinate.new(x,y)).color
-        output +="#{color}"
-        output +="\n" if y == height
-      end
-    end
-
-    output.strip!.reverse
 
   end
 
