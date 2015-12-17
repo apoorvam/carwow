@@ -53,12 +53,21 @@ the y value must be greater than 1 and less than the Image Height.
 
 Set column color
 ------------------
-
-* create a "10" by "10" image
+* create a "5" by "5" image
 * set pixel vertical colors
-  |x  |y1  |y2      |color   |
+  |x  |from|to      |color   |
   |---|----|--------|--------|
-  |2  |3   |4       |W       |
+  |2  |1   |5       |W       |
+* render image
+* check color
+  |x  |y  |color   |
+  |---|---|--------|
+  |2  |1  |W       |
+  |2  |2  |W       |
+  |2  |3  |W       |
+  |2  |4  |W       |
+  |2  |5  |W       |
+
 
 
 Set row color
