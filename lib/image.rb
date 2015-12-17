@@ -73,7 +73,9 @@ class Image
   end
 
   def set_row_color(y,from,to,color)
+    
     for x in (from..to) do
+
       set_color(Pixel::Coordinate.new(x,y),color)
     end
   end

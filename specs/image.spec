@@ -72,12 +72,22 @@ Set column color
 
 Set row color
 ------------------
-
-* create a "10" by "10" image
+tags: wip
+* create a "5" by "5" image
 * set pixel horizontal colors
-  |x1 |x2  |y       |color   |
-  |---|----|--------|--------|
-  |3  |4   |2       |Z       |
+  |y    |from  |to      |color   |
+  |-----|------|--------|--------|
+  |2    |1     |5       |W       |
+* render image
+* check color
+  |x  |y  |color   |
+  |---|---|--------|
+  |1  |2  |W       |
+  |2  |2  |W       |
+  |3  |2  |W       |
+  |4  |2  |W       |
+  |5  |2  |W       |
+
 
 Clear image
 ------------------
