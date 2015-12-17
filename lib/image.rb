@@ -9,7 +9,7 @@ class Display
       @source = source
     end
     def to_s
-      @source.strip
+      @source
     end
   end
   def self.render(image)
@@ -17,10 +17,18 @@ class Display
 
       output = ""
 
+        columns = 1
+
         (Image::MINIMUM_HEIGHT..image.height).each do |y|
         (Image::MINIMUM_WIDTH..image.width).each do |x|
           color = image.get_pixel_at(Pixel::Coordinate.new(x,y)).color
-          output << "#{color}"
+          output.prepend "#{color}"
+          if columns == image.width
+            output.prepend "\n"
+            columns = 1
+          else
+            columns+=1
+          end
         end
       end
 
