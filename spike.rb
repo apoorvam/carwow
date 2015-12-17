@@ -1,11 +1,15 @@
 require_relative  "lib/image.rb"
 
+require 'matrix'
 
-image = Image.new(3,3)
-view = Display.render(image)
-puts  view
+class Matrix
+  def []=(row, column, value)
+    @rows[row][column] = value
+  end
+end
 
-
+m = Matrix.build(5)
+put m(1,1)
 
 # ## bottom
 #

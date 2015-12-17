@@ -1,3 +1,5 @@
+require 'matrix'
+
 class InvalidWidthError < StandardError;end
 class InvalidHeightError < StandardError;end
 class OutOfImageBoundsError < StandardError;end
@@ -22,9 +24,9 @@ class Display
         (Image::MINIMUM_HEIGHT..image.height).each do |y|
         (Image::MINIMUM_WIDTH..image.width).each do |x|
           color = image.get_pixel_at(Pixel::Coordinate.new(x,y)).color
-          output.prepend "#{color}"
+          output << "#{color}"
           if columns == image.width
-            output.prepend "\n"
+            output << "\n"
             columns = 1
           else
             columns+=1
@@ -51,13 +53,9 @@ class Image
     raise InvalidWidthError.new("A width of #{@width} is less than the minimum width of #{MINIMUM_WIDTH}") if self.width < MINIMUM_WIDTH
     raise InvalidHeightError.new("A height of #{@height} is less than the minimum height of #{MINIMUM_HEIGHT}") if self.height < MINIMUM_HEIGHT
 
-
-    for y in MINIMUM_HEIGHT..height do
-      for x in  MINIMUM_WIDTH..width do
-        @pixels << Pixel.new(self,x,y)
-      end
+    Matrix.build(width, height) do |x,y|
+        @pixels << Pixel.new(self,x+1,y+1)
     end
-
 
   end
 
