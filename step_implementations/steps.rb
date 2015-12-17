@@ -87,9 +87,7 @@ step 'check color <table>' do |table|
   table.rows.each do |row|
     x = row[0].to_i
     y = row[1].to_i
-    color = row[2]
-    index = (x*y)-1
-    assert { @output.to_s[index] == color }
-
+    rows = @output.split("\n")
+    assert { rows[y-1][x-1] == row[2]}
   end
 end

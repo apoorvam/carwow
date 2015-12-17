@@ -5,15 +5,6 @@ class InvalidHeightError < StandardError;end
 class OutOfImageBoundsError < StandardError;end
 
 class Display
-  class View
-    attr_accessor :source
-    def initialize(source)
-      @source = source
-    end
-    def to_s
-      @source
-    end
-  end
   def self.render(image)
 
 
@@ -34,7 +25,7 @@ class Display
         end
       end
 
-    Display::View.new(output)
+      output
   end
 end
 class Image
