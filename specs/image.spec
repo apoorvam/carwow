@@ -91,13 +91,22 @@ tags: wip
 
 Clear image
 ------------------
-* create a "10" by "10" image
-* set pixel horizontal colors
-  |x1 |x2  |y       |color   |
-  |---|----|--------|--------|
-  |3  |4   |2       |Z       |
+* create a "5" by "5" image
 * set pixel vertical colors
-  |x  |y1  |y2      |color   |
+  |x  |from|to      |color   |
   |---|----|--------|--------|
-  |2  |3   |4       |W       |
+  |2  |1   |5       |W       |
+* set pixel horizontal colors
+  |y    |from  |to      |color   |
+  |-----|------|--------|--------|
+  |2    |1     |5       |W       |
 * clear image
+* render image
+* check color
+  |x  |y  |color   |
+  |---|---|--------|
+  |1  |1  |O       |
+  |2  |2  |O       |
+  |3  |2  |O       |
+  |4  |2  |O       |
+  |5  |2  |O       |

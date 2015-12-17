@@ -50,13 +50,7 @@ step "define region x <x> y <y> color <color> size <size>" do |x,y,color,size|
 end
 
 step 'clear image' do
-
   @image.clear
-
-  @image.pixels.each do |pixel|
-    assert{pixel.color == "O"}
-  end
-
 end
 
 
