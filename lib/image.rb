@@ -88,7 +88,6 @@ class Image
     set_color(pixel.coordinate,color)
 
     region << pixel
-
     cache << pixel
 
     loop do
@@ -96,7 +95,10 @@ class Image
       context = cache.pop
 
       if context
-
+        pixel = get_pixel_at(context.top)
+        if pixel.color == color
+          region << pixel
+        end
 
       end
 
