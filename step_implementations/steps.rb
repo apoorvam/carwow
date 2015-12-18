@@ -73,7 +73,7 @@ end
 
 step 'render image' do
   @output = Display.render(@image)
-  puts @output
+  puts @output.clone.prepend("\n")
 end
 
 step 'initialize invalid images <table>' do |table|
