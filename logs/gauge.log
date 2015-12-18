@@ -128269,3 +128269,1286 @@ OOOOO
 03:48:42.292 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
 03:48:42.292 [INFO] Scenarios: 	8 executed, 8 passed, 0 failed, 0 skipped
 03:48:42.292 [INFO] Total time taken: 165ms
+03:49:42.866 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+03:49:43.333 [INFO] Executing specification: Fill Specification
+03:49:43.334 [INFO] Executing scenario: Fill center with top in region
+03:49:43.335 [DEBUG] Executing Step: * create a "3" by "3" image
+03:49:43.336 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:49:43.338 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:49:43.340 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:49:43.342 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:49:43.343 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:49:43.346 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:49:43.347 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:49:43.349 [DEBUG] Executing Step: * render image
+03:49:43.350 [INFO] 
+AAO
+AAA
+OAA
+03:49:43.351 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+03:49:43.355 [INFO] Executing specification: Image Specification
+03:49:43.356 [INFO] Executing scenario: Create Images
+03:49:43.356 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+03:49:43.428 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+03:49:43.431 [INFO] Executing scenario: check image bounds
+03:49:43.432 [DEBUG] Executing Step: * create a "3" by "3" image
+03:49:43.433 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+03:49:43.436 [INFO] Executing scenario: Set Color of Pixel
+03:49:43.437 [DEBUG] Executing Step: * create a "3" by "3" image
+03:49:43.438 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+03:49:43.441 [INFO] Executing scenario: set pixel color and check in output
+03:49:43.442 [DEBUG] Executing Step: * create a "5" by "5" image
+03:49:43.444 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:49:43.446 [DEBUG] Executing Step: * set x "2" y "1" to "B"
+03:49:43.447 [DEBUG] Executing Step: * set x "3" y "1" to "C"
+03:49:43.449 [DEBUG] Executing Step: * set x "3" y "2" to "D"
+03:49:43.451 [DEBUG] Executing Step: * set x "3" y "3" to "E"
+03:49:43.453 [DEBUG] Executing Step: * render image
+03:49:43.454 [INFO] 
+ABCOO
+OODOO
+OOEOO
+OOOOO
+OOOOO
+03:49:43.455 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|A    |
+     |2|1|B    |
+     |3|1|C    |
+     |3|2|D    |
+     |3|3|E    |
+03:49:43.458 [INFO] Executing scenario: Set column color
+03:49:43.459 [DEBUG] Executing Step: * create a "5" by "5" image
+03:49:43.461 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:49:43.463 [DEBUG] Executing Step: * render image
+03:49:43.463 [INFO] 
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+03:49:43.464 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |2|1|W    |
+     |2|2|W    |
+     |2|3|W    |
+     |2|4|W    |
+     |2|5|W    |
+03:49:43.468 [INFO] Executing scenario: Set row color
+03:49:43.469 [DEBUG] Executing Step: * create a "5" by "5" image
+03:49:43.472 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:49:43.474 [DEBUG] Executing Step: * render image
+03:49:43.475 [INFO] 
+OOOOO
+WWWWW
+OOOOO
+OOOOO
+OOOOO
+03:49:43.475 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|2|W    |
+     |2|2|W    |
+     |3|2|W    |
+     |4|2|W    |
+     |5|2|W    |
+03:49:43.479 [INFO] Executing scenario: Clear image
+03:49:43.481 [DEBUG] Executing Step: * create a "5" by "5" image
+03:49:43.484 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:49:43.486 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:49:43.488 [DEBUG] Executing Step: * clear image
+03:49:43.490 [DEBUG] Executing Step: * render image
+03:49:43.491 [INFO] 
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+03:49:43.492 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|O    |
+     |2|2|O    |
+     |3|2|O    |
+     |4|2|O    |
+     |5|2|O    |
+03:49:43.602 [DEBUG] Plugin [Html Report] with pid [11329] has exited
+03:49:43.603 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+03:49:43.603 [INFO] Scenarios: 	8 executed, 8 passed, 0 failed, 0 skipped
+03:49:43.603 [INFO] Total time taken: 164ms
+03:50:36.034 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+03:50:36.488 [INFO] Executing specification: Fill Specification
+03:50:36.489 [INFO] Executing scenario: Fill center with top in region
+03:50:36.489 [DEBUG] Executing Step: * create a "3" by "3" image
+03:50:36.491 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:50:36.493 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:50:36.494 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:50:36.496 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:50:36.498 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:50:36.501 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:50:36.503 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:50:36.505 [DEBUG] Executing Step: * render image
+03:50:36.505 [INFO] 
+AAO
+AAA
+OAA
+03:50:36.506 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+03:50:36.510 [INFO] Executing specification: Image Specification
+03:50:36.511 [INFO] Executing scenario: Create Images
+03:50:36.511 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+03:50:36.582 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+03:50:36.585 [INFO] Executing scenario: check image bounds
+03:50:36.585 [DEBUG] Executing Step: * create a "3" by "3" image
+03:50:36.587 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+03:50:36.591 [INFO] Executing scenario: Set Color of Pixel
+03:50:36.592 [DEBUG] Executing Step: * create a "3" by "3" image
+03:50:36.593 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+03:50:36.596 [INFO] Executing scenario: set pixel color and check in output
+03:50:36.597 [DEBUG] Executing Step: * create a "5" by "5" image
+03:50:36.599 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:50:36.601 [DEBUG] Executing Step: * set x "2" y "1" to "B"
+03:50:36.603 [DEBUG] Executing Step: * set x "3" y "1" to "C"
+03:50:36.605 [DEBUG] Executing Step: * set x "3" y "2" to "D"
+03:50:36.607 [DEBUG] Executing Step: * set x "3" y "3" to "E"
+03:50:36.609 [DEBUG] Executing Step: * render image
+03:50:36.610 [INFO] 
+ABCOO
+OODOO
+OOEOO
+OOOOO
+OOOOO
+03:50:36.611 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|A    |
+     |2|1|B    |
+     |3|1|C    |
+     |3|2|D    |
+     |3|3|E    |
+03:50:36.614 [INFO] Executing scenario: Set column color
+03:50:36.615 [DEBUG] Executing Step: * create a "5" by "5" image
+03:50:36.616 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:50:36.619 [DEBUG] Executing Step: * render image
+03:50:36.621 [INFO] 
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+03:50:36.622 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |2|1|W    |
+     |2|2|W    |
+     |2|3|W    |
+     |2|4|W    |
+     |2|5|W    |
+03:50:36.626 [INFO] Executing scenario: Set row color
+03:50:36.627 [DEBUG] Executing Step: * create a "5" by "5" image
+03:50:36.629 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:50:36.632 [DEBUG] Executing Step: * render image
+03:50:36.633 [INFO] 
+OOOOO
+WWWWW
+OOOOO
+OOOOO
+OOOOO
+03:50:36.635 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|2|W    |
+     |2|2|W    |
+     |3|2|W    |
+     |4|2|W    |
+     |5|2|W    |
+03:50:36.639 [INFO] Executing scenario: Clear image
+03:50:36.640 [DEBUG] Executing Step: * create a "5" by "5" image
+03:50:36.642 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:50:36.644 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:50:36.647 [DEBUG] Executing Step: * clear image
+03:50:36.648 [DEBUG] Executing Step: * render image
+03:50:36.649 [INFO] 
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+03:50:36.651 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|O    |
+     |2|2|O    |
+     |3|2|O    |
+     |4|2|O    |
+     |5|2|O    |
+03:50:36.653 [DEBUG] Executing Step: * create a "3" by "3" image
+03:50:36.657 [INFO] Executing scenario: Fill center with top in region
+03:50:36.657 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:50:36.659 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:50:36.662 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:50:36.665 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:50:36.668 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:50:36.670 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:50:36.672 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:50:36.673 [DEBUG] Executing Step: * render image
+03:50:36.674 [INFO] 
+AAO
+AAA
+OAA
+03:50:36.675 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+03:50:36.782 [DEBUG] Plugin [Html Report] with pid [11345] has exited
+03:50:36.782 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+03:50:36.782 [INFO] Scenarios: 	9 executed, 9 passed, 0 failed, 0 skipped
+03:50:36.782 [INFO] Total time taken: 192ms
+03:51:04.130 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+03:51:04.589 [INFO] Executing specification: Fill Specification
+03:51:04.590 [INFO] Executing scenario: Fill center with top in region
+03:51:04.590 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:04.592 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:51:04.594 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:51:04.596 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:51:04.598 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:51:04.600 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:04.601 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:51:04.603 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:51:04.605 [DEBUG] Executing Step: * render image
+03:51:04.606 [INFO] 
+AAO
+AAA
+OAA
+03:51:04.607 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+03:51:04.612 [INFO] Executing specification: Image Specification
+03:51:04.612 [INFO] Executing scenario: Create Images
+03:51:04.613 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+03:51:04.679 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+03:51:04.683 [INFO] Executing scenario: check image bounds
+03:51:04.683 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:04.685 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+03:51:04.687 [INFO] Executing scenario: Set Color of Pixel
+03:51:04.688 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:04.689 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+03:51:04.692 [INFO] Executing scenario: set pixel color and check in output
+03:51:04.693 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:04.694 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:04.696 [DEBUG] Executing Step: * set x "2" y "1" to "B"
+03:51:04.698 [DEBUG] Executing Step: * set x "3" y "1" to "C"
+03:51:04.700 [DEBUG] Executing Step: * set x "3" y "2" to "D"
+03:51:04.701 [DEBUG] Executing Step: * set x "3" y "3" to "E"
+03:51:04.703 [DEBUG] Executing Step: * render image
+03:51:04.705 [INFO] 
+ABCOO
+OODOO
+OOEOO
+OOOOO
+OOOOO
+03:51:04.705 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|A    |
+     |2|1|B    |
+     |3|1|C    |
+     |3|2|D    |
+     |3|3|E    |
+03:51:04.708 [INFO] Executing scenario: Set column color
+03:51:04.709 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:04.711 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:04.713 [DEBUG] Executing Step: * render image
+03:51:04.713 [INFO] 
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+03:51:04.714 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |2|1|W    |
+     |2|2|W    |
+     |2|3|W    |
+     |2|4|W    |
+     |2|5|W    |
+03:51:04.718 [INFO] Executing scenario: Set row color
+03:51:04.719 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:04.721 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:04.723 [DEBUG] Executing Step: * render image
+03:51:04.724 [INFO] 
+OOOOO
+WWWWW
+OOOOO
+OOOOO
+OOOOO
+03:51:04.725 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|2|W    |
+     |2|2|W    |
+     |3|2|W    |
+     |4|2|W    |
+     |5|2|W    |
+03:51:04.728 [INFO] Executing scenario: Clear image
+03:51:04.729 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:04.731 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:04.734 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:04.736 [DEBUG] Executing Step: * clear image
+03:51:04.738 [DEBUG] Executing Step: * render image
+03:51:04.739 [INFO] 
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+03:51:04.740 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|O    |
+     |2|2|O    |
+     |3|2|O    |
+     |4|2|O    |
+     |5|2|O    |
+03:51:04.742 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:04.744 [INFO] Executing scenario: Fill center with top in region
+03:51:04.745 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:51:04.747 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:51:04.750 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:51:04.752 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:51:04.755 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:04.756 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:51:04.759 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:51:04.760 [DEBUG] Executing Step: * render image
+03:51:04.761 [INFO] 
+AAO
+AAA
+OAA
+03:51:04.762 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+     |3|3|A    |
+03:51:04.876 [DEBUG] Plugin [Html Report] with pid [11361] has exited
+03:51:04.876 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+03:51:04.876 [INFO] Scenarios: 	9 executed, 9 passed, 0 failed, 0 skipped
+03:51:04.876 [INFO] Total time taken: 181ms
+03:51:12.090 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+03:51:12.549 [INFO] Executing specification: Fill Specification
+03:51:12.550 [INFO] Executing scenario: Fill center with top in region
+03:51:12.550 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:12.552 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:51:12.554 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:51:12.556 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:51:12.558 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:51:12.560 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:12.562 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:51:12.564 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:51:12.566 [DEBUG] Executing Step: * render image
+03:51:12.567 [INFO] 
+AAO
+AAA
+OAA
+03:51:12.568 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+03:51:12.571 [INFO] Executing specification: Image Specification
+03:51:12.572 [INFO] Executing scenario: Create Images
+03:51:12.572 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+03:51:12.640 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+03:51:12.643 [INFO] Executing scenario: check image bounds
+03:51:12.644 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:12.647 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+03:51:12.651 [INFO] Executing scenario: Set Color of Pixel
+03:51:12.651 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:12.653 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+03:51:12.656 [INFO] Executing scenario: set pixel color and check in output
+03:51:12.656 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:12.658 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:12.659 [DEBUG] Executing Step: * set x "2" y "1" to "B"
+03:51:12.661 [DEBUG] Executing Step: * set x "3" y "1" to "C"
+03:51:12.663 [DEBUG] Executing Step: * set x "3" y "2" to "D"
+03:51:12.664 [DEBUG] Executing Step: * set x "3" y "3" to "E"
+03:51:12.666 [DEBUG] Executing Step: * render image
+03:51:12.667 [INFO] 
+ABCOO
+OODOO
+OOEOO
+OOOOO
+OOOOO
+03:51:12.668 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|A    |
+     |2|1|B    |
+     |3|1|C    |
+     |3|2|D    |
+     |3|3|E    |
+03:51:12.671 [INFO] Executing scenario: Set column color
+03:51:12.672 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:12.674 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:12.676 [DEBUG] Executing Step: * render image
+03:51:12.676 [INFO] 
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+03:51:12.677 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |2|1|W    |
+     |2|2|W    |
+     |2|3|W    |
+     |2|4|W    |
+     |2|5|W    |
+03:51:12.682 [INFO] Executing scenario: Set row color
+03:51:12.683 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:12.685 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:12.687 [DEBUG] Executing Step: * render image
+03:51:12.688 [INFO] 
+OOOOO
+WWWWW
+OOOOO
+OOOOO
+OOOOO
+03:51:12.689 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|2|W    |
+     |2|2|W    |
+     |3|2|W    |
+     |4|2|W    |
+     |5|2|W    |
+03:51:12.693 [INFO] Executing scenario: Clear image
+03:51:12.694 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:12.696 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:12.700 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:12.702 [DEBUG] Executing Step: * clear image
+03:51:12.704 [DEBUG] Executing Step: * render image
+03:51:12.704 [INFO] 
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+03:51:12.705 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|O    |
+     |2|2|O    |
+     |3|2|O    |
+     |4|2|O    |
+     |5|2|O    |
+03:51:12.707 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:12.709 [INFO] Executing scenario: Fill center with top in region
+03:51:12.710 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:51:12.711 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:51:12.713 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:51:12.715 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:51:12.717 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:12.720 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:51:12.721 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:51:12.724 [DEBUG] Executing Step: * render image
+03:51:12.725 [INFO] 
+AAO
+AAA
+OAA
+03:51:12.725 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+     |3|3|A    |
+03:51:12.836 [DEBUG] Plugin [Html Report] with pid [11376] has exited
+03:51:12.836 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+03:51:12.836 [INFO] Scenarios: 	9 executed, 9 passed, 0 failed, 0 skipped
+03:51:12.836 [INFO] Total time taken: 181ms
+03:51:54.103 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+03:51:54.559 [INFO] Executing specification: Fill Specification
+03:51:54.560 [INFO] Executing scenario: Fill center with top in region
+03:51:54.560 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:54.562 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:51:54.563 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:51:54.565 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:51:54.567 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:51:54.569 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:54.570 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:51:54.572 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:51:54.574 [DEBUG] Executing Step: * render image
+03:51:54.575 [INFO] 
+AAO
+AAA
+OAA
+03:51:54.577 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+03:51:54.581 [INFO] Executing specification: Image Specification
+03:51:54.582 [INFO] Executing scenario: Create Images
+03:51:54.583 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+03:51:54.658 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+03:51:54.661 [INFO] Executing scenario: check image bounds
+03:51:54.662 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:54.664 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+03:51:54.668 [INFO] Executing scenario: Set Color of Pixel
+03:51:54.668 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:54.670 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+03:51:54.672 [INFO] Executing scenario: set pixel color and check in output
+03:51:54.673 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:54.675 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:54.676 [DEBUG] Executing Step: * set x "2" y "1" to "B"
+03:51:54.679 [DEBUG] Executing Step: * set x "3" y "1" to "C"
+03:51:54.680 [DEBUG] Executing Step: * set x "3" y "2" to "D"
+03:51:54.682 [DEBUG] Executing Step: * set x "3" y "3" to "E"
+03:51:54.684 [DEBUG] Executing Step: * render image
+03:51:54.685 [INFO] 
+ABCOO
+OODOO
+OOEOO
+OOOOO
+OOOOO
+03:51:54.686 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|A    |
+     |2|1|B    |
+     |3|1|C    |
+     |3|2|D    |
+     |3|3|E    |
+03:51:54.690 [INFO] Executing scenario: Set column color
+03:51:54.691 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:54.693 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:54.695 [DEBUG] Executing Step: * render image
+03:51:54.697 [INFO] 
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+03:51:54.698 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |2|1|W    |
+     |2|2|W    |
+     |2|3|W    |
+     |2|4|W    |
+     |2|5|W    |
+03:51:54.701 [INFO] Executing scenario: Set row color
+03:51:54.702 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:54.704 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:54.706 [DEBUG] Executing Step: * render image
+03:51:54.706 [INFO] 
+OOOOO
+WWWWW
+OOOOO
+OOOOO
+OOOOO
+03:51:54.707 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|2|W    |
+     |2|2|W    |
+     |3|2|W    |
+     |4|2|W    |
+     |5|2|W    |
+03:51:54.710 [INFO] Executing scenario: Clear image
+03:51:54.711 [DEBUG] Executing Step: * create a "5" by "5" image
+03:51:54.712 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:54.714 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:51:54.717 [DEBUG] Executing Step: * clear image
+03:51:54.719 [DEBUG] Executing Step: * render image
+03:51:54.720 [INFO] 
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+03:51:54.721 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|O    |
+     |2|2|O    |
+     |3|2|O    |
+     |4|2|O    |
+     |5|2|O    |
+03:51:54.724 [DEBUG] Executing Step: * create a "3" by "3" image
+03:51:54.725 [INFO] Executing scenario: Fill center with top in region
+03:51:54.726 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:51:54.728 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:51:54.729 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:51:54.731 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:51:54.733 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:51:54.735 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:51:54.737 [DEBUG] Executing Step: * set x "1" y "3" to "A"
+03:51:54.739 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:51:54.740 [DEBUG] Executing Step: * render image
+03:51:54.741 [INFO] 
+AAO
+AAA
+AAA
+03:51:54.742 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+     |3|3|A    |
+03:51:54.852 [DEBUG] Plugin [Html Report] with pid [11393] has exited
+03:51:54.852 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+03:51:54.852 [INFO] Scenarios: 	9 executed, 9 passed, 0 failed, 0 skipped
+03:51:54.852 [INFO] Total time taken: 187ms
+03:52:07.129 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+03:52:07.599 [INFO] Executing specification: Fill Specification
+03:52:07.600 [INFO] Executing scenario: Fill center with top in region
+03:52:07.600 [DEBUG] Executing Step: * create a "3" by "3" image
+03:52:07.602 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:52:07.604 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:52:07.606 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:52:07.608 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:52:07.609 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:52:07.612 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:52:07.614 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:52:07.617 [DEBUG] Executing Step: * render image
+03:52:07.618 [INFO] 
+AAO
+AAA
+OAA
+03:52:07.619 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+03:52:07.624 [INFO] Executing specification: Image Specification
+03:52:07.624 [INFO] Executing scenario: Create Images
+03:52:07.625 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+03:52:07.697 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+03:52:07.699 [INFO] Executing scenario: check image bounds
+03:52:07.700 [DEBUG] Executing Step: * create a "3" by "3" image
+03:52:07.702 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+03:52:07.704 [INFO] Executing scenario: Set Color of Pixel
+03:52:07.705 [DEBUG] Executing Step: * create a "3" by "3" image
+03:52:07.707 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+03:52:07.710 [INFO] Executing scenario: set pixel color and check in output
+03:52:07.710 [DEBUG] Executing Step: * create a "5" by "5" image
+03:52:07.712 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:52:07.714 [DEBUG] Executing Step: * set x "2" y "1" to "B"
+03:52:07.716 [DEBUG] Executing Step: * set x "3" y "1" to "C"
+03:52:07.718 [DEBUG] Executing Step: * set x "3" y "2" to "D"
+03:52:07.720 [DEBUG] Executing Step: * set x "3" y "3" to "E"
+03:52:07.722 [DEBUG] Executing Step: * render image
+03:52:07.723 [INFO] 
+ABCOO
+OODOO
+OOEOO
+OOOOO
+OOOOO
+03:52:07.724 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|A    |
+     |2|1|B    |
+     |3|1|C    |
+     |3|2|D    |
+     |3|3|E    |
+03:52:07.728 [INFO] Executing scenario: Set column color
+03:52:07.729 [DEBUG] Executing Step: * create a "5" by "5" image
+03:52:07.731 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:52:07.733 [DEBUG] Executing Step: * render image
+03:52:07.736 [INFO] 
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+03:52:07.737 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |2|1|W    |
+     |2|2|W    |
+     |2|3|W    |
+     |2|4|W    |
+     |2|5|W    |
+03:52:07.739 [INFO] Executing scenario: Set row color
+03:52:07.741 [DEBUG] Executing Step: * create a "5" by "5" image
+03:52:07.743 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:52:07.745 [DEBUG] Executing Step: * render image
+03:52:07.745 [INFO] 
+OOOOO
+WWWWW
+OOOOO
+OOOOO
+OOOOO
+03:52:07.746 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|2|W    |
+     |2|2|W    |
+     |3|2|W    |
+     |4|2|W    |
+     |5|2|W    |
+03:52:07.751 [INFO] Executing scenario: Clear image
+03:52:07.752 [DEBUG] Executing Step: * create a "5" by "5" image
+03:52:07.754 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:52:07.756 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:52:07.758 [DEBUG] Executing Step: * clear image
+03:52:07.759 [DEBUG] Executing Step: * render image
+03:52:07.759 [INFO] 
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+03:52:07.760 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|O    |
+     |2|2|O    |
+     |3|2|O    |
+     |4|2|O    |
+     |5|2|O    |
+03:52:07.762 [DEBUG] Executing Step: * create a "3" by "3" image
+03:52:07.764 [INFO] Executing scenario: Fill center with top in region
+03:52:07.765 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:52:07.766 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:52:07.768 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:52:07.770 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:52:07.772 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:52:07.774 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:52:07.776 [DEBUG] Executing Step: * set x "1" y "3" to "A"
+03:52:07.778 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:52:07.780 [DEBUG] Executing Step: * render image
+03:52:07.780 [INFO] 
+AAO
+AAA
+AAA
+03:52:07.782 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+     |3|3|A    |
+     |1|3|B    |
+03:52:07.948 [ERROR] Failed step: check region
+03:52:07.948 [ERROR] Error Message: Expected (p.color == row[2]), but
+Strings differ at position 0:
+ first: "A"
+second: "B"
+    p.color is "A"
+    p is #<Pixel:0x007f807409f1e0
+       @color="A",
+       @coordinate=#<Pixel::Coordinate:0x007f807409f190 @x=2, @y=2>,
+       @image=
+        #<Image:0x007f807409f488
+         @height=3,
+         @pixels=
+          [#<Pixel:0x007f807409f3e8
+            @color="A",
+            @coordinate=#<Pixel::Coordinate:0x007f807409f398 @x=1, @y=1>,
+            @image=#<Image:0x007f807409f488 ...>>,
+           #<Pixel:0x007f807409f370
+            @color="A",
+            @coordinate=#<Pixel::Coordinate:0x007f807409f320 @x=1, @y=2>,
+            @image=#<Image:0x007f807409f488 ...>>,
+           #<Pixel:0x007f807409f2f8
+            @color="A",
+            @coordinate=#<Pixel::Coordinate:0x007f807409f2a8 @x=1, @y=3>,
+            @image=#<Image:0x007f807409f488 ...>>,
+           #<Pixel:0x007f807409f258
+            @color="A",
+            @coordinate=#<Pixel::Coordinate:0x007f807409f208 @x=2, @y=1>,
+            @image=#<Image:0x007f807409f488 ...>>,
+           #<Pixel:0x007f807409f1e0 ...>,
+           #<Pixel:0x007f807409f168
+            @color="A",
+            @coordinate=#<Pixel::Coordinate:0x007f807409f118 @x=2, @y=3>,
+            @image=#<Image:0x007f807409f488 ...>>,
+           #<Pixel:0x007f807409f0c8
+            @color="O",
+            @coordinate=#<Pixel::Coordinate:0x007f807409f078 @x=3, @y=1>,
+            @image=#<Image:0x007f807409f488 ...>>,
+           #<Pixel:0x007f807409f050
+            @color="A",
+            @coordinate=#<Pixel::Coordinate:0x007f807409f000 @x=3, @y=2>,
+            @image=#<Image:0x007f807409f488 ...>>,
+           #<Pixel:0x007f807409efd8
+            @color="A",
+            @coordinate=#<Pixel::Coordinate:0x007f807409ef88 @x=3, @y=3>,
+            @image=#<Image:0x007f807409f488 ...>>],
+         @width=3>>
+    row[2] is "B"
+    row is ["1", "3", "B"]
+03:52:07.949 [ERROR] Stacktrace: /Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:82:in `aver'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/wrong-0.7.1/lib/wrong/assert.rb:34:in `assert'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:100:in `block (3 levels) in <top (required)>'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:100:in `each'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:100:in `block (2 levels) in <top (required)>'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:96:in `each'
+	/Users/cococoder/Desktop/carwow/step_implementations/steps.rb:96:in `block in <top (required)>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/executor.rb:30:in `execute_step'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/processors/execute_step_request_processor.rb:30:in `process_execute_step_request'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `call'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/message_processor.rb:52:in `process_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:53:in `handle_message'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:37:in `dispatch_messages'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:76:in `<module:Runtime>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:29:in `<module:Gauge>'
+	/Users/cococoder/.gem/ruby/2.2.2/gems/gauge-ruby-0.1.0/lib/gauge_runtime.rb:27:in `<top (required)>'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:128:in `rescue in require'
+	/Users/cococoder/.rubies/ruby-2.2.2/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:39:in `require'
+	-e:1:in `<main>'
+	
+03:52:08.058 [DEBUG] Plugin [Html Report] with pid [11412] has exited
+03:52:08.058 [INFO] Specifications: 	2 executed, 1 passed, 1 failed, 0 skipped
+03:52:08.058 [INFO] Scenarios: 	9 executed, 8 passed, 1 failed, 0 skipped
+03:52:08.058 [INFO] Total time taken: 354ms
+03:52:12.739 [INFO] warning: parser/current is loading parser/ruby22, which recognizes
+warning: 2.2.3-compliant syntax, but you are running 2.2.2.
+warning: please see https://github.com/whitequark/parser#compatibility-with-ruby-mri.
+03:52:13.206 [INFO] Executing specification: Fill Specification
+03:52:13.206 [INFO] Executing scenario: Fill center with top in region
+03:52:13.207 [DEBUG] Executing Step: * create a "3" by "3" image
+03:52:13.209 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:52:13.211 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:52:13.213 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:52:13.215 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:52:13.216 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:52:13.218 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:52:13.220 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:52:13.222 [DEBUG] Executing Step: * render image
+03:52:13.222 [INFO] 
+AAO
+AAA
+OAA
+03:52:13.223 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+03:52:13.228 [INFO] Executing specification: Image Specification
+03:52:13.228 [INFO] Executing scenario: Create Images
+03:52:13.229 [DEBUG] Executing Step: * initialize valid images 
+     |w  |h  |pixel count|Exception|
+     |---|---|-----------|---------|
+     |3  |3  |9          |none     |
+     |250|250|62500      |none     |
+03:52:13.299 [DEBUG] Executing Step: * initialize invalid images 
+     |w  |h  |Exception message                                        |
+     |---|---|---------------------------------------------------------|
+     |251|250|A width of 251 is greater than the maximum width of 250  |
+     |250|251|A height of 251 is greater than the maximum height of 250|
+     |0  |250|A width of 0 is less than the minimum width of 1         |
+     |250|0  |A height of 0 is less than the minimum height of 1       |
+03:52:13.301 [INFO] Executing scenario: check image bounds
+03:52:13.302 [DEBUG] Executing Step: * create a "3" by "3" image
+03:52:13.304 [DEBUG] Executing Step: * set invalid pixel colors 
+     |x|y|Exception message                   |
+     |-|-|------------------------------------|
+     |4|3|4 is outside the width of the image |
+     |3|4|4 is outside the height of the image|
+     |0|3|0 is outside the width of the image |
+     |3|0|0 is outside the height of the image|
+03:52:13.307 [INFO] Executing scenario: Set Color of Pixel
+03:52:13.308 [DEBUG] Executing Step: * create a "3" by "3" image
+03:52:13.309 [DEBUG] Executing Step: * set pixel colors 
+     |x|y|color|
+     |-|-|-----|
+     |3|3|A    |
+     |2|2|A    |
+     |1|1|A    |
+03:52:13.313 [INFO] Executing scenario: set pixel color and check in output
+03:52:13.313 [DEBUG] Executing Step: * create a "5" by "5" image
+03:52:13.315 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:52:13.316 [DEBUG] Executing Step: * set x "2" y "1" to "B"
+03:52:13.318 [DEBUG] Executing Step: * set x "3" y "1" to "C"
+03:52:13.320 [DEBUG] Executing Step: * set x "3" y "2" to "D"
+03:52:13.322 [DEBUG] Executing Step: * set x "3" y "3" to "E"
+03:52:13.324 [DEBUG] Executing Step: * render image
+03:52:13.325 [INFO] 
+ABCOO
+OODOO
+OOEOO
+OOOOO
+OOOOO
+03:52:13.325 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|A    |
+     |2|1|B    |
+     |3|1|C    |
+     |3|2|D    |
+     |3|3|E    |
+03:52:13.329 [INFO] Executing scenario: Set column color
+03:52:13.330 [DEBUG] Executing Step: * create a "5" by "5" image
+03:52:13.331 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:52:13.333 [DEBUG] Executing Step: * render image
+03:52:13.334 [INFO] 
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+OWOOO
+03:52:13.335 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |2|1|W    |
+     |2|2|W    |
+     |2|3|W    |
+     |2|4|W    |
+     |2|5|W    |
+03:52:13.339 [INFO] Executing scenario: Set row color
+03:52:13.340 [DEBUG] Executing Step: * create a "5" by "5" image
+03:52:13.342 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:52:13.344 [DEBUG] Executing Step: * render image
+03:52:13.345 [INFO] 
+OOOOO
+WWWWW
+OOOOO
+OOOOO
+OOOOO
+03:52:13.346 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|2|W    |
+     |2|2|W    |
+     |3|2|W    |
+     |4|2|W    |
+     |5|2|W    |
+03:52:13.350 [INFO] Executing scenario: Clear image
+03:52:13.351 [DEBUG] Executing Step: * create a "5" by "5" image
+03:52:13.354 [DEBUG] Executing Step: * set pixel vertical colors 
+     |x|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:52:13.355 [DEBUG] Executing Step: * set pixel horizontal colors 
+     |y|from|to|color|
+     |-|----|--|-----|
+     |2|1   |5 |W    |
+03:52:13.357 [DEBUG] Executing Step: * clear image
+03:52:13.358 [DEBUG] Executing Step: * render image
+03:52:13.359 [INFO] 
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+03:52:13.359 [DEBUG] Executing Step: * check color 
+     |x|y|color|
+     |-|-|-----|
+     |1|1|O    |
+     |2|2|O    |
+     |3|2|O    |
+     |4|2|O    |
+     |5|2|O    |
+03:52:13.362 [DEBUG] Executing Step: * create a "3" by "3" image
+03:52:13.364 [INFO] Executing scenario: Fill center with top in region
+03:52:13.365 [DEBUG] Executing Step: * set x "1" y "2" to "A"
+03:52:13.366 [DEBUG] Executing Step: * set x "2" y "1" to "A"
+03:52:13.368 [DEBUG] Executing Step: * set x "2" y "3" to "A"
+03:52:13.369 [DEBUG] Executing Step: * set x "3" y "2" to "A"
+03:52:13.371 [DEBUG] Executing Step: * set x "1" y "1" to "A"
+03:52:13.372 [DEBUG] Executing Step: * set x "3" y "3" to "A"
+03:52:13.374 [DEBUG] Executing Step: * set x "1" y "3" to "A"
+03:52:13.377 [DEBUG] Executing Step: * fill x "2" y "2" to "A"
+03:52:13.379 [DEBUG] Executing Step: * render image
+03:52:13.379 [INFO] 
+AAO
+AAA
+AAA
+03:52:13.381 [DEBUG] Executing Step: * check region 
+     |x|y|color|
+     |-|-|-----|
+     |2|2|A    |
+     |2|1|A    |
+     |2|3|A    |
+     |1|2|A    |
+     |3|2|A    |
+     |1|1|A    |
+     |3|3|A    |
+     |1|3|A    |
+03:52:13.492 [DEBUG] Plugin [Html Report] with pid [11429] has exited
+03:52:13.492 [INFO] Specifications: 	2 executed, 2 passed, 0 failed, 0 skipped
+03:52:13.492 [INFO] Scenarios: 	9 executed, 9 passed, 0 failed, 0 skipped
+03:52:13.492 [INFO] Total time taken: 181ms
