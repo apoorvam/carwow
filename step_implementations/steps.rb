@@ -61,9 +61,15 @@ step 'initialize valid images <table>' do |table|
     assert{image.pixels.count == row[2].to_i}
   end
 end
+
 step 'set x <x> y <y> to <color>' do |x,y,color|
   pixel =@image.set_color(Pixel::Coordinate.new(x,y),color)
 end
+
+step 'fill x <x> y <y> to <color>' do |x,y,color|
+  @region =@image.fill(Pixel::Coordinate.new(x,y),color)
+end
+
 
 step 'render image' do
   @output = Display.render(@image)
@@ -83,5 +89,15 @@ step 'check color <table>' do |table|
     y = row[1].to_i
     rows = @output.split("\n")
     assert { rows[y-1][x-1] == row[2]}
+  end
+end
+
+step 'check region <table>' do |table|
+  table.rows.each do |row|
+    x = row[0].to_i
+    y = row[1].to_i
+
+    assert { @region.map{|p|p.coordinate}.include? Pixel::Coordinate.new(x,y)}
+    @region.each { |p| assert{ p.color == row[2]}}
   end
 end

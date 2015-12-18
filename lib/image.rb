@@ -80,14 +80,16 @@ class Image
     end
   end
 
-  def fill(x,y,color)
+  def fill(coordinate,color)
     cache = []
     region = []
 
-    pixel = get_pixel_at(Pixel::Coordinate.new(x,y))
+    pixel = get_pixel_at(coordinate)
     set_color(pixel.coordinate,color)
-    cache << pixel
+
     region << pixel
+
+    cache << pixel
 
     loop do
 
