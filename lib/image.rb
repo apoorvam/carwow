@@ -1,8 +1,9 @@
 require 'matrix'
 
-class InvalidWidthError < StandardError;end
-class InvalidHeightError < StandardError;end
-class OutOfImageBoundsError < StandardError;end
+class ImageError < StandardError;end
+class InvalidWidthError < ImageError;end
+class InvalidHeightError < ImageError;end
+class OutOfImageBoundsError < ImageError;end
 
 class Display
   def self.render(image)
@@ -106,7 +107,7 @@ class Image
 
         right = get_pixel_at(context.right)
         region << right  if right.color == color
-        
+
       end
 
       break if cache.empty?
