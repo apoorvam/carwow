@@ -104,7 +104,9 @@ class Image
         left = get_pixel_at(context.left)
         region << left  if left.color == color
 
-
+        right = get_pixel_at(context.right)
+        region << right  if right.color == color
+        
       end
 
       break if cache.empty?
