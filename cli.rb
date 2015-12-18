@@ -1,12 +1,17 @@
+require_relative "lib/image.rb"
+
 puts "image builder"
 puts "to start please enter i"
 
+def apply(image,message)
+  begin
+    puts "ooops! you dont have a " if image.nil?
+    yield image if block_given?
+    puts message
+  rescue ImageError => e
+    puts e.message
+  end
 
-
-def execute(image,message)
-  puts "ooops! you dont have a " if image.nil?
-  yield image if block_given?
-  puts message
 end
 
 def cancelable
@@ -21,38 +26,39 @@ image = nil
 
 cancelable do
   loop do
-    case gets.chomp
+    case gets.chomp.downcase
     when "i"
-      puts "M:"
+      print "M:"
       m = gets.chomp
-      puts "N:"
+      print "N:"
       n = gets.chomp
-      image.new(m,n)
+      image= Image.new(m.to_i,n.to_i)
       puts "Created a new #{m} x #{n} image with all pixels coloured white (O)"
 
     when "c"
-      execute(image,"Clears the table, setting all pixels to white (O)") do |image|
+      apply(image,"Clears the table, setting all pixels to white (O)") do |image|
 
       end
     when "l"
-      execute(image,"Colours the pixel (X,Y) with colour C.") do |image|
+      apply(image,"Colours the pixel (X,Y) with colour C.") do |image|
 
       end
     when "v"
-      execute(image,"Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive)") do |image|
+      apply(image,"Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive)") do |image|
 
       end
     when "h"
-      execute(image,"Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).") do |image|
+      apply(image,"Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).") do |image|
 
       end
     when "f"
-      execute(image,"Fill the region R with the colour C. R is defined as: Pixel (X,Y) belongs to R.") do |image|
+      apply(image,"Fill the region R with the colour C. R is defined as: Pixel (X,Y) belongs to R.") do |image|
 
       end
     when "s"
-      execute(image,"Show the contents of the current image") do |image|
-
+      apply(image,"Show the contents of the current image") do |image|
+        output = Display.render(image)
+        puts output.clone.prepend("\n")
       end
     when "x"
       puts "Terminate the session"
