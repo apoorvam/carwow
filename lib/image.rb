@@ -97,22 +97,22 @@ class Image
 
       if context
 
-        if inside? context.top
+        if context.top.inside? self
           top = get_pixel_at(context.top)
           region << top if top.color == color
         end
 
-        if inside? context.bottom
+        if context.bottom.inside? self
           bottom = get_pixel_at(context.bottom)
           region << bottom  if bottom.color == color
         end
 
-        if inside? context.left
+        if context.left.inside? self
           left = get_pixel_at(context.left)
           region << left  if left.color == color
         end
 
-        if inside? context.right
+        if context.right.inside? self
           right = get_pixel_at(context.right)
           region << right  if right.color == color
         end
@@ -127,13 +127,7 @@ class Image
 
   end
 
-  def inside? pixel
-    return false if pixel.x < MINIMUM_WIDTH
-    return false if pixel.x > width
-    return false if pixel.y < MINIMUM_HEIGHT
-    return false if pixel.y > height
-    true
-  end
+
 
 
 
@@ -174,7 +168,17 @@ class Pixel
     def ==(coordinate)
       self.x == coordinate.x && self.y == coordinate.y
     end
+
+    def inside? image
+      return false if self.x < Image::MINIMUM_WIDTH
+      return false if self.x > image.width
+      return false if self.y < Image::MINIMUM_HEIGHT
+      return false if self.y > image.height
+      true
+    end
+
   end
+
   def initialize(image,x,y)
     @image = image
     @color="O"
