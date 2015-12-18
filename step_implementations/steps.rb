@@ -92,11 +92,20 @@ step 'check color <table>' do |table|
   end
 end
 
-step 'check region <table>' do |table|
+step 'check in region <table>' do |table|
   table.rows.each do |row|
     x = row[0].to_i
     y = row[1].to_i
     assert { @region.include? @image.get_pixel_at(Pixel::Coordinate.new(x,y))}
     @region.each { |p| assert{ p.color == row[2]}}
+  end
+end
+
+step 'check out of region <table>' do |table|
+  table.rows.each do |row|
+    x = row[0].to_i
+    y = row[1].to_i
+    deny { @region.include? @image.get_pixel_at(Pixel::Coordinate.new(x,y))}
+
   end
 end

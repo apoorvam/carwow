@@ -101,26 +101,34 @@ class Image
 
         if context.top.inside? self
           top = get_pixel_at(context.top)
-          region << top if top.color == color
-          todo << top unless done.include? top
+          if top.color == color
+            region << top
+            todo << top unless done.include? top
+          end
         end
 
         if context.bottom.inside? self
           bottom = get_pixel_at(context.bottom)
-          region << bottom  if bottom.color == color
-          todo << bottom unless done.include? bottom
+          if bottom.color == color
+            region << bottom
+            todo << bottom unless done.include? bottom
+          end
         end
 
         if context.left.inside? self
           left = get_pixel_at(context.left)
-          region << left  if left.color == color
-          todo << left unless done.include? left
+          if left.color == color
+            region << left
+            todo << left unless done.include? left
+          end
         end
 
         if context.right.inside? self
           right = get_pixel_at(context.right)
-          region << right  if right.color == color
-          todo << right unless done.include? right
+          if right.color == color
+            region << right
+            todo << right unless done.include? right
+          end
         end
 
         done << context
@@ -135,6 +143,8 @@ class Image
     region
 
   end
+
+
 
 
 
