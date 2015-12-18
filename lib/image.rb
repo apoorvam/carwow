@@ -95,10 +95,15 @@ class Image
       context = cache.pop
 
       if context
-        pixel = get_pixel_at(context.top)
-        if pixel.color == color
-          region << pixel
-        end
+        top = get_pixel_at(context.top)
+        region << top if top.color == color
+
+        bottom = get_pixel_at(context.bottom)
+        region << bottom  if bottom.color == color
+
+        left = get_pixel_at(context.left)
+        region << left  if left.color == color
+
 
       end
 
