@@ -1,7 +1,7 @@
 puts "image builder"
 puts "to start please enter i"
 
-image = nil
+
 
 def execute(image,message)
   puts "ooops! you dont have a " if image.nil?
@@ -13,16 +13,23 @@ def cancelable
   begin
     yield
   rescue SystemExit, Interrupt
-  
+
   end
 end
 
+image = nil
 
 cancelable do
   loop do
     case gets.chomp
     when "i"
-      puts "Create a new M x N image with all pixels coloured white (O)"
+      puts "M:"
+      m = gets.chomp
+      puts "N:"
+      n = gets.chomp
+      image.new(m,n)
+      puts "Created a new #{m} x #{n} image with all pixels coloured white (O)"
+
     when "c"
       execute(image,"Clears the table, setting all pixels to white (O)") do |image|
 
