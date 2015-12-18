@@ -100,24 +100,29 @@ class Image
         if context.top.inside? self
           top = get_pixel_at(context.top)
           region << top if top.color == color
+
         end
 
         if context.bottom.inside? self
           bottom = get_pixel_at(context.bottom)
           region << bottom  if bottom.color == color
+
         end
 
         if context.left.inside? self
           left = get_pixel_at(context.left)
           region << left  if left.color == color
+
         end
 
         if context.right.inside? self
           right = get_pixel_at(context.right)
           region << right  if right.color == color
+          
         end
 
       end
+
 
       break if cache.empty?
 
@@ -156,6 +161,7 @@ class Pixel
   end
 
   def ==(pixel)
+    return false if pixel.nil?
     self.coordinate == pixel.coordinate
   end
   class Coordinate

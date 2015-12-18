@@ -96,8 +96,7 @@ step 'check region <table>' do |table|
   table.rows.each do |row|
     x = row[0].to_i
     y = row[1].to_i
-
-    assert { @region.map{|p|p.coordinate}.include? Pixel::Coordinate.new(x,y)}
+    assert { @region.include? @image.get_pixel_at(Pixel::Coordinate.new(x,y))}
     @region.each { |p| assert{ p.color == row[2]}}
   end
 end
