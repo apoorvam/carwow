@@ -1,15 +1,99 @@
-require_relative  "lib/image.rb"
+# * I M N - Create a new M x N image with all pixels coloured white (O).
+# * C - Clears the table, setting all pixels to white (O).
+# * L X Y C - Colours the pixel (X,Y) with colour C.
+# * V X Y1 Y2 C - Draw a vertical segment of colour C in column X between rows Y1 and Y2 (inclusive).
+# * H X1 X2 Y C - Draw a horizontal segment of colour C in row Y between columns X1 and X2 (inclusive).
+# * F X Y C - Fill the region R with the colour C. R is defined as: Pixel (X,Y) belongs to R.
+#  Any other pixel which is the same colour as (X,Y) and shares a common side with any pixel in R also belongs to this region.
+#
+# * S -
+# * X -
 
-require 'matrix'
+# class Command;end
+#
+# class I < Command
+#   def execute(image)
+#
+#   end
+# end
+#
+# class C < Command
+#   def execute(image)
+#
+#   end
+# end
+#
+# class L < Command
+#   def execute(image)
+#
+#   end
+# end
+#
+# class V < Command
+#   def execute(image)
+#
+#   end
+# end
+#
+# class H < Command
+#   def execute(image)
+#
+#   end
+# end
+#
+# class F < Command
+#   def execute(image)
+#
+#   end
+# end
+#
+# class F < Command
+#   def execute(image)
+#
+#   end
+# end
+#
+#
+#
 
-class Matrix
-  def []=(row, column, value)
-    @rows[row][column] = value
-  end
-end
 
-m = Matrix.build(5)
-put m(1,1)
+# commands={I:I.new}
+# commands={C:C.new}
+# commands={L:L.new}
+# commands={H:H.new}
+# commands={F:F.new}
+
+
+# require_relative  "lib/image.rb"
+#
+# require 'matrix'
+#
+# class Matrix
+#   def []=(row, column, value)
+#     @rows[row][column] = value
+#   end
+# end
+#
+# m = Matrix.build(5)
+# put m(1,1)
+
+# queue = []
+#
+# queue << 1
+# queue << 2
+# queue << 3
+#
+# loop do
+#   context = queue.pop
+#
+#   if context > 1
+#     queue << 4
+#   end
+#
+#   puts context
+#
+#   break unless context
+# end
 
 # ## bottom
 #
