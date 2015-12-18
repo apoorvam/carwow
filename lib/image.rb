@@ -91,7 +91,7 @@ class Image
 
     region << pixel
     todo << pixel
-    done << pixel
+
 
     loop do
 
