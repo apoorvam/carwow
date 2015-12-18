@@ -1,30 +1,12 @@
 require 'matrix'
+require_relative "pixel.rb"
+require_relative "display.rb"
 
 class ImageError < StandardError;end
 class InvalidWidthError < ImageError;end
 class InvalidHeightError < ImageError;end
 class OutOfImageBoundsError < ImageError;end
 
-class Display
-  def self.render(image)
-      output = ""
-        columns = 1
-        (Image::MINIMUM_HEIGHT..image.height).each do |y|
-        (Image::MINIMUM_WIDTH..image.width).each do |x|
-          color = image.get_pixel_at(Pixel::Coordinate.new(x,y)).color
-          output << "#{color}"
-          if columns == image.width
-            output << "\n"
-            columns = 1
-          else
-            columns+=1
-          end
-        end
-      end
-
-      output
-  end
-end
 class Image
   MAXIMUM_HEIGHT=250
   MAXIMUM_WIDTH=250
@@ -140,65 +122,10 @@ class Image
 
   end
 
-
-
-
-
-
-
   def clear
     @pixels.each do |pixel|
       set_color(pixel.coordinate,"O")
     end
-  end
-
-end
-
-class Pixel
-  attr_reader :coordinate,:image
-  attr_accessor :color
-  def top
-    Pixel::Coordinate.new(self.coordinate.x,self.coordinate.y-1)
-  end
-  def bottom
-    Pixel::Coordinate.new(self.coordinate.x,self.coordinate.y+1)
-  end
-  def left
-    Pixel::Coordinate.new(self.coordinate.x-1,self.coordinate.y)
-  end
-  def right
-    Pixel::Coordinate.new(self.coordinate.x+1,self.coordinate.y)
-  end
-
-  def ==(pixel)
-    return false if pixel.nil?
-    self.coordinate == pixel.coordinate
-  end
-  class Coordinate
-    attr_reader :x,:y
-    def initialize(x,y)
-      @x = x.to_i
-      @y = y.to_i
-    end
-
-    def ==(coordinate)
-      self.x == coordinate.x && self.y == coordinate.y
-    end
-
-    def inside? image
-      return false if self.x < Image::MINIMUM_WIDTH
-      return false if self.x > image.width
-      return false if self.y < Image::MINIMUM_HEIGHT
-      return false if self.y > image.height
-      true
-    end
-
-  end
-
-  def initialize(image,x,y)
-    @image = image
-    @color="O"
-    @coordinate =Pixel::Coordinate.new(x,y)
   end
 
 end
