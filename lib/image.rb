@@ -96,17 +96,26 @@ class Image
       context = cache.pop
 
       if context
-        top = get_pixel_at(context.top)
-        region << top if top.color == color
 
-        bottom = get_pixel_at(context.bottom)
-        region << bottom  if bottom.color == color
+        if inside? context.top
+          top = get_pixel_at(context.top)
+          region << top if top.color == color
+        end
 
-        left = get_pixel_at(context.left)
-        region << left  if left.color == color
+        if inside? context.bottom
+          bottom = get_pixel_at(context.bottom)
+          region << bottom  if bottom.color == color
+        end
 
-        right = get_pixel_at(context.right)
-        region << right  if right.color == color
+        if inside? context.left
+          left = get_pixel_at(context.left)
+          region << left  if left.color == color
+        end
+
+        if inside? context.right
+          right = get_pixel_at(context.right)
+          region << right  if right.color == color
+        end
 
       end
 
@@ -116,6 +125,14 @@ class Image
 
     region
 
+  end
+
+  def inside? pixel
+    return false if pixel.x < MINIMUM_WIDTH
+    return false if pixel.x > width
+    return false if pixel.y < MINIMUM_HEIGHT
+    return false if pixel.y > height
+    true
   end
 
 
@@ -145,7 +162,7 @@ class Pixel
   end
 
   def ==(pixel)
-    self.coordinate.to_s == pixel.coordinate.to_s
+    self.coordinate == pixel.coordinate
   end
   class Coordinate
     attr_reader :x,:y
