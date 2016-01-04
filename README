@@ -1,0 +1,13 @@
+Prequisites
+
+brew install gauage
+
+
+Tests:
+
+1) bundle install
+2) gauage specs/
+
+Running the application:
+
+ruby cli.rb
