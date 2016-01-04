@@ -118,7 +118,7 @@ class Image
 
     end
 
-    region.uniq!
+    region.uniq
 
   end
 
